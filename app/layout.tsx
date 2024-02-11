@@ -27,11 +27,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header className="py-2">
               <div className="flex items-center justify-between">
                 <ModeToggle />
+                <div className="font-bold">Laoshi Village Education Hub</div>
                 <nav className="ml-auto text-sm font-medium space-x-6">
                   <Link href="/">Home</Link>
-                  <Link href="/about">About</Link>
+                  <Link href="/about">Learn</Link>
                   <Link href="/blog">News</Link>
-                  <Link href="/inquiry">Inquiry</Link>
+                  <Link href="/inquiry">Contact</Link>
                 </nav>
               </div>
             </header>
