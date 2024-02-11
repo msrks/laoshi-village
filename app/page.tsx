@@ -12,7 +12,9 @@ export default function Home() {
         </AspectRatio>
       </div>
       <div className="absolute z-20 flex justify-center items-center">
-        <h1 className="text-5xl font-bold text-white">Hello from 海头镇老市</h1>
+        <h1 className="text-xl md:text-5xl font-bold text-white">
+          Hello from 海头镇老市
+        </h1>
       </div>
     </div>
   );
