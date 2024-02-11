@@ -11,7 +11,7 @@ const links = {
 };
 
 export const siteConfig = {
-  name: "Laoshi Villadge",
+  name: "Laoshi Village",
   description: "The best place to visit",
   url: "https://alan-webpage.vercel.app",
   ogImage: "https://alan-webpage.vercel.app/opengraph-image.png",
