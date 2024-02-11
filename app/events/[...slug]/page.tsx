@@ -45,35 +45,35 @@ export async function generateMetadata({
 
   const url = process.env.NEXT_PUBLIC_APP_URL;
 
-  const ogUrl = new URL(`${url}/api/og`);
-  ogUrl.searchParams.set("title", event.title);
-  ogUrl.searchParams.set("type", "Blog Post");
-  ogUrl.searchParams.set("mode", "dark");
+  // const ogUrl = new URL(`${url}/api/og`);
+  // ogUrl.searchParams.set("title", event.title);
+  // ogUrl.searchParams.set("type", "Blog Post");
+  // ogUrl.searchParams.set("mode", "dark");
 
   return {
     // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
     title: event.title,
     description: event.description,
-    openGraph: {
-      title: event.title,
-      description: event.description,
-      type: "article",
-      url: absoluteUrl(event.slug),
-      images: [
-        {
-          url: ogUrl.toString(),
-          width: 1200,
-          height: 630,
-          alt: event.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: event.title,
-      description: event.description,
-      images: [ogUrl.toString()],
-    },
+    // openGraph: {
+    //   title: event.title,
+    //   description: event.description,
+    //   type: "article",
+    //   url: absoluteUrl(event.slug),
+    //   images: [
+    //     {
+    //       url: ogUrl.toString(),
+    //       width: 1200,
+    //       height: 630,
+    //       alt: event.title,
+    //     },
+    //   ],
+    // },
+    // twitter: {
+    //   card: "summary_large_image",
+    //   title: event.title,
+    //   description: event.description,
+    //   images: [ogUrl.toString()],
+    // },
   };
 }
 
