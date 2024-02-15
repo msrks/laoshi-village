@@ -88,44 +88,19 @@ export default function BlogPage() {
           Introduction to Laoshi Village
         </PageHeaderHeading>
         <div className="md:text-lg">
-          老市村, located in 海头镇 of 儋州市, has embarked on an ecological
-          revival journey, transforming from its traditional salt production
-          roots to a model of environmental sustainability and community
-          revitalization. Historically, the village thrived on salt farming, but
-          the conversion of salt fields to shrimp ponds in the 1990s led to
-          ecological degradation, loss of biodiversity, and a decline in
-          community vitality. The shift not only resulted in pollution but also
-          left the village without a sustainable economic base, driving the
-          younger population to seek employment elsewhere and leading to a
-          demographic shift towards an aging and diminished population. In
-          response to these challenges, the 海南省蓝丝带海洋环境保护协会
-          initiated an ecological restoration project, focusing on wetland
-          restoration and waste management. The project involved the
-          comprehensive restoration of 1800 square meters of mangrove wetlands,
-          planting 6000 mangrove saplings, and establishing a mangrove
-          women&apos;s patrol team to empower local women and engage the
-          community in conservation efforts. The initiative also included
-          educational programs to raise environmental awareness and promote
-          waste
-          {/* segregation among villagers. The revitalization efforts extend beyond
-          ecological restoration to include cultural and economic development.
-          The village is exploring the revival of its salt farming heritage by
-          restoring ancient salt fields and integrating them into eco-tourism
-          and educational projects. This not only preserves the traditional
-          craftsmanship of salt production but also offers new livelihood
-          opportunities for villagers, aligning with the broader vision of
-          turning "green waters and mountains into gold and silver mountains," a
-          Chinese concept emphasizing the economic value of environmental
-          conservation. These efforts have garnered recognition, with the
-          village's project being selected as one of the "Biodiversity 100+
-          Global Typical Cases" by the United Nations Convention on Biological
-          Diversity. This acknowledgment highlights the village's commitment to
-          biodiversity conservation and sustainable development. The
-          collaborative approach, involving government support, non-profit
-          organizations, and community engagement, serves as a model for rural
-          revitalization. It showcases the potential of integrating ecological
-          conservation with cultural preservation and economic development to
-          create resilient and vibrant rural communities. */}
+          老市村, located in 海头镇 of 儋州市, transitioned from its traditional
+          salt farming to become a beacon of ecological sustainability and
+          community renewal. The village faced ecological and social decline due
+          to the shift from salt fields to shrimp ponds in the 1990s, leading to
+          environmental damage and an aging population. In response, the
+          海南省蓝丝带海洋环境保护协会 initiated a restoration project,
+          rehabilitating wetlands, planting mangroves, and promoting community
+          involvement in conservation. Efforts expanded to cultural and economic
+          revitalization, including the revival of ancient salt farming
+          integrated with eco-tourism. These initiatives have earned
+          international recognition, showcasing a successful model of combining
+          ecological conservation with economic and cultural development for
+          rural vitality.
         </div>
       </div>
 
