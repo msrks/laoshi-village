@@ -28,7 +28,7 @@ export default function Home() {
         <ImagesSliderDemo />
         <Separator className="my-8" />
       </div> */}
-      <div className="w-full relative">
+      <div className="w-full relative ">
         <AspectRatio ratio={16 / 9}>
           <div className="absolute inset-0 z-10 flex justify-center items-center">
             <h1 className="text-xl md:text-5xl font-bold text-white">
@@ -36,7 +36,7 @@ export default function Home() {
             </h1>
           </div>
           <Image
-            src="/hero1.jpeg"
+            src="/hero1_new.jpeg"
             alt=""
             fill
             className="object-cover"
