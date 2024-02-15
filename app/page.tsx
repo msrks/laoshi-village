@@ -69,7 +69,7 @@ export default function Home() {
             </Link>
           ))}
         </div>
-        <Separator className="my-8" />
+        <Separator className="hidden md:block my-8" />
       </div>
       <div className="container flex">
         <BlogPage />

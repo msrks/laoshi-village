@@ -26,12 +26,12 @@ export default function BlogPage() {
   return (
     <Shell className="md:pb-10">
       <PageHeader>
-        <PageHeaderHeading>Events</PageHeaderHeading>
+        <div className="text-xl md:text-3xl">Events</div>
         <PageHeaderDescription>
           Explore the latest news and updates from the community
         </PageHeaderDescription>
       </PageHeader>
-      <Separator className="mb-2.5" />
+      <Separator className="hidden md:block my-2" />
       <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
         <React.Suspense
           fallback={Array.from({ length: 3 }).map((_, i) => (
