@@ -7,7 +7,10 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { MainNav } from "@/components/layout/main-nav";
 import { siteConfig } from "@/config/site";
 import { MobileNav } from "@/components/layout/mobile-nav";
-import { Palmtree } from "lucide-react";
+import { Palmtree, PlayCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Suspense } from "react";
+import { AudioPlayer } from "./audio-player";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,7 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative min-h-screen flex flex-col items-center ">
             <header className="sticky top-0 z-50 w-full border-b bg-background">
-              <div className="container flex h-16 items-center space-x-2 ">
+              <div className="container flex h-16 items-center ">
                 {/* <ModeToggle /> */}
                 {/* <div className="font-bold">Laoshi Village Education Hub</div> */}
                 {/* <nav className="ml-auto text-sm font-medium space-x-6">
@@ -53,12 +56,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   // sidebarNavItems={dashboardConfig.sidebarNav}
                 />
                 <ModeToggle />
-                <audio
-                  src="/we-are-the-world.mp3"
-                  autoPlay
-                  loop
-                  controls
-                ></audio>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <AudioPlayer />
+                </Suspense>
               </div>
             </header>
             {children}
