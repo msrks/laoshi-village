@@ -23,31 +23,31 @@ export const siteConfig = {
         {
           title: "History",
           href: "/history",
-          description: "History of Laoshi Villadge.",
+          description: "History of 老市.",
           items: [],
         },
         {
-          title: "Access",
-          href: "/access",
-          description: "How to get to Laoshi Villadge.",
+          title: "Travel Information",
+          href: "/travel-information",
+          description: "How to get to 老市.",
           items: [],
         },
         {
-          title: "Magazine",
-          href: "/magazine",
-          description: "Laoshi Villadge Magazine.",
+          title: "Article",
+          href: "/article",
+          description: "老市 Article.",
           items: [],
         },
         {
           title: "Policy Plan",
           href: "/policy-plan",
-          description: "Laoshi Villadge Policy Plan.",
+          description: "老市 Policy Plan.",
           items: [],
         },
         {
           title: "Contact",
           href: "/contact",
-          description: "Contact Laoshi Villadge.",
+          description: "Contact 老市.",
           items: [],
         },
         {
@@ -75,19 +75,19 @@ export const siteConfig = {
         {
           title: "Elder Care",
           href: "/elder-care",
-          description: "Elder Care of Laoshi Villadge.",
+          description: "Elder Care of 老市.",
           items: [],
         },
         {
           title: "Kid Care",
           href: "/kid-care",
-          description: "Kid Care of Laoshi Villadge.",
+          description: "Kid Care of 老市.",
           items: [],
         },
         {
           title: "Mental Care",
           href: "/mental-care",
-          description: "Mental Care of Laoshi Villadge.",
+          description: "Mental Care of 老市.",
           items: [],
         },
       ],
@@ -98,13 +98,13 @@ export const siteConfig = {
         {
           title: "Library",
           href: "/library",
-          description: "Library of Laoshi Villadge.",
+          description: "Library of 老市.",
           items: [],
         },
         {
           title: "Business",
           href: "/buisness",
-          description: "Business of Laoshi Villadge.",
+          description: "Business of 老市.",
           items: [],
         },
       ],
@@ -115,13 +115,13 @@ export const siteConfig = {
         {
           title: "Donate",
           href: "/donate",
-          description: "Donate to Laoshi Villadge.",
+          description: "Donate to 老市.",
           items: [],
         },
         {
           title: "Volunteer",
           href: "/volunteer",
-          description: "Volunteer to Laoshi Villadge.",
+          description: "Volunteer to 老市.",
           items: [],
         },
       ],
@@ -129,7 +129,7 @@ export const siteConfig = {
   ] satisfies MainNavItem[],
   footerNav: [
     {
-      title: "Laoshi Villadge",
+      title: "老市",
       items: [
         {
           title: "Contact",

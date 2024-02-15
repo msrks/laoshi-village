@@ -32,15 +32,15 @@ export default function BlogPage() {
         </PageHeaderDescription>
       </PageHeader>
       <Separator className="mb-2.5" />
-      <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
         <React.Suspense
-          fallback={Array.from({ length: 4 }).map((_, i) => (
+          fallback={Array.from({ length: 3 }).map((_, i) => (
             <EventCardSkeleton key={i} />
           ))}
         >
-          {events.map((event, i) => (
-            <EventCard key={event.slug} event={event} i={i} />
-          ))}
+          {events.map((event, i) =>
+            i < 3 ? <EventCard key={event.slug} event={event} i={i} /> : null
+          )}
         </React.Suspense>
       </section>
     </Shell>
