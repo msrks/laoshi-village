@@ -67,6 +67,12 @@ export const siteConfig = {
           description: "Latest Events",
           items: [],
         },
+        {
+          title: "Education Hub",
+          href: "/education-hub",
+          description: "The education hub of the community",
+          items: [],
+        },
       ],
     },
     {
@@ -93,18 +99,18 @@ export const siteConfig = {
       ],
     },
     {
-      title: "Resources",
+      title: "Ecologic & Livelihoods",
       items: [
+        {
+          title: "Ecologic & Livelihoods",
+          href: "/library",
+          description: "..",
+          items: [],
+        },
         {
           title: "Library",
           href: "/library",
           description: "Library of 老市.",
-          items: [],
-        },
-        {
-          title: "Business",
-          href: "/buisness",
-          description: "Business of 老市.",
           items: [],
         },
       ],

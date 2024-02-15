@@ -23,9 +23,9 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    <div className="hidden md:flex justify-between w-full">
+    <div className="hidden md:flex justify-between w-full text-xl">
       <Link href="/" className="mr-auto hidden items-center space-x-2 md:flex">
-        <Palmtree className="size-6" />
+        <Palmtree className="size-8" />
         <span className="hidden font-bold md:inline-block">
           {siteConfig.name}
         </span>
@@ -35,7 +35,7 @@ export function MainNav({ items }: MainNavProps) {
         <NavigationMenuList>
           {items?.[0]?.items ? (
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="h-auto">
+              <NavigationMenuTrigger className="h-auto text-base">
                 {items[0].title}
               </NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -75,7 +75,7 @@ export function MainNav({ items }: MainNavProps) {
             .map((item) =>
               item?.items ? (
                 <NavigationMenuItem key={item.title}>
-                  <NavigationMenuTrigger className="h-auto capitalize">
+                  <NavigationMenuTrigger className="h-auto capitalize text-base">
                     {item.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>

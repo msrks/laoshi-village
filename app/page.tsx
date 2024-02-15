@@ -6,7 +6,7 @@ import { ImagesSliderDemo } from "./image-slider-demo";
 import Link from "next/link";
 
 const majorLinks = [
-  { imgSrc: "/hero4.jpeg", title: "About the village", href: "/about" },
+  { imgSrc: "/hero_about.jpeg", title: "About the village", href: "/about" },
   {
     imgSrc: "/hero3.jpeg",
     title: "The education hub of the community",
