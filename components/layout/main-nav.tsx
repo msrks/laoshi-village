@@ -23,9 +23,9 @@ interface MainNavProps {
 
 export function MainNav({ items }: MainNavProps) {
   return (
-    <div className="hidden md:flex justify-between w-full text-xl">
+    <div className="hidden md:flex justify-between w-full text-lg">
       <Link href="/" className="mr-auto hidden items-center space-x-2 md:flex">
-        <Palmtree className="size-8" />
+        <Palmtree className="size-6" />
         <span className="hidden font-bold md:inline-block">
           {siteConfig.name}
         </span>

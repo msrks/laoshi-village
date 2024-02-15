@@ -28,9 +28,9 @@ export default function Home() {
         <ImagesSliderDemo />
         <Separator className="my-8" />
       </div> */}
-      <div className="container relative">
-        <AspectRatio ratio={16 / 8}>
-          <div className="absolute inset-0 z-10 bg-black/30 flex justify-center items-center">
+      <div className="w-full relative">
+        <AspectRatio ratio={16 / 9}>
+          <div className="absolute inset-0 z-10 flex justify-center items-center">
             <h1 className="text-xl md:text-5xl font-bold text-white">
               Hello from 海头镇老市
             </h1>
@@ -43,7 +43,9 @@ export default function Home() {
             priority
           />
         </AspectRatio>
-        <div className="grid grid-cols-1 md:grid-cols-4 my-2 gap-2">
+      </div>
+      <div className="container relative">
+        <div className="hidden md:grid grid-cols-4 my-2 gap-2">
           {majorLinks.map((m, i) => (
             <Link
               href={m.href}
@@ -72,7 +74,9 @@ export default function Home() {
       <div className="container flex">
         <BlogPage />
 
-        <BlogPage />
+        <div className="hidden md:block">
+          <BlogPage />
+        </div>
       </div>
     </div>
   );

@@ -36,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="relative min-h-screen flex flex-col items-center">
+          <div className="relative min-h-screen flex flex-col items-center ">
             <header className="sticky top-0 z-50 w-full border-b bg-background">
               <div className="container flex h-16 items-center ">
                 {/* <ModeToggle /> */}
@@ -56,8 +56,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </div>
             </header>
             {children}
-            <footer className="w-full border-t bg-secondary ">
-              <div className="container flex h-24 items-center text-2xl font-semibold justify-around">
+            <footer className="hidden md:block w-full border-t bg-secondary ">
+              <div className="container flex py-4 items-center text-lg font-semibold justify-around">
                 {/* <div className="flex items-center space-x-4">
                   <Palmtree size={24} />
                   <span className="font-bold">Laoshi Village</span>

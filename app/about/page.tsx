@@ -70,9 +70,9 @@ export default function BlogPage() {
     .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <Shell className="md:pb-10">
-      <div className="container relative">
-        <AspectRatio ratio={16 / 5}>
+    <>
+      <div className="w-full max-w-[1400px] relative">
+        <AspectRatio ratio={16 / 6}>
           <Image
             src="/hero_about.jpeg"
             alt=""
@@ -82,12 +82,13 @@ export default function BlogPage() {
           />
         </AspectRatio>
       </div>
-      <div className="flex space-x-6">
+
+      <div className="container flex flex-col lg:flex-row gap-6 my-6">
         <PageHeaderHeading className="flex-none">
           Introduction to
           <br /> Laoshi Village
         </PageHeaderHeading>
-        <div className="text-lg">
+        <div className="md:text-lg">
           老市村, located in 海头镇 of 儋州市, has embarked on an ecological
           revival journey, transforming from its traditional salt production
           roots to a model of environmental sustainability and community
@@ -129,8 +130,8 @@ export default function BlogPage() {
         </div>
       </div>
 
-      <section>
-        <div className="grid grid-cols-1 md:grid-cols-4 my-2 gap-2">
+      <section className="container">
+        <div className="grid grid-cols-2 md:grid-cols-4 my-2 gap-2">
           {minorLinks.map((m, i) => (
             <Link
               href={m.href}
@@ -166,6 +167,6 @@ export default function BlogPage() {
           ))}
         </React.Suspense>
       </section> */}
-    </Shell>
+    </>
   );
 }
