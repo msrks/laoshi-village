@@ -84,9 +84,8 @@ export default function BlogPage() {
       </div>
 
       <div className="container flex flex-col lg:flex-row gap-6 my-6">
-        <PageHeaderHeading className="flex-none">
-          Introduction to
-          <br /> Laoshi Village
+        <PageHeaderHeading className="flex-none lg:max-w-[250px]">
+          Introduction to Laoshi Village
         </PageHeaderHeading>
         <div className="md:text-lg">
           老市村, located in 海头镇 of 儋州市, has embarked on an ecological
