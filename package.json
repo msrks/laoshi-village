@@ -37,7 +37,8 @@
     "react-dom": "18.2.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",

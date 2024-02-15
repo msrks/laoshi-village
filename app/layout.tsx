@@ -38,7 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="relative min-h-screen flex flex-col items-center ">
             <header className="sticky top-0 z-50 w-full border-b bg-background">
-              <div className="container flex h-16 items-center ">
+              <div className="container flex h-16 items-center space-x-2 ">
                 {/* <ModeToggle /> */}
                 {/* <div className="font-bold">Laoshi Village Education Hub</div> */}
                 {/* <nav className="ml-auto text-sm font-medium space-x-6">
@@ -53,6 +53,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   // sidebarNavItems={dashboardConfig.sidebarNav}
                 />
                 <ModeToggle />
+                <audio
+                  src="/we-are-the-world.mp3"
+                  autoPlay
+                  loop
+                  controls
+                ></audio>
               </div>
             </header>
             {children}
