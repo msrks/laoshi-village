@@ -20,14 +20,7 @@ export const metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: "The best place to visit",
-  keywords: [
-    "nextjs",
-    "react",
-    "react server components",
-    "skateshop",
-    "skateboarding",
-    "kickflip",
-  ],
+  keywords: ["laoshi", "老市", "海头镇老市"],
   authors: [
     {
       name: "msrks",
