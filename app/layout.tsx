@@ -7,17 +7,34 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { MainNav } from "@/components/layout/main-nav";
 import { siteConfig } from "@/config/site";
 import { MobileNav } from "@/components/layout/mobile-nav";
-import { Palmtree, PlayCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Suspense } from "react";
+import { PropsWithChildren, Suspense } from "react";
 import { AudioPlayer } from "./audio-player";
+import { absoluteUrl } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
-  title: "Laoshi Village",
-  description: "XXX Villege Community",
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: "The best place to visit",
+  keywords: [
+    "nextjs",
+    "react",
+    "react server components",
+    "skateshop",
+    "skateboarding",
+    "kickflip",
+  ],
+  authors: [
+    {
+      name: "msrks",
+      url: "https://blog.msrks.app/about",
+    },
+  ],
+  creator: "msrks",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -26,13 +43,20 @@ export const metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/og.jpg`],
+    creator: "@msrks",
+  },
+  icons: {
+    icon: "/icon.png",
+  },
+  manifest: absoluteUrl("/site.webmanifest"),
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body
@@ -42,14 +66,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="relative min-h-screen flex flex-col items-center ">
             <header className="sticky top-0 z-50 w-full border-b bg-background">
               <div className="container flex h-16 items-center ">
-                {/* <ModeToggle /> */}
-                {/* <div className="font-bold">Laoshi Village Education Hub</div> */}
-                {/* <nav className="ml-auto text-sm font-medium space-x-6">
-                  <Link href="/">Home</Link>
-                  <Link href="/about">Learn</Link>
-                  <Link href="/blog">News</Link>
-                  <Link href="/inquiry">Contact</Link>
-                </nav> */}
                 <MainNav items={siteConfig.mainNav} />
                 <MobileNav
                   mainNavItems={siteConfig.mainNav}
@@ -64,10 +80,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             {children}
             <footer className="hidden md:block w-full border-t bg-secondary ">
               <div className="container flex py-4 items-center text-lg font-semibold justify-around">
-                {/* <div className="flex items-center space-x-4">
-                  <Palmtree size={24} />
-                  <span className="font-bold">Laoshi Village</span>
-                </div> */}
                 <Link href="/">Volunteers Wanted</Link>
                 <Link href="/about">Donation</Link>
                 <Link href="/blog">Visiting Appointment</Link>
