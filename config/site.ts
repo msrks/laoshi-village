@@ -22,7 +22,7 @@ export const siteConfig = {
       items: [
         {
           title: "History",
-          href: "/history",
+          href: "/history-en",
           description: "History of 老市.",
           items: [],
         },

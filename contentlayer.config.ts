@@ -38,6 +38,9 @@ export const Page = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    image: {
+      type: "string",
+    },
   },
   computedFields,
 }));

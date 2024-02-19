@@ -25,7 +25,7 @@ const minorLinks = [
   {
     imgSrc: "/hero_temple.jpeg",
     title: "History, What to see and do",
-    href: "/history",
+    href: "/history-en",
   },
   {
     imgSrc: "/hero_organization.jpeg",
