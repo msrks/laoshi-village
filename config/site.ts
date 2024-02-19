@@ -21,12 +21,6 @@ export const siteConfig = {
       title: "About",
       items: [
         {
-          title: "History",
-          href: "/history-en",
-          description: "History of 老市.",
-          items: [],
-        },
-        {
           title: "Travel Information",
           href: "/travel-information",
           description: "How to get to 老市.",
@@ -54,6 +48,35 @@ export const siteConfig = {
           title: "Appointment",
           href: "/appointment",
           description: "Visitor Appointment",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Salt History",
+      items: [
+        {
+          title: "Historical Background",
+          href: "/history-en",
+          description: "歴史背景",
+          items: [],
+        },
+        {
+          title: "Seasalt Making Process",
+          href: "/seasalt-making-process-en",
+          description: "制盐过程",
+          items: [],
+        },
+        {
+          title: "Health Benefit of Sea Salt",
+          href: "/health-benefit-en",
+          description: "传统海盐对健康的益处",
+          items: [],
+        },
+        {
+          title: "Laoshi Salt Conservation Center",
+          href: "/salt-conservation-center-en",
+          description: "老市挝石盐保护中心",
           items: [],
         },
       ],

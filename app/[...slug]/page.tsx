@@ -2,11 +2,12 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { allPages } from "contentlayer/generated";
 
-import { Mdx } from "@/components/mdx-components";
+// import { Mdx } from "@/components/mdx-components";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Mdx } from "@/components/mdx/mdx-components";
 
 interface PageProps {
   params: {
