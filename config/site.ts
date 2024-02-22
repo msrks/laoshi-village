@@ -41,38 +41,42 @@ export const siteConfig = {
           description: "Visitor Appointment",
           items: [],
         },
-      ],
-    },
-    {
-      title: "Nature School",
-      // title: "Salt History",
-      items: [
         {
-          title: "Historical Background",
-          href: "/history-en",
-          description: "歴史背景",
-          items: [],
-        },
-        {
-          title: "Seasalt Making Process",
-          href: "/seasalt-making-process-en",
-          description: "制盐过程",
-          items: [],
-        },
-        {
-          title: "Health Benefit of Sea Salt",
-          href: "/health-benefit-en",
-          description: "传统海盐对健康的益处",
-          items: [],
-        },
-        {
-          title: "Laoshi Salt Conservation Center",
-          href: "/salt-conservation-center-en",
-          description: "老市挝石盐保护中心",
+          title: "Nature School",
+          href: "/nature-school",
+          description: "自然学校",
           items: [],
         },
       ],
     },
+
+    // title: "Salt History",
+    // items: [
+    //   {
+    //     title: "Historical Background",
+    //     href: "/history-en",
+    //     description: "歴史背景",
+    //     items: [],
+    //   },
+    //   {
+    //     title: "Seasalt Making Process",
+    //     href: "/seasalt-making-process-en",
+    //     description: "制盐过程",
+    //     items: [],
+    //   },
+    //   {
+    //     title: "Health Benefit of Sea Salt",
+    //     href: "/health-benefit-en",
+    //     description: "传统海盐对健康的益处",
+    //     items: [],
+    //   },
+    //   {
+    //     title: "Laoshi Salt Conservation Center",
+    //     href: "/salt-conservation-center-en",
+    //     description: "老市挝石盐保护中心",
+    //     items: [],
+    //   },
+    // ],
     {
       title: "Events",
       items: [
@@ -93,6 +97,12 @@ export const siteConfig = {
     {
       title: "Programs",
       items: [
+        {
+          title: "Nature School",
+          href: "/nature-school",
+          description: "自然学校",
+          items: [],
+        },
         {
           title: "Elder Care",
           href: "/elder-care",

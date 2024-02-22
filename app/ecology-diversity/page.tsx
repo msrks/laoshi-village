@@ -30,8 +30,13 @@ const minorLinks = [
   },
   {
     imgSrc: "/salt-farm.jpeg",
-    title: "Farm",
+    title: "Salt Farm",
     href: "/farm",
+  },
+  {
+    imgSrc: "/hero1.jpeg",
+    title: "3 Bridge Farm",
+    href: "/three-bridge-farm",
   },
   {
     imgSrc: "/hero_organization.jpeg",
