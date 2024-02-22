@@ -10,14 +10,14 @@ const majorLinks = [
   {
     imgSrc: "/hero3.jpeg",
     title: "The education hub of the community",
-    href: "/about",
+    href: "/",
   },
   {
     imgSrc: "/hero_diversity.jpeg",
     title: "Ecologic and diversity livelihodds",
-    href: "/about",
+    href: "/ecology-diversity",
   },
-  { imgSrc: "/hero_charity.jpeg", title: "Charity Program", href: "/about" },
+  { imgSrc: "/hero_charity.jpeg", title: "Charity Program", href: "/" },
 ];
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
       </div> */}
       <div className="w-full relative ">
         <AspectRatio ratio={16 / 9}>
-          <div className="absolute inset-0 z-10 flex justify-center items-center">
+          <div className="absolute inset-0 z-10 bg-black/10 flex justify-center items-center">
             <h1 className="text-xl md:text-5xl font-bold text-white">
               Hello from 海头镇老市
             </h1>

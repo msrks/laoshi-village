@@ -2,20 +2,11 @@ import type { FooterItem, MainNavItem } from "@/types";
 
 export type SiteConfig = typeof siteConfig;
 
-const links = {
-  twitter: "https://twitter.com/sadmann17",
-  github: "https://github.com/sadmann7/skateshop",
-  githubAccount: "https://github.com/sadmann7",
-  discord: "https://discord.com/users/sadmann7",
-  calDotCom: "https://cal.com/sadmann7",
-};
-
 export const siteConfig = {
   name: "Laoshi Village",
   description: "The best place to visit",
   url: "https://alan-webpage.vercel.app",
   ogImage: "https://alan-webpage.vercel.app/opengraph-image.png",
-  links,
   mainNav: [
     {
       title: "About",
@@ -53,7 +44,8 @@ export const siteConfig = {
       ],
     },
     {
-      title: "Salt History",
+      title: "Nature School",
+      // title: "Salt History",
       items: [
         {
           title: "Historical Background",
@@ -125,8 +117,8 @@ export const siteConfig = {
       title: "???",
       items: [
         {
-          title: "Ecologic & Livelihoods",
-          href: "/library",
+          title: "Ecologic and Diversity Livelihoods",
+          href: "/ecology-diversity",
           description: "..",
           items: [],
         },
