@@ -146,10 +146,10 @@ export default function BlogPage() {
           Nature School
         </PageHeaderHeading>
         <div className="md:text-lg">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-          perferendis adipisci molestiae accusamus dolor quis molestias natus
-          aliquam consequatur. Mollitia dignissimos repellat nulla repudiandae
-          necessitatibus nesciunt qui quis recusandae voluptatem!
+         让“村”，成为一所学校。让更多的孩子在“村”里健康快乐成长。让更多人看见地方社区与自然的生命力，
+          看见自己与每一个人与生俱来的美好 Transform the village into a nature school,where kids grow up 
+          happy and healthy. Let reveal the energy of our communities and nature,embracing the inherent beauty
+          within ourselves and others
           {/* <Button asChild variant="link">
             <Link
               href="/pdf/livelihoods-en.pdf"
