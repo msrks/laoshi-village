@@ -83,18 +83,18 @@ export const siteConfig = {
     // ],
     {
       // title: "Events",
-      title: "最新活动",
+      title: "最新活动与公告",
       items: [
         {
-          title: "Events",
+          title: "最新活动",
           href: "/events",
-          description: "Latest Events",
+          description: "Events",
           items: [],
         },
         {
-          title: "Education Hub",
-          href: "/education-hub",
-          description: "The education hub of the community",
+          title: "最新公告",
+          href: "/announcements",
+          description: "Announcements",
           items: [],
         },
       ],
@@ -103,6 +103,12 @@ export const siteConfig = {
       // title: "Programs",
       title: "社区营造项目",
       items: [
+        {
+          title: "Education Hub",
+          href: "/education-hub",
+          description: "The education hub of the community",
+          items: [],
+        },
         {
           title: "Elder Care",
           href: "/elder-care",
