@@ -6,6 +6,7 @@ export const siteConfig = {
   name: "海头老市村",
   // name: "Laoshi Village",
   heroSlogan: "Hello from 海头老市村",
+  heroSubSlogan: "为正义，爱邻居，明智生活，做最好的自己",
   description: "The best place to visit",
   url: "https://alan-webpage.vercel.app",
   ogImage: "https://alan-webpage.vercel.app/opengraph-image.png",

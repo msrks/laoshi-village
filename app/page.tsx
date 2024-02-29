@@ -32,8 +32,10 @@ export default function Home() {
       <div className="w-full relative ">
         <AspectRatio ratio={16 / 9}>
           <div className="absolute inset-0 z-10 bg-black/10 flex justify-center items-center">
-            <h1 className="text-xl md:text-5xl font-bold text-white">
+            <h1 className="text-xl md:text-5xl font-bold text-white text-center">
               {siteConfig.heroSlogan}
+              <div className="my-12" />
+              {siteConfig.heroSubSlogan}
             </h1>
           </div>
           <Image
