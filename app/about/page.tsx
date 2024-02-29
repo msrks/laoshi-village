@@ -25,7 +25,7 @@ const minorLinks = [
   {
     imgSrc: "/hero_temple.jpeg",
     title: "History, What to see and do",
-    href: "/history-en",
+    href: "/history",
   },
   {
     imgSrc: "/hero_organization.jpeg",
@@ -85,10 +85,11 @@ export default function BlogPage() {
 
       <div className="container flex flex-col lg:flex-row gap-6 my-6">
         <PageHeaderHeading className="flex-none lg:max-w-[250px]">
-          Introduction to Laoshi Village
+          {/* Introduction to Laoshi Village */}
+          老市村简介
         </PageHeaderHeading>
         <div className="md:text-lg">
-          老市村, located in 海头镇 of 儋州市, transitioned from its traditional
+          {/* 老市村, located in 海头镇 of 儋州市, transitioned from its traditional
           salt farming to become a beacon of ecological sustainability and
           community renewal. The village faced ecological and social decline due
           to the shift from salt fields to shrimp ponds in the 1990s, leading to
@@ -100,7 +101,8 @@ export default function BlogPage() {
           integrated with eco-tourism. These initiatives have earned
           international recognition, showcasing a successful model of combining
           ecological conservation with economic and cultural development for
-          rural vitality.
+          rural vitality. */}
+          儋州海头镇的老市村是一个坐落在珠碧江边的村庄小组。当地的湿地滩涂蕴藏着多样的生物物种，生存了百年的古酸豆树为居民提供着烈日下的庇护。目前村子开展了湿地生态修复、古河道恢复、生态养殖、红树林种植、自然教育等与生态保育和社区培力相关的实践探索。基于这些探索，老市希望能够进一步将人和人凝聚起来，一起推动更多村子在生态、生计以及关系层面的实践，增强社区韧性。
         </div>
       </div>
 
