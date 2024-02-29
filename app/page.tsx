@@ -5,20 +5,33 @@ import { Separator } from "@/components/ui/separator";
 import { ImagesSliderDemo } from "./image-slider-demo";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import ArticlePage from "./articles/page";
 
 const majorLinks = [
-  { imgSrc: "/hero_about.jpeg", title: "About the village", href: "/about" },
+  {
+    imgSrc: "/hero_about.jpeg",
+    // title: "About the village",
+    title: "关于老市村",
+    href: "/about",
+  },
   {
     imgSrc: "/hero3.jpeg",
-    title: "The education hub of the community",
+    // title: "The education hub of the community",
+    title: "艺文阅读",
     href: "/",
   },
   {
     imgSrc: "/hero_diversity.jpeg",
-    title: "Ecologic and diversity livelihodds",
+    // title: "Ecologic and diversity livelihodds",
+    title: "生态与多元生计",
     href: "/ecology-diversity",
   },
-  { imgSrc: "/hero_charity.jpeg", title: "Charity Program", href: "/" },
+  {
+    imgSrc: "/hero_charity.jpeg",
+    // title: "Charity Program",
+    title: "社区关怀计划",
+    href: "/",
+  },
 ];
 
 export default function Home() {
@@ -75,7 +88,7 @@ export default function Home() {
         <Separator className="hidden md:block my-8" />
       </div>
       <div className="container flex">
-        <BlogPage />
+        <ArticlePage />
 
         <div className="hidden md:block">
           <BlogPage />

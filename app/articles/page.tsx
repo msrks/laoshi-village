@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const config = {
-  title: "最新活动",
+  title: "焦点文章",
 };
 
-export default function BlogPage() {
+export default function ArticlePage() {
   const events = allEvents
     .filter((event) => event.published)
     .sort((a, b) => b.date.localeCompare(a.date));

@@ -49,6 +49,24 @@ export const metadata = {
   manifest: absoluteUrl("/site.webmanifest"),
 };
 
+const footerConfig = [
+  {
+    // title: "Volunteers Wanted",
+    title: "志愿者招募",
+    href: "/",
+  },
+  {
+    // title: "Donation",
+    title: "捐款支持",
+    href: "/about",
+  },
+  {
+    // title: "Visiting Appointment",
+    title: "参访预约",
+    href: "/blog",
+  },
+];
+
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
@@ -73,9 +91,11 @@ export default function RootLayout({ children }: PropsWithChildren) {
             {children}
             <footer className="hidden md:block w-full border-t bg-secondary ">
               <div className="container flex py-4 items-center text-lg font-semibold justify-around">
-                <Link href="/">Volunteers Wanted</Link>
-                <Link href="/about">Donation</Link>
-                <Link href="/blog">Visiting Appointment</Link>
+                {footerConfig.map((c) => (
+                  <Link href={c.href} key={c.href}>
+                    {c.title}
+                  </Link>
+                ))}
               </div>
             </footer>
           </div>
