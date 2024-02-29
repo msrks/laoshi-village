@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { allArticles } from "contentlayer/generated";
+import { allAnnouncements } from "contentlayer/generated";
 
 import { Mdx } from "@/components/mdx/mdx-components";
 
@@ -25,53 +25,55 @@ interface PostPageProps {
 
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
-  const article = allArticles.find((article) => article.slugAsParams === slug);
+  const announcement = allAnnouncements.find(
+    (announcement) => announcement.slugAsParams === slug
+  );
 
-  if (!article) {
+  if (!announcement) {
     null;
   }
 
-  return article;
+  return announcement;
 }
 
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const article = await getPostFromParams(params);
+  const announcement = await getPostFromParams(params);
 
-  if (!article) {
+  if (!announcement) {
     return {};
   }
 
   const url = process.env.NEXT_PUBLIC_APP_URL;
 
   // const ogUrl = new URL(`${url}/api/og`);
-  // ogUrl.searchParams.set("title", article.title);
+  // ogUrl.searchParams.set("title", announcement.title);
   // ogUrl.searchParams.set("type", "Blog Post");
   // ogUrl.searchParams.set("mode", "dark");
 
   return {
     // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
-    title: article.title,
-    description: article.description,
+    title: announcement.title,
+    description: announcement.description,
     // openGraph: {
-    //   title: article.title,
-    //   description: article.description,
-    //   type: "article",
-    //   url: absoluteUrl(article.slug),
+    //   title: announcement.title,
+    //   description: announcement.description,
+    //   type: "announcement",
+    //   url: absoluteUrl(announcement.slug),
     //   images: [
     //     {
     //       url: ogUrl.toString(),
     //       width: 1200,
     //       height: 630,
-    //       alt: article.title,
+    //       alt: announcement.title,
     //     },
     //   ],
     // },
     // twitter: {
     //   card: "summary_large_image",
-    //   title: article.title,
-    //   description: article.description,
+    //   title: announcement.title,
+    //   description: announcement.description,
     //   images: [ogUrl.toString()],
     // },
   };
@@ -80,15 +82,15 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  return allArticles.map((article) => ({
-    slug: article.slugAsParams.split("/"),
+  return allAnnouncements.map((announcement) => ({
+    slug: announcement.slugAsParams.split("/"),
   }));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const article = await getPostFromParams(params);
+  const announcement = await getPostFromParams(params);
 
-  if (!article) {
+  if (!announcement) {
     notFound();
   }
 
@@ -106,30 +108,32 @@ export default async function PostPage({ params }: PostPageProps) {
       </Link>
       <div className="space-y-2">
         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-          {article.date && (
-            <time dateTime={article.date}>{formatDate(article.date)}</time>
+          {announcement.date && (
+            <time dateTime={announcement.date}>
+              {formatDate(announcement.date)}
+            </time>
           )}
-          {article.date ? <div>•</div> : null}
-          <div>{article.readingTime}min</div>
+          {announcement.date ? <div>•</div> : null}
+          <div>{announcement.readingTime}min</div>
         </div>
         <h1 className="inline-block text-4xl font-bold leading-tight lg:text-5xl">
-          {article.title}
+          {announcement.title}
         </h1>
       </div>
-      {article.image && (
+      {/* {announcement.image && (
         <AspectRatio ratio={16 / 9}>
           <Image
-            src={article.image}
-            alt={article.title}
+            src={announcement.image}
+            alt={announcement.title}
             fill
             className="rounded-md border bg-muted"
             priority
           />
         </AspectRatio>
-      )}
-      <Mdx code={article.body.code} />
+      )} */}
+      <Mdx code={announcement.body.code} />
       <Separator className="my-4" />
-      <MdxPager currentItem={article} allItems={allArticles} />
+      <MdxPager currentItem={announcement} allItems={allAnnouncements} />
       <Link
         href="/events"
         className={cn(
