@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { allEvents } from "contentlayer/generated";
+import { allArticles } from "contentlayer/generated";
 
 import { Mdx } from "@/components/mdx/mdx-components";
 
@@ -25,53 +25,53 @@ interface PostPageProps {
 
 async function getPostFromParams(params: PostPageProps["params"]) {
   const slug = params?.slug?.join("/");
-  const event = allEvents.find((event) => event.slugAsParams === slug);
+  const article = allArticles.find((article) => article.slugAsParams === slug);
 
-  if (!event) {
+  if (!article) {
     null;
   }
 
-  return event;
+  return article;
 }
 
 export async function generateMetadata({
   params,
 }: PostPageProps): Promise<Metadata> {
-  const event = await getPostFromParams(params);
+  const article = await getPostFromParams(params);
 
-  if (!event) {
+  if (!article) {
     return {};
   }
 
   const url = process.env.NEXT_PUBLIC_APP_URL;
 
   // const ogUrl = new URL(`${url}/api/og`);
-  // ogUrl.searchParams.set("title", event.title);
+  // ogUrl.searchParams.set("title", article.title);
   // ogUrl.searchParams.set("type", "Blog Post");
   // ogUrl.searchParams.set("mode", "dark");
 
   return {
     // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
-    title: event.title,
-    description: event.description,
+    title: article.title,
+    description: article.description,
     // openGraph: {
-    //   title: event.title,
-    //   description: event.description,
+    //   title: article.title,
+    //   description: article.description,
     //   type: "article",
-    //   url: absoluteUrl(event.slug),
+    //   url: absoluteUrl(article.slug),
     //   images: [
     //     {
     //       url: ogUrl.toString(),
     //       width: 1200,
     //       height: 630,
-    //       alt: event.title,
+    //       alt: article.title,
     //     },
     //   ],
     // },
     // twitter: {
     //   card: "summary_large_image",
-    //   title: event.title,
-    //   description: event.description,
+    //   title: article.title,
+    //   description: article.description,
     //   images: [ogUrl.toString()],
     // },
   };
@@ -80,15 +80,15 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
-  return allEvents.map((event) => ({
-    slug: event.slugAsParams.split("/"),
+  return allArticles.map((article) => ({
+    slug: article.slugAsParams.split("/"),
   }));
 }
 
 export default async function PostPage({ params }: PostPageProps) {
-  const event = await getPostFromParams(params);
+  const article = await getPostFromParams(params);
 
-  if (!event) {
+  if (!article) {
     notFound();
   }
 
@@ -106,30 +106,30 @@ export default async function PostPage({ params }: PostPageProps) {
       </Link>
       <div className="space-y-2">
         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-          {event.date && (
-            <time dateTime={event.date}>{formatDate(event.date)}</time>
+          {article.date && (
+            <time dateTime={article.date}>{formatDate(article.date)}</time>
           )}
-          {event.date ? <div>•</div> : null}
-          <div>{event.readingTime}min</div>
+          {article.date ? <div>•</div> : null}
+          <div>{article.readingTime}min</div>
         </div>
         <h1 className="inline-block text-4xl font-bold leading-tight lg:text-5xl">
-          {event.title}
+          {article.title}
         </h1>
       </div>
-      {event.image && (
+      {article.image && (
         <AspectRatio ratio={16 / 9}>
           <Image
-            src={event.image}
-            alt={event.title}
+            src={article.image}
+            alt={article.title}
             fill
             className="rounded-md border bg-muted"
             priority
           />
         </AspectRatio>
       )}
-      <Mdx code={event.body.code} />
+      <Mdx code={article.body.code} />
       <Separator className="my-4" />
-      <MdxPager currentItem={event} allItems={allEvents} />
+      <MdxPager currentItem={article} allItems={allArticles} />
       <Link
         href="/events"
         className={cn(

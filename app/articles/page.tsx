@@ -1,16 +1,11 @@
 import * as React from "react";
 import { type Metadata } from "next";
-import { allEvents } from "contentlayer/generated";
-
+import { allArticles } from "contentlayer/generated";
 import { Separator } from "@/components/ui/separator";
-import {
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/page-header";
+import { PageHeader, PageHeaderDescription } from "@/components/page-header";
 import { Shell } from "@/components/shells/shell";
 import { EventCardSkeleton } from "./_components/event-card-skeleton";
-import { EventCard } from "./_components/event-card";
+import { ArticleCard } from "./_components/event-card";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
@@ -23,8 +18,8 @@ const config = {
 };
 
 export default function ArticlePage() {
-  const events = allEvents
-    .filter((event) => event.published)
+  const articles = allArticles
+    .filter((article) => article.published)
     .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
@@ -42,8 +37,10 @@ export default function ArticlePage() {
             <EventCardSkeleton key={i} />
           ))}
         >
-          {events.map((event, i) =>
-            i < 3 ? <EventCard key={event.slug} event={event} i={i} /> : null
+          {articles.map((article, i) =>
+            i < 3 ? (
+              <ArticleCard key={article.slug} article={article} i={i} />
+            ) : null
           )}
         </React.Suspense>
       </section>
