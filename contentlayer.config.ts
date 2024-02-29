@@ -45,6 +45,35 @@ export const Page = defineDocumentType(() => ({
   computedFields,
 }));
 
+export const Announcement = defineDocumentType(() => ({
+  name: "Announcement",
+  filePathPattern: `announcements/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    date: {
+      type: "date",
+      required: true,
+    },
+    published: {
+      type: "boolean",
+      default: true,
+    },
+    image: {
+      type: "string",
+      required: true,
+    },
+  },
+
+  computedFields,
+}));
+
 export const Article = defineDocumentType(() => ({
   name: "Article",
   filePathPattern: `articles/**/*.mdx`,
@@ -105,5 +134,5 @@ export const Event = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Event, Page, Article],
+  documentTypes: [Event, Page, Article, Announcement],
 });
