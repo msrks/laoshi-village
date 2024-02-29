@@ -4,6 +4,7 @@ import BlogPage from "./events/page";
 import { Separator } from "@/components/ui/separator";
 import { ImagesSliderDemo } from "./image-slider-demo";
 import Link from "next/link";
+import { siteConfig } from "@/config/site";
 
 const majorLinks = [
   { imgSrc: "/hero_about.jpeg", title: "About the village", href: "/about" },
@@ -32,7 +33,7 @@ export default function Home() {
         <AspectRatio ratio={16 / 9}>
           <div className="absolute inset-0 z-10 bg-black/10 flex justify-center items-center">
             <h1 className="text-xl md:text-5xl font-bold text-white">
-              Hello from 海头镇老市
+              {siteConfig.heroSlogan}
             </h1>
           </div>
           <Image

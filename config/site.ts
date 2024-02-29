@@ -3,13 +3,16 @@ import type { FooterItem, MainNavItem } from "@/types";
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Laoshi Village",
+  name: "海头老市村",
+  // name: "Laoshi Village",
+  heroSlogan: "Hello from 海头老市村",
   description: "The best place to visit",
   url: "https://alan-webpage.vercel.app",
   ogImage: "https://alan-webpage.vercel.app/opengraph-image.png",
   mainNav: [
     {
-      title: "About",
+      // title: "About",
+      title: "关于我们",
       items: [
         {
           title: "Travel Information",
@@ -41,12 +44,12 @@ export const siteConfig = {
           description: "Visitor Appointment",
           items: [],
         },
-        {
-          title: "Nature School",
-          href: "/nature-school",
-          description: "自然学校",
-          items: [],
-        },
+        // {
+        //   title: "Nature School",
+        //   href: "/nature-school",
+        //   description: "自然学校",
+        //   items: [],
+        // },
       ],
     },
 
@@ -78,7 +81,8 @@ export const siteConfig = {
     //   },
     // ],
     {
-      title: "Events",
+      // title: "Events",
+      title: "最新活动",
       items: [
         {
           title: "Events",
@@ -95,14 +99,9 @@ export const siteConfig = {
       ],
     },
     {
-      title: "Programs",
+      // title: "Programs",
+      title: "社区营造项目",
       items: [
-        {
-          title: "Nature School",
-          href: "/nature-school",
-          description: "自然学校",
-          items: [],
-        },
         {
           title: "Elder Care",
           href: "/elder-care",
@@ -124,8 +123,15 @@ export const siteConfig = {
       ],
     },
     {
-      title: "???",
+      // title: "???",
+      title: "老市自然学校",
       items: [
+        {
+          title: "Nature School",
+          href: "/nature-school",
+          description: "自然学校",
+          items: [],
+        },
         {
           title: "Ecologic and Diversity Livelihoods",
           href: "/ecology-diversity",
@@ -141,7 +147,8 @@ export const siteConfig = {
       ],
     },
     {
-      title: "Support Us",
+      // title: "Support Us",
+      title: "支持我们",
       items: [
         {
           title: "Donate",
