@@ -106,7 +106,7 @@ export function MobileNav({ mainNavItems, lang }: MobileNavProps) {
       </Sheet>
       <Link
         href="/"
-        className="mr-auto flex items-center space-x-2 md:hidden min-w-20 ml-12"
+        className="mr-auto flex items-center space-x-2 md:hidden min-w-20 ml-2"
       >
         <Palmtree className="size-6" />
         <span className=" font-bold  inline-block md:hidden">
