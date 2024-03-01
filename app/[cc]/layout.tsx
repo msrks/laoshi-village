@@ -30,10 +30,13 @@ export default function Layout({
       </header>
       {children}
       <footer className="hidden md:block w-full border-t bg-secondary ">
-        <div className="container flex py-4 items-center text-lg font-semibold justify-around">
+        <div className="container flex  py-4 items-center  justify-around">
           {siteConfig.footerNav.map((c) => (
-            <Link href={c.href} key={c.href}>
-              {params.cc === "cn" ? c.titleCn : c.title}
+            <Link href={c.href} className="flex flex-col" key={c.href}>
+              <h2 className="text-lg font-semibold">
+                {params.cc === "cn" ? c.titleCn : c.title}
+              </h2>
+              <p>{params.cc === "cn" ? c.descriptionCn : c.description}</p>
             </Link>
           ))}
         </div>

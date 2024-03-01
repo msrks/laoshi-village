@@ -203,16 +203,23 @@ export const siteConfig = {
       title: "Volunteers Wanted",
       titleCn: "志愿者招募",
       href: "/",
+      description: "Join us to build the community!",
+      descriptionCn: "定义你的青春，突破自己的框架；来与我们一起社区营造吧！",
     },
     {
       title: "Donation",
       titleCn: "捐款支持",
       href: "/about",
+      description: "Support us with your donation!",
+      descriptionCn:
+        "爱惜乡土，积少成多，卷起衣袖赞助我们；改变，让你我都看得见。",
     },
     {
       title: "Visiting Appointment",
       titleCn: "参访预约",
       href: "/blog",
+      description: "Make an appointment to visit and explore Laoshi Village",
+      descriptionCn: "预约参观、探索老市村、发掘这片土地上你从未接触过的感动",
     },
   ] satisfies FooterItem[],
 };

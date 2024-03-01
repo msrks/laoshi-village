@@ -2,6 +2,8 @@ export interface FooterItem {
   title: string;
   titleCn: string;
   href: string;
+  description?: string;
+  descriptionCn?: string;
 }
 
 export interface NavItem {
