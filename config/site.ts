@@ -1,4 +1,3 @@
-import { CC } from "@/app/[cc]/page";
 import type { FooterItem, MainNavItem } from "@/types";
 
 export type SiteConfig = typeof siteConfig;
@@ -187,14 +186,19 @@ export const siteConfig = {
   ] satisfies MainNavItem[],
   footerNav: [
     {
-      title: "老市",
-      items: [
-        {
-          title: "Contact",
-          href: "/contact",
-          external: false,
-        },
-      ],
+      title: "Volunteers Wanted",
+      titleCn: "志愿者招募",
+      href: "/",
+    },
+    {
+      title: "Donation",
+      titleCn: "捐款支持",
+      href: "/about",
+    },
+    {
+      title: "Visiting Appointment",
+      titleCn: "参访预约",
+      href: "/blog",
     },
   ] satisfies FooterItem[],
 };

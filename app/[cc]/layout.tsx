@@ -7,24 +7,6 @@ import { PropsWithChildren, Suspense } from "react";
 import { AudioPlayer } from "./audio-player";
 import { Button } from "@/components/ui/button";
 
-const footerConfig = [
-  {
-    // title: "Volunteers Wanted",
-    title: "志愿者招募",
-    href: "/",
-  },
-  {
-    // title: "Donation",
-    title: "捐款支持",
-    href: "/about",
-  },
-  {
-    // title: "Visiting Appointment",
-    title: "参访预约",
-    href: "/blog",
-  },
-];
-
 export default function Layout({
   children,
   params,
@@ -53,9 +35,9 @@ export default function Layout({
       {children}
       <footer className="hidden md:block w-full border-t bg-secondary ">
         <div className="container flex py-4 items-center text-lg font-semibold justify-around">
-          {footerConfig.map((c) => (
+          {siteConfig.footerNav.map((c) => (
             <Link href={c.href} key={c.href}>
-              {c.title}
+              {params.cc === "cn" ? c.titleCn : c.title}
             </Link>
           ))}
         </div>
