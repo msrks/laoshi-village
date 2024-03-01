@@ -1,19 +1,11 @@
-import * as React from "react";
 import { type Metadata } from "next";
 import { allEvents } from "contentlayer/generated";
-
-import { Separator } from "@/components/ui/separator";
-import {
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/page-header";
-import { Shell } from "@/components/shells/shell";
-import { EventCardSkeleton } from "./_components/event-card-skeleton";
-import { EventCard } from "./_components/event-card";
+import { PageHeaderHeading } from "@/components/page-header";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import Link from "next/link";
+import { aboutConfig } from "@/config/about";
+import { CC } from "../page";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
@@ -21,50 +13,13 @@ export const metadata: Metadata = {
   description: "Explore the latest news and updates from the community",
 };
 
-const minorLinks = [
-  {
-    imgSrc: "/hero_temple.jpeg",
-    title: "History, What to see and do",
-    href: "/history",
-  },
-  {
-    imgSrc: "/hero_organization.jpeg",
-    title: "Village organization",
-    href: "",
-  },
-  {
-    imgSrc: "/hero_woman.jpeg",
-    title: "Annual events",
-    href: "",
-  },
-  {
-    imgSrc: "/hero_volunteer.jpeg",
-    title: "Volunteers wanted",
-    href: "",
-  },
-  {
-    imgSrc: "/hero_woman.jpeg",
-    title: "Article about us",
-    href: "",
-  },
-  {
-    imgSrc: "/hero_woman.jpeg",
-    title: "Finantial Reoprt",
-    href: "",
-  },
-  {
-    imgSrc: "/hero_woman.jpeg",
-    title: "Donations",
-    href: "",
-  },
-  {
-    imgSrc: "/hero_travel_information.jpeg",
-    title: "Travel Informations",
-    href: "/travel-information",
-  },
-];
-
-export default function BlogPage() {
+export default function Page({
+  params = { cc: "cn" },
+}: {
+  params: {
+    cc?: CC;
+  };
+}) {
   const events = allEvents
     .filter((event) => event.published)
     .sort((a, b) => b.date.localeCompare(a.date));
@@ -85,38 +40,26 @@ export default function BlogPage() {
 
       <div className="container flex flex-col lg:flex-row gap-6 my-6">
         <PageHeaderHeading className="flex-none lg:max-w-[250px]">
-          {/* Introduction to Laoshi Village */}
-          老市村简介
+          {params.cc === "cn" ? aboutConfig.titleCn : aboutConfig.title}
         </PageHeaderHeading>
         <div className="md:text-lg">
-          {/* 老市村, located in 海头镇 of 儋州市, transitioned from its traditional
-          salt farming to become a beacon of ecological sustainability and
-          community renewal. The village faced ecological and social decline due
-          to the shift from salt fields to shrimp ponds in the 1990s, leading to
-          environmental damage and an aging population. In response, the
-          海南省蓝丝带海洋环境保护协会 initiated a restoration project,
-          rehabilitating wetlands, planting mangroves, and promoting community
-          involvement in conservation. Efforts expanded to cultural and economic
-          revitalization, including the revival of ancient salt farming
-          integrated with eco-tourism. These initiatives have earned
-          international recognition, showcasing a successful model of combining
-          ecological conservation with economic and cultural development for
-          rural vitality. */}
-          儋州海头镇的老市村是一个坐落在珠碧江边的村庄小组。当地的湿地滩涂蕴藏着多样的生物物种，生存了百年的古酸豆树为居民提供着烈日下的庇护。目前村子开展了湿地生态修复、古河道恢复、生态养殖、红树林种植、自然教育等与生态保育和社区培力相关的实践探索。基于这些探索，老市希望能够进一步将人和人凝聚起来，一起推动更多村子在生态、生计以及关系层面的实践，增强社区韧性。
+          {params.cc === "cn"
+            ? aboutConfig.descriptionCn
+            : aboutConfig.description}
         </div>
       </div>
 
       <section className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 my-2 gap-2">
-          {minorLinks.map((m, i) => (
+          {aboutConfig.navs.map((m, i) => (
             <Link
-              href={m.href}
+              href={`/${params.cc}/${m.href}`}
               className="col-span-1 relative group overflow-hidden"
               key={i}
             >
               <div className="absolute inset-0 z-10 bg-black/30 flex justify-center items-center">
                 <h1 className="text-xl font-bold text-white text-center p-2">
-                  {m.title}
+                  {params.cc === "cn" ? m.titleCn : m.title}
                 </h1>
               </div>
               <AspectRatio ratio={16 / 13}>
