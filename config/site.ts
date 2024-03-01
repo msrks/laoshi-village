@@ -38,13 +38,13 @@ export const siteConfig = {
           description: "How to get to Laoshi",
           items: [],
         },
-        {
-          title: "Policy Plan",
-          titleCn: "政策计划",
-          href: "/policy-plan",
-          description: "老市 Policy Plan.",
-          items: [],
-        },
+        // {
+        //   title: "Policy Plan",
+        //   titleCn: "政策计划",
+        //   href: "/policy-plan",
+        //   description: "老市 Policy Plan.",
+        //   items: [],
+        // },
         {
           title: "Contact",
           titleCn: "联系我们",
@@ -120,19 +120,6 @@ export const siteConfig = {
         //   description: "Mental Care",
         //   items: [],
         // },
-      ],
-    },
-    {
-      title: "Nature School",
-      titleCn: "老市自然学校",
-      items: [
-        {
-          title: "Nature School",
-          titleCn: "自然学校",
-          href: "/nature-school",
-          description: "Nature School",
-          items: [],
-        },
         {
           title: "Ecologic and Diversity Livelihoods",
           titleCn: "生态与多元生计",
@@ -173,6 +160,19 @@ export const siteConfig = {
           titleCn: "老市挝石盐保护中心",
           href: "/salt-conservation-center",
           description: "Laoshi Salt Conservation Center",
+          items: [],
+        },
+      ],
+    },
+    {
+      title: "Nature School",
+      titleCn: "老市自然学校",
+      items: [
+        {
+          title: "Nature School",
+          titleCn: "自然学校",
+          href: "/nature-school",
+          description: "Nature School",
           items: [],
         },
       ],
