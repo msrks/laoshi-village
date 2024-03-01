@@ -156,28 +156,135 @@ export const natureSchoolConfig = {
   ],
   navs: [
     {
-      imgSrc: "/cafe.jpeg",
+      imgSrc: "/tamarin2.jpeg",
       title: "Mayor Class",
       titleCn: "市长课堂",
       href: "/mayor-class",
     },
     {
-      imgSrc: "/salt-farm.jpeg",
+      imgSrc: "/tamarin2.jpeg",
       title: "Another Guys Class",
       titleCn: "另一个家伙的课堂",
       href: "/farm",
     },
     {
-      imgSrc: "/salt-farm.jpeg",
+      imgSrc: "/tamarin2.jpeg",
       title: "Another Guys Class",
       titleCn: "另一个家伙的课堂",
       href: "/farm",
     },
     {
-      imgSrc: "/salt-farm.jpeg",
+      imgSrc: "/tamarin2.jpeg",
       title: "Another Guys Class",
       titleCn: "另一个家伙的课堂",
       href: "/farm",
+    },
+  ],
+  activitiesTitle: "Activities in Laoshi",
+  activitiesTitleCn: "老市村 活動方案介紹",
+  activitiesNav: [
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Mayor Class",
+      titleCn: "沙灘露營",
+      description: "Camping on the beach",
+      descriptionCn:
+        "看這夕陽落下圍著營火，滿天星斗，睡在沙灘上，在乾淨的海岸線漫步，悠閒的時光用海草自由創作，一起凝視著火光，期待日出入睡吧!",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "浮潛",
+      description: "Snorkeling",
+      descriptionCn:
+        "來北海道也可以浮潛!跟當地魚夫借用的海膽田，一潛而下遍地都是可愛的海膽，乾淨的海洋裡。海星、海兔、寄居蟹，豐富的潮間帶生物等你來探訪。",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "撈魚 抓蝦",
+      description: "Fishing and shrimping",
+      descriptionCn:
+        "一人手上握一隻網子變身河川少年吧!北海道乾淨的河川可以讓大家輕易的觀察到螃蟹 蝦子 魚。是大人小孩都適合的夏季活動。",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "露營活動",
+      description: "Camping",
+      descriptionCn:
+        "黑松內山毛櫸自然學校，本身就是個露營場，提供帳棚出租、野炊料理出租，歡迎自駕行的朋友來訪。",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "住宿 餐點",
+      description: "Camping",
+      descriptionCn: "走訪黑松內地區的訪客，歡迎來自然學校住宿一晚",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "參訪研習",
+      description: "Camping",
+      descriptionCn:
+        "提供對日本自然學校有興趣者，一個實習交流參訪的平台。透過黑松內的安排可以到北海道各地自然學校交流喔!",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "馬鈴薯片DIY",
+      description: "Camping",
+      descriptionCn:
+        "北海道盛產的馬鈴薯，其實黑松內就是其中重要的產區，可以走進農家看到碩大的倉庫，乘坐大型機具，就像銀之匙一樣的體驗。最後自己動手，跟日本媽媽一起炸馬鈴薯片，享受好吃的北海道口味!",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "牧場參觀",
+      description: "Camping",
+      descriptionCn:
+        "來北海道就是要喝牛奶! 比超市還要新鮮的就是直接到產地去，一起照顧牧場的母牛們，懷著感謝的心喝下每一口得來不易的鮮奶。還可以用鮮奶自己做成奶油喔!",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "搗麻糬體驗",
+      description: "Camping",
+      descriptionCn:
+        "黑松內是糯米的產區，用在地的食材，和傳統的道具，體驗日本和風的禱麻糬吧!",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "幼兒園參訪",
+      description: "Camping",
+      descriptionCn:
+        "提供對日本幼兒園參訪、實習有興趣的你一個交流的機會，可以到當地的幼兒園實際擔任一天志工，跟著日本小孩一起上學，欣賞乾淨整潔的木質教室，還有老師們的班級經營手法~",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "國小生交流活動",
+      description: "Camping",
+      descriptionCn:
+        "黑松內山毛櫸自然學校與當地國小有緊密的合作關係，歡迎國外的國中小與日本當地進行國際交流活動。可以透過一起上體育課拉近孩子之間距離，異國料理PARTY,或是中、英文會話讓孩子從小對外國語產生興趣。",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "工作假期",
+      description: "Camping",
+      descriptionCn:
+        "歡迎公司行號、企業團體一起到黑松內進行工作假期，以國際交流為目的到訪黑松內，實際案例，建設冬天雪地迷宮，開放給當地的孩子玩，或是文化交流，介紹台灣觀光景點，讓到訪黑松內的旅人可以跟在地居民有接觸的機會。",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Another Guys Class",
+      titleCn: "大學生暑假實習",
+      description: "Camping",
+      descriptionCn:
+        "黑松內自然學校是環境教育、社區發展的實踐NPO,歡迎大學生前來交流學習。特別是6月-8月期間，北海道的熱情夏天，可以讓你的論文發表充滿環教熱血。",
     },
   ],
 };

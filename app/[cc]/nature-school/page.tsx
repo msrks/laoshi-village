@@ -156,21 +156,20 @@ export default function Page({
 
       <div className="container mx-auto  my-6 w-full text-center">
         <PageHeaderHeading className="flex-none w-full mx-auto">
-          Activities in Laoshi
+          {params.cc === "cn"
+            ? natureSchoolConfig.activitiesTitleCn
+            : natureSchoolConfig.activitiesTitle}
         </PageHeaderHeading>
       </div>
 
       <section className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 my-2 gap-2">
-          {natureSchoolConfig.navs.map((m, i) => (
-            <div key={i}>
-              <Link
-                href={m.href}
-                className="col-span-1 relative group overflow-hidden"
-              >
-                <div className="absolute inset-0 z-10 bg-black/30 flex justify-center items-center">
+          {natureSchoolConfig.activitiesNav.map((m, i) => (
+            <div key={i} className="flex flex-col">
+              <div className="col-span-1 relative  overflow-hidden">
+                <div className="absolute flex flex-col inset-0 z-10 bg-black/30 justify-center items-center">
                   <h1 className="text-xl font-bold text-white text-center p-2">
-                    {m.title}
+                    {params.cc === "cn" ? m.titleCn : m.title}
                   </h1>
                 </div>
                 <AspectRatio ratio={16 / 13}>
@@ -178,17 +177,14 @@ export default function Page({
                     src={m.imgSrc}
                     alt=""
                     fill
-                    className="object-cover group-hover:scale-105"
+                    className="object-cover"
                     priority
                   />
                 </AspectRatio>
-              </Link>
-              <div>
-                description of activity : Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Explicabo eligendi adipisci iusto aspernatur.
-                Molestiae quod possimus sit neque expedita nostrum laudantium
-                excepturi maiores minima harum et totam, molestias eos deserunt.
               </div>
+              <p className="p-2">
+                {params.cc === "cn" ? m.descriptionCn : m.description}
+              </p>
             </div>
           ))}
         </div>
