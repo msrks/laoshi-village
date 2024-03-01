@@ -87,7 +87,7 @@ export function MainNav({ items, lang }: MainNavProps) {
                       {item.items.map((item) => (
                         <ListItem
                           key={item.title}
-                          title={item.title}
+                          title={lang === "cn" ? item.titleCn : item.title}
                           href={item.href}
                         >
                           {item.description}
