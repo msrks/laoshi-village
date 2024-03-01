@@ -9,6 +9,7 @@ export interface FooterItem {
 
 export interface NavItem {
   title: string;
+  titleCn: string;
   href?: string;
   disabled?: boolean;
   external?: boolean;

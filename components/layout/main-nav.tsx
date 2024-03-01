@@ -16,18 +16,20 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Palmtree } from "lucide-react";
+import { CC } from "@/app/[cc]/page";
 
 interface MainNavProps {
   items?: MainNavItem[];
+  lang: CC;
 }
 
-export function MainNav({ items }: MainNavProps) {
+export function MainNav({ items, lang }: MainNavProps) {
   return (
     <div className="hidden md:flex justify-between w-full text-lg">
       <Link href="/" className="mr-auto hidden items-center space-x-2 md:flex">
         <Palmtree className="size-6" />
         <span className="hidden font-bold md:inline-block">
-          {siteConfig.name}
+          {lang === "cn" ? siteConfig.nameCn : siteConfig.name}
         </span>
         <span className="sr-only">Home</span>
       </Link>
@@ -36,7 +38,7 @@ export function MainNav({ items }: MainNavProps) {
           {items?.[0]?.items ? (
             <NavigationMenuItem>
               <NavigationMenuTrigger className="h-auto text-base">
-                {items[0].title}
+                {lang === "cn" ? items[0].titleCn : items[0].title}
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px]  md:grid-cols-[.75fr_1fr]">
@@ -48,10 +50,12 @@ export function MainNav({ items }: MainNavProps) {
                       >
                         <Palmtree className="size-6" />
                         <div className="mb-2 mt-4 text-md font-medium">
-                          {siteConfig.name}
+                          {lang === "cn" ? siteConfig.nameCn : siteConfig.name}
                         </div>
                         <p className="text-sm leading-tight text-muted-foreground">
-                          {siteConfig.description}
+                          {lang === "cn"
+                            ? siteConfig.descriptionCn
+                            : siteConfig.description}
                         </p>
                         <span className="sr-only">Home</span>
                       </Link>
@@ -60,7 +64,7 @@ export function MainNav({ items }: MainNavProps) {
                   {items[0].items.map((item) => (
                     <ListItem
                       key={item.title}
-                      title={item.title}
+                      title={lang === "cn" ? item.titleCn : item.title}
                       href={item.href}
                     >
                       {item.description}
@@ -76,7 +80,7 @@ export function MainNav({ items }: MainNavProps) {
               item?.items ? (
                 <NavigationMenuItem key={item.title}>
                   <NavigationMenuTrigger className="h-auto capitalize text-base">
-                    {item.title}
+                    {lang === "cn" ? item.titleCn : item.title}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 ">
@@ -99,7 +103,7 @@ export function MainNav({ items }: MainNavProps) {
                       <NavigationMenuLink
                         className={cn(navigationMenuTriggerStyle(), "h-auto")}
                       >
-                        {item.title}
+                        {lang === "cn" ? item.titleCn : item.title}
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>

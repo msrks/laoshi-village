@@ -18,13 +18,15 @@ import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Palmtree } from "lucide-react";
+import { CC } from "@/app/[cc]/page";
 
 interface MobileNavProps {
   mainNavItems: MainNavItem[];
+  lang: CC;
   //   sidebarNavItems: SidebarNavItem[];
 }
 
-export function MobileNav({ mainNavItems }: MobileNavProps) {
+export function MobileNav({ mainNavItems, lang }: MobileNavProps) {
   const segment = useSelectedLayoutSegment();
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -48,7 +50,9 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
               onClick={() => setIsOpen(false)}
             >
               <Palmtree className="size-6" />
-              <span className="font-bold">{siteConfig.name}</span>
+              <span className="font-bold">
+                {lang === "cn" ? siteConfig.nameCn : siteConfig.name}
+              </span>
               <span className="sr-only">Home</span>
             </Link>
           </div>
@@ -56,13 +60,18 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
             <div className="pl-1 pr-7">
               <Accordion
                 type="multiple"
-                defaultValue={mainNavItems.map((item) => item.title)}
+                defaultValue={mainNavItems.map((item) =>
+                  lang === "cn" ? item.titleCn : item.title
+                )}
                 className="w-full"
               >
                 {mainNavItems?.map((item, index) => (
-                  <AccordionItem value={item.title} key={index}>
+                  <AccordionItem
+                    value={lang === "cn" ? item.titleCn : item.title}
+                    key={index}
+                  >
                     <AccordionTrigger className="text-sm capitalize">
-                      {item.title}
+                      {lang === "cn" ? item.titleCn : item.title}
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="flex flex-col space-y-2">
@@ -75,14 +84,14 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
                               setIsOpen={setIsOpen}
                               disabled={subItem.disabled}
                             >
-                              {subItem.title}
+                              {lang === "cn" ? subItem.titleCn : subItem.title}
                             </MobileLink>
                           ) : (
                             <div
                               key={index}
                               className="text-foreground/70 transition-colors"
                             >
-                              {item.title}
+                              {lang === "cn" ? item.titleCn : item.title}
                             </div>
                           )
                         )}
@@ -101,7 +110,7 @@ export function MobileNav({ mainNavItems }: MobileNavProps) {
       >
         <Palmtree className="size-6" />
         <span className=" font-bold  inline-block md:hidden">
-          {siteConfig.name}
+          {lang === "cn" ? siteConfig.nameCn : siteConfig.name}
         </span>
         <span className="sr-only">Home</span>
       </Link>
