@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import { MobileNav } from "@/components/layout/mobile-nav";
 import { PropsWithChildren, Suspense } from "react";
 import { AudioPlayer } from "./audio-player";
-import { Button } from "@/components/ui/button";
+import LangToggle from "@/components/layout/lang-toggle";
 
 export default function Layout({
   children,
@@ -25,11 +25,7 @@ export default function Layout({
           <Suspense fallback={<div>Loading...</div>}>
             <AudioPlayer />
           </Suspense>
-          <Button variant="ghost" asChild size="sm">
-            <Link href={`/${params.cc === "cn" ? "en" : "cn"}`}>
-              {params.cc !== "cn" ? "中文" : "English"}
-            </Link>
-          </Button>
+          <LangToggle />
         </div>
       </header>
       {children}
