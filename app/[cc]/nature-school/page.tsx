@@ -37,7 +37,7 @@ const minorLinks = [
   // items: [
   //   {
   //     title: "Historical Background",
-  //     href: "/history-en",
+  //     href: "/salt-history",
   //     description: "歴史背景",
   //     items: [],
   //   },
@@ -87,7 +87,7 @@ const minorLinks2 = [
   // items: [
   //   {
   //     title: "Historical Background",
-  //     href: "/history-en",
+  //     href: "/salt-history",
   //     description: "歴史背景",
   //     items: [],
   //   },

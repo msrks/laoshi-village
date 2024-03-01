@@ -150,7 +150,7 @@ export const siteConfig = {
         {
           title: "Historical Background of Salt",
           titleCn: "历史背景",
-          href: "/history-en",
+          href: "/salt-history",
           description: "Historical Background of Salt",
           items: [],
         },
