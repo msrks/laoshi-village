@@ -25,6 +25,13 @@ export const siteConfig = {
           items: [],
         },
         {
+          title: "History",
+          titleCn: "历史",
+          href: "/history",
+          description: "History",
+          items: [],
+        },
+        {
           title: "Travel Information",
           titleCn: "交通信息",
           href: "/travel-information",
