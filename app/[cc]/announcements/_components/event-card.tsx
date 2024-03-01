@@ -1,20 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { type Announcement } from "contentlayer/generated";
-
 import { formatDate } from "@/lib/utils";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceholderImage } from "@/components/placeholder-image";
+import { CC } from "../../page";
 
 interface AnnouncementCardProps {
   announcement: Announcement;
   i: number;
+  lang: CC;
 }
 
-export function AnnouncementCard({ announcement, i }: AnnouncementCardProps) {
+export function AnnouncementCard({
+  announcement,
+  i,
+  lang,
+}: AnnouncementCardProps) {
   return (
-    <Link key={announcement.slug} href={announcement.slug}>
+    <Link key={announcement.slug} href={`/${lang}/${announcement.slug}`}>
       <span className="sr-only">{announcement.title}</span>
       <article className="space-y-4">
         <AspectRatio ratio={16 / 9}>

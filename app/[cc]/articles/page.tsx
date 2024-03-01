@@ -49,7 +49,12 @@ export default function ArticlePage({
         >
           {articles.map((article, i) =>
             i < 3 ? (
-              <ArticleCard key={article.slug} article={article} i={i} />
+              <ArticleCard
+                key={article.slug}
+                article={article}
+                i={i}
+                lang={params.cc!}
+              />
             ) : null
           )}
         </React.Suspense>

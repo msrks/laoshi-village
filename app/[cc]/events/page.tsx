@@ -1,13 +1,8 @@
 import * as React from "react";
 import { type Metadata } from "next";
 import { allEvents } from "contentlayer/generated";
-
 import { Separator } from "@/components/ui/separator";
-import {
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/page-header";
+import { PageHeader, PageHeaderDescription } from "@/components/page-header";
 import { Shell } from "@/components/shells/shell";
 import { EventCardSkeleton } from "./_components/event-card-skeleton";
 import { EventCard } from "./_components/event-card";
@@ -52,7 +47,14 @@ export default function EventPages({
           ))}
         >
           {events.map((event, i) =>
-            i < 3 ? <EventCard key={event.slug} event={event} i={i} /> : null
+            i < 3 ? (
+              <EventCard
+                key={event.slug}
+                event={event}
+                i={i}
+                lang={params.cc!}
+              />
+            ) : null
           )}
         </React.Suspense>
       </section>

@@ -6,15 +6,17 @@ import { formatDate } from "@/lib/utils";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceholderImage } from "@/components/placeholder-image";
+import { CC } from "../../page";
 
 interface EventCardProps {
   event: Event;
   i: number;
+  lang: CC;
 }
 
-export function EventCard({ event, i }: EventCardProps) {
+export function EventCard({ event, i, lang }: EventCardProps) {
   return (
-    <Link key={event.slug} href={event.slug}>
+    <Link key={event.slug} href={`/${lang}/${event.slug}`}>
       <span className="sr-only">{event.title}</span>
       <article className="space-y-4">
         <AspectRatio ratio={16 / 9}>

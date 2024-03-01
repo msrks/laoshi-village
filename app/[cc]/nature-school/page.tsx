@@ -1,21 +1,11 @@
-import * as React from "react";
 import { type Metadata } from "next";
 import { allEvents } from "contentlayer/generated";
-
 import { Separator } from "@/components/ui/separator";
-import {
-  PageHeader,
-  PageHeaderDescription,
-  PageHeaderHeading,
-} from "@/components/page-header";
-import { Shell } from "@/components/shells/shell";
-import { EventCardSkeleton } from "./_components/event-card-skeleton";
-import { EventCard } from "./_components/event-card";
+import { PageHeaderHeading } from "@/components/page-header";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Palmtree } from "lucide-react";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
@@ -146,10 +136,11 @@ export default function BlogPage() {
           Nature School
         </PageHeaderHeading>
         <div className="md:text-lg">
-         让“村”，成为一所学校。让更多的孩子在“村”里健康快乐成长。让更多人看见地方社区与自然的生命力，
-          看见自己与每一个人与生俱来的美好 Transform the village into a nature school,where kids grow up 
-          happy and healthy. Let reveal the energy of our communities and nature,embracing the inherent beauty
-          within ourselves and others
+          让“村”，成为一所学校。让更多的孩子在“村”里健康快乐成长。让更多人看见地方社区与自然的生命力，
+          看见自己与每一个人与生俱来的美好 Transform the village into a nature
+          school,where kids grow up happy and healthy. Let reveal the energy of
+          our communities and nature,embracing the inherent beauty within
+          ourselves and others
           {/* <Button asChild variant="link">
             <Link
               href="/pdf/livelihoods-en.pdf"

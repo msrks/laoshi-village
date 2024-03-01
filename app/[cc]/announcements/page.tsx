@@ -6,6 +6,7 @@ import { PageHeader, PageHeaderDescription } from "@/components/page-header";
 import { Shell } from "@/components/shells/shell";
 import { EventCardSkeleton } from "./_components/event-card-skeleton";
 import { AnnouncementCard } from "./_components/event-card";
+import { CC } from "../page";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
@@ -17,7 +18,13 @@ const config = {
   title: "最新公告",
 };
 
-export default function AnnouncementPage() {
+export default function AnnouncementPage({
+  params = { cc: "cn" },
+}: {
+  params: {
+    cc?: CC;
+  };
+}) {
   const announcements = allAnnouncements
     .filter((announcement) => announcement.published)
     .sort((a, b) => b.date.localeCompare(a.date));
@@ -41,6 +48,7 @@ export default function AnnouncementPage() {
                 key={announcement.slug}
                 announcement={announcement}
                 i={i}
+                lang={params.cc!}
               />
             ) : null
           )}
