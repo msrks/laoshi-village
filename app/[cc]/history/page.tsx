@@ -1,7 +1,6 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { CC } from "../page";
 import Image from "next/image";
-import { title } from "process";
 
 const config = {
   imgSrc: "/hero_temple.jpeg",

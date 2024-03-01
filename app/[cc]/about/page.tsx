@@ -1,5 +1,4 @@
 import { type Metadata } from "next";
-import { allEvents } from "contentlayer/generated";
 import { PageHeaderHeading } from "@/components/page-header";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
@@ -9,8 +8,8 @@ import { CC } from "../page";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
-  title: "Event",
-  description: "Explore the latest news and updates from the community",
+  title: "About",
+  description: "about the community",
 };
 
 export default function Page({
@@ -20,10 +19,6 @@ export default function Page({
     cc?: CC;
   };
 }) {
-  const events = allEvents
-    .filter((event) => event.published)
-    .sort((a, b) => b.date.localeCompare(a.date));
-
   return (
     <>
       <div className="w-full max-w-[1400px] relative">
