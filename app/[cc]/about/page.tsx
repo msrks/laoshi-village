@@ -29,7 +29,7 @@ export default function Page({
       <div className="w-full max-w-[1400px] relative">
         <AspectRatio ratio={16 / 6}>
           <Image
-            src="/hero_about.jpeg"
+            src={aboutConfig.imgSrc}
             alt=""
             fill
             className="object-cover"
@@ -75,17 +75,6 @@ export default function Page({
           ))}
         </div>
       </section>
-      {/* <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <React.Suspense
-          fallback={Array.from({ length: 3 }).map((_, i) => (
-            <EventCardSkeleton key={i} />
-          ))}
-        >
-          {events.map((event, i) => (
-            <EventCard key={event.slug} event={event} i={i} />
-          ))}
-        </React.Suspense>
-      </section> */}
     </>
   );
 }
