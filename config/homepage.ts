@@ -10,7 +10,7 @@ export const homepageConfig = {
       imgSrc: "/hero3.jpeg",
       title: "The education hub of the community",
       titleCn: "艺文阅读",
-      href: "/",
+      href: "/education-hub",
     },
     {
       imgSrc: "/hero_diversity.jpeg",
@@ -22,7 +22,7 @@ export const homepageConfig = {
       imgSrc: "/hero_charity.jpeg",
       title: "Charity Program",
       titleCn: "社区关怀计划",
-      href: "/",
+      href: "/donate",
     },
   ],
 };

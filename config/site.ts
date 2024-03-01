@@ -18,6 +18,13 @@ export const siteConfig = {
       titleCn: "关于我们",
       items: [
         {
+          title: "About",
+          titleCn: "关于老市",
+          href: "/about",
+          description: "About Laoshi",
+          items: [],
+        },
+        {
           title: "Travel Information",
           titleCn: "交通信息",
           href: "/travel-information",

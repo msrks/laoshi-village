@@ -48,7 +48,7 @@ export default function LandingPage({
         <div className="hidden md:grid grid-cols-4 my-2 gap-2">
           {homepageConfig.navs.map((m, i) => (
             <Link
-              href={m.href}
+              href={`/${params.cc}/${m.href}`}
               className="col-span-1 relative group overflow-hidden"
               key={i}
             >
