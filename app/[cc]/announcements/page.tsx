@@ -23,7 +23,7 @@ export default function AnnouncementPage() {
     .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <Shell className="md:pb-10">
+    <Shell className="md:pb-10 min-h-[calc(100vh-124px)]">
       <PageHeader>
         <div className="text-xl md:text-3xl">{config.title}</div>
         <PageHeaderDescription>announcements..</PageHeaderDescription>

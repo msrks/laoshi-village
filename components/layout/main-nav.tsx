@@ -26,7 +26,10 @@ interface MainNavProps {
 export function MainNav({ items, lang }: MainNavProps) {
   return (
     <div className="hidden md:flex justify-between w-full text-lg">
-      <Link href="/" className="mr-auto hidden items-center space-x-2 md:flex">
+      <Link
+        href={`/${lang}`}
+        className="mr-auto hidden items-center space-x-2 md:flex"
+      >
         <Palmtree className="size-6" />
         <span className="hidden font-bold md:inline-block">
           {lang === "cn" ? siteConfig.nameCn : siteConfig.name}
@@ -45,7 +48,7 @@ export function MainNav({ items, lang }: MainNavProps) {
                   <li className="row-span-3">
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/"
+                        href={`/${lang}`}
                         className="flex size-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       >
                         <Palmtree className="size-6" />
@@ -65,7 +68,7 @@ export function MainNav({ items, lang }: MainNavProps) {
                     <ListItem
                       key={item.title}
                       title={lang === "cn" ? item.titleCn : item.title}
-                      href={item.href}
+                      href={`/${lang}/${item.href}`}
                     >
                       {item.description}
                     </ListItem>
@@ -88,7 +91,7 @@ export function MainNav({ items, lang }: MainNavProps) {
                         <ListItem
                           key={item.title}
                           title={lang === "cn" ? item.titleCn : item.title}
-                          href={item.href}
+                          href={`/${lang}/${item.href}`}
                         >
                           {item.description}
                         </ListItem>
@@ -99,7 +102,11 @@ export function MainNav({ items, lang }: MainNavProps) {
               ) : (
                 item.href && (
                   <NavigationMenuItem key={item.title}>
-                    <Link href={item.href} legacyBehavior passHref>
+                    <Link
+                      href={`/${lang}/${item.href}`}
+                      legacyBehavior
+                      passHref
+                    >
                       <NavigationMenuLink
                         className={cn(navigationMenuTriggerStyle(), "h-auto")}
                       >

@@ -57,12 +57,12 @@ export default async function PagePage({ params }: PageProps) {
   const basePath = params.slug[params.slug.length - 1].slice(0, -3);
 
   return (
-    <article className="container max-w-3xl py-8 md:py-10 space-y-6">
+    <article className="container max-w-3xl py-8 md:py-10 space-y-6 min-h-[calc(100vh-124px)]">
       <div className="flex items-center">
         <h1 className="inline-block text-3xl font-bold leading-tight lg:text-4xl mr-auto">
           {page.title}
         </h1>
-        <Button size="icon" variant="ghost" asChild>
+        {/* <Button size="icon" variant="ghost" asChild>
           <Link href={basePath + "-en"}>🇺🇸</Link>
         </Button>
         <Button size="icon" variant="ghost" asChild>
@@ -70,7 +70,7 @@ export default async function PagePage({ params }: PageProps) {
         </Button>
         <Button size="icon" variant="ghost" asChild>
           <Link href={basePath + "-ja"}>🇯🇵</Link>
-        </Button>
+        </Button> */}
       </div>
 
       {/* {page.description && <p className="text-xl">{page.description}</p>} */}
