@@ -169,10 +169,17 @@ export const siteConfig = {
       titleCn: "老市自然学校",
       items: [
         {
-          title: "Nature School",
-          titleCn: "自然学校",
+          title: "Activities & Courses",
+          titleCn: "活动与课程",
           href: "/nature-school",
-          description: "Nature School",
+          description: "Activities & Courses",
+          items: [],
+        },
+        {
+          title: "Schedule",
+          titleCn: "活動日程表",
+          href: "/schedule",
+          description: "Schedule",
           items: [],
         },
       ],
