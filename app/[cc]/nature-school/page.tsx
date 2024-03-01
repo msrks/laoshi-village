@@ -1,128 +1,33 @@
 import { type Metadata } from "next";
-import { allEvents } from "contentlayer/generated";
-import { Separator } from "@/components/ui/separator";
 import { PageHeaderHeading } from "@/components/page-header";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import Link from "next/link";
+import { CC } from "../page";
 import { Button } from "@/components/ui/button";
+import { natureSchoolConfig } from "@/config/nature-school";
+import { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
-  title: "Event",
-  description: "Explore the latest news and updates from the community",
+  title: "Nature School",
+  description: "Nature School",
 };
 
-const minorLinks = [
-  {
-    imgSrc: "/cafe.jpeg",
-    title: "Mayor Class",
-    href: "/mayor-class",
-  },
-  {
-    imgSrc: "/salt-farm.jpeg",
-    title: "Another Guys Class",
-    href: "/farm",
-  },
-  {
-    imgSrc: "/salt-farm.jpeg",
-    title: "Another Guys Class",
-    href: "/farm",
-  },
-  {
-    imgSrc: "/salt-farm.jpeg",
-    title: "Another Guys Class",
-    href: "/farm",
-  },
-  // items: [
-  //   {
-  //     title: "Historical Background",
-  //     href: "/salt-history",
-  //     description: "歴史背景",
-  //     items: [],
-  //   },
-  //   {
-  //     title: "Seasalt Making Process",
-  //     href: "/seasalt-making-process",
-  //     description: "制盐过程",
-  //     items: [],
-  //   },
-  //   {
-  //     title: "Health Benefit of Sea Salt",
-  //     href: "/health-benefit",
-  //     description: "传统海盐对健康的益处",
-  //     items: [],
-  //   },
-  //   {
-  //     title: "Laoshi Salt Conservation Center",
-  //     href: "/salt-conservation-center",
-  //     description: "老市挝石盐保护中心",
-  //     items: [],
-  //   },
-  // ],
-];
-
-const minorLinks2 = [
-  {
-    imgSrc: "/cafe.jpeg",
-    title: "Activity 1",
-    href: "/contact",
-  },
-  {
-    imgSrc: "/cafe.jpeg",
-    title: "Activity 1",
-    href: "/cafe",
-  },
-  {
-    imgSrc: "/cafe.jpeg",
-    title: "Activity 1",
-    href: "/cafe",
-  },
-  {
-    imgSrc: "/cafe.jpeg",
-    title: "Activity 1",
-    href: "/cafe",
-  },
-
-  // items: [
-  //   {
-  //     title: "Historical Background",
-  //     href: "/salt-history",
-  //     description: "歴史背景",
-  //     items: [],
-  //   },
-  //   {
-  //     title: "Seasalt Making Process",
-  //     href: "/seasalt-making-process",
-  //     description: "制盐过程",
-  //     items: [],
-  //   },
-  //   {
-  //     title: "Health Benefit of Sea Salt",
-  //     href: "/health-benefit",
-  //     description: "传统海盐对健康的益处",
-  //     items: [],
-  //   },
-  //   {
-  //     title: "Laoshi Salt Conservation Center",
-  //     href: "/salt-conservation-center",
-  //     description: "老市挝石盐保护中心",
-  //     items: [],
-  //   },
-  // ],
-];
-
-export default function BlogPage() {
-  const events = allEvents
-    .filter((event) => event.published)
-    .sort((a, b) => b.date.localeCompare(a.date));
-
+export default function Page({
+  params = { cc: "cn" },
+}: {
+  params: {
+    cc?: CC;
+  };
+}) {
   return (
     <>
       <div className="w-full max-w-[1400px] relative">
         <AspectRatio ratio={16 / 6}>
           <Image
-            src="/tamarind.jpeg"
+            src={natureSchoolConfig.imgSrc}
             alt=""
             fill
             className="object-cover"
@@ -132,15 +37,15 @@ export default function BlogPage() {
       </div>
 
       <div className="container flex flex-col lg:flex-row gap-6 my-6">
-        <PageHeaderHeading className="flex-none lg:max-w-[250px]">
-          Nature School
+        <PageHeaderHeading className="flex-none lg:w-[280px]">
+          {params.cc === "cn"
+            ? natureSchoolConfig.titleCn
+            : natureSchoolConfig.title}
         </PageHeaderHeading>
-        <div className="md:text-lg">
-          让“村”，成为一所学校。让更多的孩子在“村”里健康快乐成长。让更多人看见地方社区与自然的生命力，
-          看见自己与每一个人与生俱来的美好 Transform the village into a nature
-          school,where kids grow up happy and healthy. Let reveal the energy of
-          our communities and nature,embracing the inherent beauty within
-          ourselves and others
+        <div className="md:text-lg ">
+          {params.cc === "cn"
+            ? natureSchoolConfig.descriptionCn
+            : natureSchoolConfig.description}
           {/* <Button asChild variant="link">
             <Link
               href="/pdf/livelihoods-en.pdf"
@@ -153,63 +58,84 @@ export default function BlogPage() {
         </div>
       </div>
 
-      <div className="container flex flex-col lg:flex-row gap-6 my-6">
-        <PageHeaderHeading className="flex-none lg:max-w-[250px]">
-          Past Events Feedbacks
+      <div className="container flex flex-col lg:flex-row gap-6 my-6 ">
+        <PageHeaderHeading className="flex-none lg:w-[280px]">
+          {params.cc === "cn"
+            ? natureSchoolConfig.feedbackTitleCn
+            : natureSchoolConfig.feedbackTitle}
         </PageHeaderHeading>
-        <div className="md:text-lg">
-          <Button asChild variant="link" className="underline">
-            <Link
-              href="https://mp.weixin.qq.com/s/QOGtKsTm1BGtyj6_ITvOvA"
-              className="md:text-lg"
-              target="_blank"
+        <div className="md:text-lg flex flex-col items-start ">
+          {natureSchoolConfig.feedbackNavs.map((m, i) => (
+            <Button
+              key={i}
+              asChild
+              variant="link"
+              className="underline px-0 hover:text-primary/70"
             >
-              海童会 : 我们如何在村庄学习，在不同的文化与大自然中吸取能量。
-            </Link>
-          </Button>
+              <Link href={m.href} className="md:text-lg" target="_blank">
+                {params.cc === "cn" ? m.titleCn : m.title}
+              </Link>
+            </Button>
+          ))}
         </div>
       </div>
 
       <div className="container grid grid-cols-2">
-        <div className=" flex flex-col lg:flex-row gap-6 my-6">
-          <PageHeaderHeading className="flex-none lg:max-w-[250px]">
-            Members of Team
-          </PageHeaderHeading>
-          <div className="md:text-lg">
-            <div>organization-1</div>
-            <div>organization-2</div>
-            <div>organization-3</div>
-            <div>organization-3</div>
-            <div>organization-3</div>
-            <div>organization-3</div>
-          </div>
+        <div>
+          {natureSchoolConfig.subsections.map((m, i) => (
+            <div key={i} className="flex flex-col my-6 gap-2">
+              <h1
+                className={cn("font-semibold flex-none", {
+                  "text-3xl": i === 0,
+                  "text-xl": i !== 0,
+                })}
+              >
+                {params.cc === "cn" ? m.titleCn : m.title}
+              </h1>
+              <div className="md:text-lg">
+                {m.items.map((item, i) => (
+                  <div key={i}>
+                    {params.cc === "cn" ? item.nameCn : item.name}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
-        <div className=" flex flex-col lg:flex-row gap-6 my-6">
-          <PageHeaderHeading className="flex-none lg:max-w-[250px]">
-            List of Experts
-          </PageHeaderHeading>
-          <div className="md:text-lg">
-            <div>expert-1</div>
-            <div>expert-2</div>
-            <div>expert-3</div>
-            <div>expert-3</div>
-            <div>expert-3</div>
-            <div>expert-3</div>
-          </div>
+        <div>
+          {natureSchoolConfig.subsections2.map((m, i) => (
+            <div key={i} className="flex flex-col my-6 gap-2">
+              <h1
+                className={cn("font-semibold flex-none", {
+                  "text-3xl": i === 0,
+                  "text-xl": i !== 0,
+                })}
+              >
+                {params.cc === "cn" ? m.titleCn : m.title}
+              </h1>
+              <div className="md:text-lg">
+                {m.items.map((item, i) => (
+                  <div key={i}>
+                    {params.cc === "cn" ? item.nameCn : item.name}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
       <section className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 my-2 gap-2">
-          {minorLinks.map((m, i) => (
+          {natureSchoolConfig.navs.map((m, i) => (
             <Link
-              href={m.href}
+              href={`/${params.cc}/${m.href}`}
               className="col-span-1 relative group overflow-hidden"
               key={i}
             >
               <div className="absolute inset-0 z-10 bg-black/30 flex justify-center items-center">
                 <h1 className="text-xl font-bold text-white text-center p-2">
-                  {m.title}
+                  {params.cc === "cn" ? m.titleCn : m.title}
                 </h1>
               </div>
               <AspectRatio ratio={16 / 13}>
@@ -236,7 +162,7 @@ export default function BlogPage() {
 
       <section className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 my-2 gap-2">
-          {minorLinks2.map((m, i) => (
+          {natureSchoolConfig.navs.map((m, i) => (
             <div key={i}>
               <Link
                 href={m.href}
@@ -267,17 +193,6 @@ export default function BlogPage() {
           ))}
         </div>
       </section>
-      {/* <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <React.Suspense
-          fallback={Array.from({ length: 3 }).map((_, i) => (
-            <EventCardSkeleton key={i} />
-          ))}
-        >
-          {events.map((event, i) => (
-            <EventCard key={event.slug} event={event} i={i} />
-          ))}
-        </React.Suspense>
-      </section> */}
     </>
   );
 }
