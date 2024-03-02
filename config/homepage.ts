@@ -1,4 +1,25 @@
 export const homepageConfig = {
+  carouselItems: [
+    {
+      imgSrc: "/hero1_new.jpeg",
+      title: "Hello from 海头老市村",
+      titleCn: "Hello from 海头老市村",
+      description:
+        "For justice, love neighbor, wise living, be the best of yourself",
+      descriptionCn: "为正义，爱邻居，明智生活，做最好的自己",
+      href: "/about",
+    },
+    {
+      imgSrc: "/crab.jpeg",
+      title: "Laoshi Nature School",
+      titleCn: "老市自然学校",
+      description:
+        "Let the “village” become a school. Let more children grow up healthy and happy in the “village”, and let more people see the vitality of local communities and nature, and see the beauty that everyone is born with",
+      descriptionCn:
+        "让“村”，成为一所学校。让更多的孩子在“村”里健康快乐成长，让更多人看见地方社区与自然的生命力，看见自己与每一个人与生俱来的美好",
+      href: "/nature-school",
+    },
+  ],
   navs: [
     {
       imgSrc: "/hero_about.jpeg",

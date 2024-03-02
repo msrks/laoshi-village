@@ -2,10 +2,10 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
 import ArticlePage from "./articles/page";
 import { homepageConfig } from "@/config/homepage";
 import EventPages from "./events/page";
+import CarouselComponent from "./carousel";
 
 export type CC = "en" | "cn";
 
@@ -18,32 +18,7 @@ export default function LandingPage({
 }) {
   return (
     <div className="grow flex flex-col items-center justify-center relative w-full">
-      {/* <Image src="/demo1.jpg" alt="demo1" width={500} height={500} /> */}
-      {/* <div className="container relative">
-        <ImagesSliderDemo />
-        <Separator className="my-8" />
-      </div> */}
-      <div className="w-full relative ">
-        <AspectRatio ratio={16 / 9}>
-          <div className="absolute inset-0 z-10 bg-black/10 flex justify-center items-center">
-            <h1 className="text-xl md:text-5xl font-bold text-white text-center">
-              {siteConfig.heroSlogan}
-              <div className="my-12" />
-              {params.cc === "cn"
-                ? siteConfig.heroSubSloganCn
-                : siteConfig.heroSubSlogan}
-            </h1>
-          </div>
-          <Image
-            src="/hero1_new.jpeg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </AspectRatio>
-      </div>
-
+      <CarouselComponent lang={params.cc!} />
       <div className="container relative">
         <div className="hidden md:grid grid-cols-4 my-2 gap-2">
           {homepageConfig.navs.map((m, i) => (
@@ -69,11 +44,10 @@ export default function LandingPage({
             </Link>
           ))}
         </div>
-        <Separator className="hidden md:block my-8" />
       </div>
+      <Separator className="container hidden md:block my-8" />
       <div className="container flex">
         <ArticlePage params={{ cc: params.cc }} />
-
         <div className="hidden md:block">
           <EventPages params={{ cc: params.cc }} />
         </div>
