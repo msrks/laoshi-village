@@ -33,7 +33,7 @@ export default function ArticlePage({
     .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <Shell className="md:pb-10 min-h-[calc(100vh-124px)]">
+    <Shell className="md:pb-10 min-h-[calc(100vh-172px)]">
       <PageHeader>
         <div className="text-xl md:text-3xl">
           {params.cc === "cn" ? config.titleCn : config.title}
