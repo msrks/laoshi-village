@@ -36,7 +36,7 @@ export default function Page({
       <div className="container py-6 space-y-4">
         <h1 className="text-xl md:text-3xl font-semibold">全部活動</h1>
 
-        <div className="flex gap-4 containe flex-col xs:flex-row ">
+        <div className="flex gap-4 containe flex-col sm:flex-row ">
           <GroupSelector />
           <TypeSelector />
           <AgeSelector />

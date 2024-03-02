@@ -14,7 +14,7 @@ export default function Layout({
   return (
     <div className="relative min-h-screen flex flex-col items-center ">
       <header className="sticky top-0 z-50 w-full border-b bg-background">
-        <div className="container flex h-16 items-center ">
+        <div className="container  flex h-12 items-center ">
           <MainNav items={siteConfig.mainNav} lang={params.cc} />
           <MobileNav
             mainNavItems={siteConfig.mainNav}

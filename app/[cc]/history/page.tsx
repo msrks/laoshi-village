@@ -59,7 +59,7 @@ export default function Page({
   };
 }) {
   return (
-    <div className="xs:container px-4 xs:px-0 space-y-2 xs:space-y-12 mb-12">
+    <div className="sm:container px-4 sm:px-0 space-y-2 sm:space-y-12 mb-12">
       <div className="w-full max-w-[1400px] relative">
         <AspectRatio ratio={16 / 3}>
           <Image
