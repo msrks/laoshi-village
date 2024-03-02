@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { natureSchoolConfig } from "@/config/nature-school";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import { Calendar, Sprout } from "lucide-react";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
@@ -35,7 +36,6 @@ export default function Page({
           />
         </AspectRatio>
       </div>
-
       <div className="container flex flex-col lg:flex-row gap-6 my-6">
         <PageHeaderHeading className="flex-none lg:w-[280px]">
           {params.cc === "cn"
@@ -57,7 +57,6 @@ export default function Page({
           </Button> */}
         </div>
       </div>
-
       <div className="container flex flex-col lg:flex-row gap-6 my-6 ">
         <PageHeaderHeading className="flex-none lg:w-[280px]">
           {params.cc === "cn"
@@ -79,7 +78,6 @@ export default function Page({
           ))}
         </div>
       </div>
-
       <div className="container grid grid-cols-2">
         <div>
           {natureSchoolConfig.subsections.map((m, i) => (
@@ -124,6 +122,28 @@ export default function Page({
           ))}
         </div>
       </div>
+      <div className="flex container gap-2">
+        <Button asChild variant="ghost">
+          <Link
+            href={`/${params.cc}/activities-at-nature-school`}
+            className="md:text-lg"
+            target="_blank"
+          >
+            全部活動
+            <Sprout className="ml-2 size-6" />
+          </Link>
+        </Button>
+        <Button asChild variant="ghost">
+          <Link
+            href={`/${params.cc}/calendar-at-nature-school`}
+            className="md:text-lg"
+            target="_blank"
+          >
+            活動日誌
+            <Calendar className="ml-2 size-6" />
+          </Link>
+        </Button>
+      </div>
 
       <section className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 my-2 gap-2">
@@ -151,9 +171,7 @@ export default function Page({
           ))}
         </div>
       </section>
-
       <Separator className="my-4 container" />
-
       <div className="container mx-auto  my-6 w-full text-center">
         <PageHeaderHeading className="flex-none w-full mx-auto">
           {params.cc === "cn"
@@ -161,7 +179,6 @@ export default function Page({
             : natureSchoolConfig.activitiesTitle}
         </PageHeaderHeading>
       </div>
-
       <section className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 my-2 gap-2">
           {natureSchoolConfig.activitiesNav.map((m, i) => (

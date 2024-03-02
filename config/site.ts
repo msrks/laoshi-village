@@ -185,7 +185,7 @@ export const siteConfig = {
         {
           title: "Calendar",
           titleCn: "活動日誌",
-          href: "/calendar",
+          href: "/calendar-at-nature-schol",
           description: "Calendar",
           items: [],
         },
