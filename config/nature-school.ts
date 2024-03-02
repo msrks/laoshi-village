@@ -1,7 +1,7 @@
 export const natureSchoolConfig = {
   title: "Nature School",
   titleCn: "老市自然学校",
-  imgSrc: "/tamarind.jpeg",
+  imgSrc: "/crab.jpeg",
   description:
     "Transform the village into a natureschool,where kids grow up happy and healthy. Let reveal the energy ofour communities and nature,embracing the inherent beauty withinourselves and others",
   descriptionCn:

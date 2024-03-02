@@ -22,14 +22,14 @@ export function AnnouncementCard({
     <Link key={announcement.slug} href={`/${lang}/${announcement.slug}`}>
       <span className="sr-only">{announcement.title}</span>
       <article className="space-y-4">
-        <AspectRatio ratio={16 / 9}>
+        <AspectRatio ratio={16 / 9} className="overflow-hidden relative">
           {announcement.image ? (
             <Image
               src={announcement.image}
               alt={announcement.title}
               fill
               sizes="(min-width: 1024px) 384px, (min-width: 768px) 288px, (min-width: 640px) 224px, 100vw"
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover hover:scale-105"
               priority={i <= 1}
             />
           ) : (

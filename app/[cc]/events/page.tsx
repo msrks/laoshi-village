@@ -7,6 +7,7 @@ import { Shell } from "@/components/shells/shell";
 import { EventCardSkeleton } from "./_components/event-card-skeleton";
 import { EventCard } from "./_components/event-card";
 import { CC } from "../page";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
@@ -22,17 +23,23 @@ const config = {
 
 export default function EventPages({
   params = { cc: "cn" },
+  asSubsection = false,
 }: {
   params: {
     cc?: CC;
   };
+  asSubsection?: boolean;
 }) {
   const events = allEvents
     .filter((event) => event.published)
     .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <Shell className="md:pb-10 min-h-[calc(100vh-172px)]">
+    <Shell
+      className={cn("md:pb-10 ", {
+        "min-h-[calc(100vh-172px)]": !asSubsection,
+      })}
+    >
       <PageHeader>
         <div className="text-xl md:text-3xl">
           {params.cc === "cn" ? config.titleCn : config.title}

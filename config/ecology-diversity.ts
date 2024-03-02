@@ -1,7 +1,7 @@
 export const ecologyDiversityConfig = {
   title: "Ecologic and diversity livelihoods",
   titleCn: "生态与多元生计",
-  imgSrc: "/crab.jpeg",
+  imgSrc: "/tamarind.jpeg",
   description:
     "Talking about the natural resources of LaoShi Village, there are 113tamarind trees, most of which are ancient trees over a hundred yearsold. They surround the residential areas of LaoShi Village, blendinginto the front streets and backyards of the village, providingresidents with daily shade and yielding tamarind fruits year afteryear. Located to the north of LaoShi Village is the Zhu Bi River, anestuarine habitat where fresh and brackish waters converge. It hosts avariety of crabs, with a majority being fiddler crabs, as well asdiverse shellfish, fish, and shrimp. A flat wetland area of over 300acres was once developed by the ancestors of LaoShi Village into saltfields (using ancient sand drying techniques). The former salt fieldsof LaoShi Village were registered by the Danzhou Salt Bureau, andduring its heyday, over 30 households in the village were engaged intraditional salt production. At that time, the people of LaoShiVillage relied on the salt industry for their livelihoods. Although itwas hard work, it provided security, and life was worry-free.",
   descriptionCn:
