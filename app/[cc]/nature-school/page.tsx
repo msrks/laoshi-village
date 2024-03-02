@@ -63,13 +63,13 @@ export default function Page({
             ? natureSchoolConfig.feedbackTitleCn
             : natureSchoolConfig.feedbackTitle}
         </PageHeaderHeading>
-        <div className="md:text-lg flex flex-col items-start ">
+        <div className="md:text-lg flex flex-col items-start gap-1 ">
           {natureSchoolConfig.feedbackNavs.map((m, i) => (
             <Button
               key={i}
               asChild
               variant="link"
-              className="underline px-0 hover:text-primary/70"
+              className="underline px-0 hover:text-primary/70 text-wrap"
             >
               <Link href={m.href} className="md:text-lg" target="_blank">
                 {params.cc === "cn" ? m.titleCn : m.title}
@@ -123,7 +123,7 @@ export default function Page({
         </div>
       </div>
       <div className="flex container gap-2">
-        <Button asChild variant="ghost">
+        <Button asChild variant="default">
           <Link
             href={`/${params.cc}/activities-at-nature-school`}
             className="md:text-lg"

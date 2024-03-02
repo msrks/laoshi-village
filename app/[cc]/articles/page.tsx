@@ -36,7 +36,7 @@ export default function ArticlePage({
 
   return (
     <Shell
-      className={cn("md:pb-10 ", {
+      className={cn("md:pb-10", {
         "min-h-[calc(100vh-172px)]": !asSubsection,
       })}
     >

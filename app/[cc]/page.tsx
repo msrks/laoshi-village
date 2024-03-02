@@ -46,7 +46,7 @@ export default function LandingPage({
         </div>
       </div>
       <Separator className="container hidden md:block my-8" />
-      <div className="container flex">
+      <div className="flex">
         <ArticlePage params={{ cc: params.cc }} asSubsection />
         <div className="hidden md:block">
           <EventPages params={{ cc: params.cc }} asSubsection />
