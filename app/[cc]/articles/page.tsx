@@ -47,7 +47,7 @@ export default function ArticlePage({
         <PageHeaderDescription>{config.description}</PageHeaderDescription>
       </PageHeader>
       <Separator className="hidden md:block my-2" />
-      <section className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         <React.Suspense
           fallback={Array.from({ length: 3 }).map((_, i) => (
             <EventCardSkeleton key={i} />
