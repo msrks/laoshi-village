@@ -133,7 +133,7 @@ export default function Page({
             <Sprout className="ml-2 size-6" />
           </Link>
         </Button>
-        <Button asChild variant="ghost">
+        {/* <Button asChild variant="ghost">
           <Link
             href={`/${params.cc}/calendar-at-nature-school`}
             className="md:text-lg"
@@ -142,7 +142,7 @@ export default function Page({
             活動日誌
             <Calendar className="ml-2 size-6" />
           </Link>
-        </Button>
+        </Button> */}
       </div>
 
       <section className="container">

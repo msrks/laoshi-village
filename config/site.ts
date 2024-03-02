@@ -182,13 +182,13 @@ export const siteConfig = {
           description: "Activities & Courses",
           items: [],
         },
-        {
-          title: "Calendar",
-          titleCn: "活動日誌",
-          href: "/calendar-at-nature-schol",
-          description: "Calendar",
-          items: [],
-        },
+        // {
+        //   title: "Calendar",
+        //   titleCn: "活動日誌",
+        //   href: "/calendar-at-nature-schol",
+        //   description: "Calendar",
+        //   items: [],
+        // },
       ],
     },
     {
