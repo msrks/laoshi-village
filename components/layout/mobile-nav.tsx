@@ -79,7 +79,7 @@ export function MobileNav({ mainNavItems, lang }: MobileNavProps) {
                           subItem.href ? (
                             <MobileLink
                               key={index}
-                              href={String(subItem.href)}
+                              href={`/${lang}/${subItem.href}`}
                               segment={String(segment)}
                               setIsOpen={setIsOpen}
                               disabled={subItem.disabled}

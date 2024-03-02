@@ -59,7 +59,7 @@ export default function Page({
   };
 }) {
   return (
-    <div className="container space-y-12 mb-12">
+    <div className="xs:container px-4 xs:px-0 space-y-2 xs:space-y-12 mb-12">
       <div className="w-full max-w-[1400px] relative">
         <AspectRatio ratio={16 / 3}>
           <Image
@@ -72,7 +72,7 @@ export default function Page({
         </AspectRatio>
       </div>
       {config.items.map((m, i) => (
-        <div className="w-full relative grid grid-cols-4 gap-6" key={i}>
+        <div className="w-full relative sm:grid grid-cols-4 gap-6" key={i}>
           <h1 className="col-span-4 text-3xl font-semibold">
             {params.cc === "cn" ? m.titleCn : m.title}
           </h1>

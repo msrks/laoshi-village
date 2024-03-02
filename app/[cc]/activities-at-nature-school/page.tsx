@@ -36,14 +36,14 @@ export default function Page({
       <div className="container py-6 space-y-4">
         <h1 className="text-xl md:text-3xl font-semibold">全部活動</h1>
 
-        <div className="flex gap-4 container ">
+        <div className="flex gap-4 containe flex-col xs:flex-row ">
           <GroupSelector />
           <TypeSelector />
           <AgeSelector />
         </div>
 
         <div className="flex sm:flex-row flex-col">
-          <div className="flex-none mr-2">
+          <div className="flex-none mr-2 mb-4">
             <CalendarDemo />
           </div>
           <div className="flex flex-wrap gap-2">
