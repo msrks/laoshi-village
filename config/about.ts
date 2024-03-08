@@ -10,19 +10,19 @@ export const aboutConfig = {
     {
       imgSrc: "/hero_temple.jpeg",
       title: "History, What to see and do",
-      titleCn: "历史、景点和活动",
+      titleCn: "老市村的总体介绍",
       href: "/history",
     },
     {
       imgSrc: "/hero_organization.jpeg",
       title: "Village organization",
-      titleCn: "村庄组织",
+      titleCn: "社区组织架构",
       href: "",
     },
     {
       imgSrc: "/hero_woman.jpeg",
       title: "Annual events",
-      titleCn: "年度活动",
+      titleCn: "社区大事记",
       href: "",
     },
     {
@@ -52,7 +52,7 @@ export const aboutConfig = {
     {
       imgSrc: "/hero_travel_information.jpeg",
       title: "Travel Informations",
-      titleCn: "旅游信息",
+      titleCn: "交通信息",
       href: "/travel-information",
     },
   ],
