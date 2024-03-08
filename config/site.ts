@@ -135,27 +135,6 @@ export const siteConfig = {
           items: [],
         },
         {
-          title: "Historical Background of Salt",
-          titleCn: "历史背景",
-          href: "/salt-history",
-          description: "Historical Background of Salt",
-          items: [],
-        },
-        {
-          title: "Seasalt Making Process",
-          titleCn: "制盐过程",
-          href: "/seasalt-making-process",
-          description: "Seasalt Making Process",
-          items: [],
-        },
-        {
-          title: "Health Benefit of Sea Salt",
-          titleCn: "盐对健康的益处",
-          href: "/health-benefit",
-          description: "Health Benefit of Sea Salt",
-          items: [],
-        },
-        {
           title: "Laoshi Salt Conservation Center",
           titleCn: "老市挝石盐保护中心",
           href: "/salt-conservation-center",
