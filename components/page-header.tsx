@@ -30,9 +30,9 @@ const headingVariants = cva(
   {
     variants: {
       size: {
-        default: "text-3xl md:text-4xl",
-        sm: "text-2xl md:text-3xl",
-        lg: "text-4xl md:text-5xl",
+        default: "text-2xl md:text-3xl",
+        sm: "text-xl md:text-2xl",
+        lg: "text-3xl md:text-4xl",
       },
     },
     defaultVariants: {

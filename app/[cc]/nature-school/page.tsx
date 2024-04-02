@@ -63,7 +63,7 @@ export default function Page({
             ? natureSchoolConfig.feedbackTitleCn
             : natureSchoolConfig.feedbackTitle}
         </PageHeaderHeading>
-        <div className="md:text-lg flex flex-col items-start gap-1 ">
+        <div className="md:text-lg flex flex-col items-start">
           {natureSchoolConfig.feedbackNavs.map((m, i) => (
             <Button
               key={i}
@@ -78,7 +78,7 @@ export default function Page({
           ))}
         </div>
       </div>
-      <div className="container grid grid-cols-2">
+      <div className="container grid grid-cols-2 gap-4">
         <div>
           {natureSchoolConfig.subsections.map((m, i) => (
             <div key={i} className="flex flex-col my-6 gap-2">
@@ -90,7 +90,7 @@ export default function Page({
               >
                 {params.cc === "cn" ? m.titleCn : m.title}
               </h1>
-              <div className="md:text-lg">
+              <div className="md:text-md">
                 {m.items.map((item, i) => (
                   <div key={i}>
                     {params.cc === "cn" ? item.nameCn : item.name}
@@ -111,7 +111,7 @@ export default function Page({
               >
                 {params.cc === "cn" ? m.titleCn : m.title}
               </h1>
-              <div className="md:text-lg">
+              <div className="md:text-md">
                 {m.items.map((item, i) => (
                   <div key={i}>
                     {params.cc === "cn" ? item.nameCn : item.name}
