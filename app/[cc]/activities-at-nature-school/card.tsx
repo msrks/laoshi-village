@@ -10,7 +10,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Calendar, Clock4, MapPin } from "lucide-react";
+import { Calendar, Clock4, MapPin, Smile, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -43,6 +43,14 @@ export function ActivityCard({ activity }: { activity: Activity }) {
           <div className="flex items-center gap-2">
             <MapPin className="size-4" />
             {activity.location}
+          </div>
+          <div className="flex items-center gap-2">
+            <Smile className="size-4" />
+            {activity.age}
+          </div>
+          <div className="flex items-center gap-2">
+            <Users className="size-4" />
+            {activity.capacity}
           </div>
           <Button size="sm" asChild className="mr-auto">
             <Link href={`/cn/${activity.slug}`}>詳情</Link>

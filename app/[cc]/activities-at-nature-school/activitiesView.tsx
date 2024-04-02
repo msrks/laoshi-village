@@ -15,11 +15,11 @@ export default function ActivitiesView({
 
   return (
     <>
-      <div className="flex gap-4 containe flex-col sm:flex-row ">
+      {/* <div className="flex gap-4 containe flex-col sm:flex-row ">
         <GroupSelector />
         <TypeSelector />
         <AgeSelector />
-      </div>
+      </div> */}
 
       <div className="flex sm:flex-row flex-col items-start">
         <div className="flex-none mr-2 mb-4">
@@ -31,19 +31,14 @@ export default function ActivitiesView({
         </div>
         <div className="flex flex-wrap gap-2">
           {activities
-            .filter((activity) => {
+            .filter((a) => {
               if (!date || date.length === 0) return true;
-              return (
-                // activity.date.split("T")[0] === date.toISOString().split("T")[0]
-                date.some(
-                  (d) =>
-                    activity.date.split("T")[0] ===
-                    d.toISOString().split("T")[0]
-                )
+              return date.some(
+                (d) => a.date.split("T")[0] === d.toISOString().split("T")[0]
               );
             })
-            .map((activity, i) => (
-              <ActivityCard activity={activity} key={i} />
+            .map((a, i) => (
+              <ActivityCard activity={a} key={i} />
             ))}
         </div>
       </div>
