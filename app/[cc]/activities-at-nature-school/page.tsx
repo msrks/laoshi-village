@@ -2,9 +2,9 @@ import { type Metadata } from "next";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import Image from "next/image";
 import { CC } from "../page";
-import { CalendarDemo } from "./calendar";
-import { CardDemo } from "./card";
-import { AgeSelector, GroupSelector, TypeSelector } from "./selector";
+import { allActivities } from "@/.contentlayer/generated";
+import { activitiesConfig } from "@/config/activities-at-nature-school";
+import ActivitiesView from "./activitiesView";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
@@ -15,16 +15,18 @@ export const metadata: Metadata = {
 export default function Page({
   params = { cc: "cn" },
 }: {
-  params: {
-    cc?: CC;
-  };
+  params: { cc?: CC };
 }) {
+  const activities = allActivities
+    .filter((event) => event.published)
+    .sort((a, b) => b.date.localeCompare(a.date));
+
   return (
     <>
       <div className="w-full max-w-[1400px] relative">
-        <AspectRatio ratio={16 / 6}>
+        <AspectRatio ratio={16 / 2}>
           <Image
-            src="/tamarin2.jpeg"
+            src={activitiesConfig.imgSrc}
             alt=""
             fill
             className="object-cover"
@@ -34,25 +36,13 @@ export default function Page({
       </div>
 
       <div className="container py-6 space-y-4">
-        <h1 className="text-xl md:text-3xl font-semibold">全部活動</h1>
+        <h1 className="text-xl md:text-3xl font-semibold">
+          {params.cc === "cn"
+            ? activitiesConfig.titleCn
+            : activitiesConfig.title}
+        </h1>
 
-        <div className="flex gap-4 containe flex-col sm:flex-row ">
-          <GroupSelector />
-          <TypeSelector />
-          <AgeSelector />
-        </div>
-
-        <div className="flex sm:flex-row flex-col">
-          <div className="flex-none mr-2 mb-4">
-            <CalendarDemo />
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <CardDemo />
-            <CardDemo />
-            <CardDemo />
-            <CardDemo />
-          </div>
-        </div>
+        <ActivitiesView activities={activities} />
       </div>
     </>
   );

@@ -18,7 +18,7 @@ const computedFields: ComputedFields = {
     type: "number",
     resolve: (doc) => {
       const content = doc.body.raw as string;
-      const wordsPerMinute = 200;
+      const wordsPerMinute = 50;
       const numberOfWords = content.split(/\s/g).length;
       const minutes = numberOfWords / wordsPerMinute;
       return Math.ceil(minutes);
@@ -41,6 +41,7 @@ export const Page = defineDocumentType(() => ({
     image: {
       type: "string",
     },
+    date: { type: "date", required: true },
   },
   computedFields,
 }));
@@ -69,6 +70,32 @@ export const Announcement = defineDocumentType(() => ({
       type: "string",
       required: true,
     },
+  },
+
+  computedFields,
+}));
+
+export const Activity = defineDocumentType(() => ({
+  name: "Activity",
+  filePathPattern: `activities-at-nature-school/**/*.mdx`,
+  contentType: "mdx",
+  fields: {
+    title: { type: "string", required: true },
+    description: { type: "string" },
+    date: { type: "date", required: true },
+    time: { type: "string" },
+    location: { type: "string" },
+    age: { type: "string" },
+    capacity: { type: "string" },
+    fee: { type: "string" },
+    requirements: { type: "string" },
+    organizer: { type: "string" },
+    keywords: { type: "string" },
+    theme: { type: "string" },
+    instructor: { type: "string" },
+    transportation: { type: "string" },
+    published: { type: "boolean", default: true },
+    image: { type: "string", required: true },
   },
 
   computedFields,
@@ -134,5 +161,5 @@ export const Event = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Event, Page, Article, Announcement],
+  documentTypes: [Event, Page, Article, Announcement, Activity],
 });

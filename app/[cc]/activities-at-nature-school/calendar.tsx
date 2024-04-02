@@ -1,16 +1,23 @@
 "use client";
 
 import { Calendar } from "@/components/ui/calendar";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 
-export function CalendarDemo() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
-
+export function CalendarDemo({
+  dateList,
+  date,
+  setDate,
+}: {
+  dateList: string[];
+  date: Date[] | undefined;
+  setDate: Dispatch<SetStateAction<Date[] | undefined>>;
+}) {
   return (
     <Calendar
-      mode="single"
+      mode="multiple"
       selected={date}
       onSelect={setDate}
+      disabled={(date) => !dateList.includes(date.toISOString().split("T")[0])}
       className="rounded-md border"
     />
   );
