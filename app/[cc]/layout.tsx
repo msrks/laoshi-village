@@ -30,7 +30,7 @@ export default function Layout({
       </header>
       {children}
       <footer className="hidden md:block w-full border-t bg-secondary ">
-        <div className="container flex  py-4 items-center  justify-around">
+        <div className="container flex  py-4 items-center  justify-around gap-4">
           {siteConfig.footerNav.map((c) => (
             <Link href={c.href} className="flex flex-col" key={c.href}>
               <h2 className="text-lg font-semibold">
