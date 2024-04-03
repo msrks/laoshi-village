@@ -135,27 +135,13 @@ export const Event = defineDocumentType(() => ({
   filePathPattern: `events/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-    date: {
-      type: "date",
-      required: true,
-    },
-    published: {
-      type: "boolean",
-      default: true,
-    },
-    image: {
-      type: "string",
-      required: true,
-    },
+    title: { type: "string", required: true },
+    description: { type: "string" },
+    date: { type: "date", required: true },
+    published: { type: "boolean", default: true },
+    image: { type: "string", required: true },
+    externalLink: { type: "string" },
   },
-
   computedFields,
 }));
 

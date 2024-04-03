@@ -16,7 +16,10 @@ interface EventCardProps {
 
 export function EventCard({ event, i, lang }: EventCardProps) {
   return (
-    <Link key={event.slug} href={`/${lang}/${event.slug}`}>
+    <Link
+      key={event.slug}
+      href={event.externalLink ?? `/${lang}/${event.slug}`}
+    >
       <span className="sr-only">{event.title}</span>
       <article className="space-y-4">
         <AspectRatio ratio={16 / 9} className="overflow-hidden relative">
