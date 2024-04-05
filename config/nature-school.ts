@@ -15,7 +15,8 @@ export const natureSchoolConfig = {
       items: [
         {
           name: "Tan Xiyun",
-          nameCn: "谭喜云 校長（平民書馆馆長,老市村村长）土木工程师10年，有丰富建筑。海头小学足球教练，有多年社区治理经验，同时也是玩音乐，爱运动，擅长各项体育运动，游泳，足球，排球，羽毛球……象棋，爱读书，爱思考，重实践，爱旅行，有北京，西藏，日本骑行经历，在美国硅谷当过足球教练，目前仍在斯坦福大学游学",
+          nameCn:
+            "谭喜云 校長（平民書馆馆長,老市村村长）土木工程师10年，有丰富建筑。海头小学足球教练，有多年社区治理经验，同时也是玩音乐，爱运动，擅长各项体育运动，游泳，足球，排球，羽毛球……象棋，爱读书，爱思考，重实践，爱旅行，有北京，西藏，日本骑行经历，在美国硅谷当过足球教练，目前仍在斯坦福大学游学",
         },
         {
           name: "Liang Baohuang",
@@ -184,6 +185,24 @@ export const natureSchoolConfig = {
   activitiesTitleCn: "老市村 活動方案介紹",
   activitiesNav: [
     {
+      imgSrc: "/student-internship.png",
+      title: "Summer Internship for University Students",
+      titleCn: "大學生暑假實習",
+      description:
+        "The Old City Nature School is a rural community practicing environmental education and community development, and welcomes university students to come and exchange ideas. Especially during the period of June-August, the passionate summer in Hai Tou, Danzhou, can fill your thesis presentation with environmental education fervor.",
+      descriptionCn:
+        "老市自然學校是環境教育、社區發展的實踐乡村社区,歡迎大學生前來交流學習。特別是6月-8月期間，儋州海头的熱情夏天，可以讓你的論文發表充滿環教熱血。",
+    },
+    {
+      imgSrc: "/companyteambuilding.png",
+      title: "Company Team Building and Work Holidays",
+      titleCn: "企业团建与工作假期",
+      description:
+        "Welcome companies and corporate groups to Laoshi Village for team building, annual meetings, and work holidays. Whether you visit Laoshi Village for relaxation and local customs or for the purpose of communication, you can experience the local customs of Laoshi Village, ancient trees, wetlands, oceans, and practical cases of grassroots community governance. Various interesting community building projects in education, culture, and psychology allow workplace professionals visiting Laoshi Village to have the opportunity to contact with nature and grassroots communities.",
+      descriptionCn:
+        "歡迎公司、企業團體一起到老市村進行团建、年会、工作假期，无论是以放松体验地方风土人情还是交流為目的到訪老市村，古树，湿地，海洋，基层社区治理的實際案例，种种教育、文化、心理有意思的社区营造项目，讓到訪老市村的职场达人接觸到大自然与基层社区的“真实”的機會。",
+    },
+    {
       imgSrc: "/crab.jpeg",
       title: "Mayor Class",
       titleCn: "沙灘露營",
@@ -269,22 +288,6 @@ export const natureSchoolConfig = {
       description: "Camping",
       descriptionCn:
         "黑松內山毛櫸自然學校與當地國小有緊密的合作關係，歡迎國外的國中小與日本當地進行國際交流活動。可以透過一起上體育課拉近孩子之間距離，異國料理PARTY,或是中、英文會話讓孩子從小對外國語產生興趣。",
-    },
-    {
-      imgSrc: "/companyteambuilding.png",
-      title: "Another Guys Class",
-      titleCn: "企业团建与工作假期",
-      description: "Camping",
-      descriptionCn:
-        "歡迎公司、企業團體一起到老市村進行团建、年会、工作假期，无论是以放松体验地方风土人情还是交流為目的到訪老市村，古树，湿地，海洋，基层社区治理的實際案例，种种教育、文化、心理有意思的社区营造项目，讓到訪老市村的职场达人接觸到大自然与基层社区的“真实”的機會。",
-    },
-    {
-      imgSrc: "/student-internship.png",
-      title: "Another Guys Class",
-      titleCn: "大學生暑假實習",
-      description: "Camping",
-      descriptionCn:
-        "老市自然學校是環境教育、社區發展的實踐乡村社区,歡迎大學生前來交流學習。特別是6月-8月期間，儋州海头的熱情夏天，可以讓你的論文發表充滿環教熱血。",
     },
   ],
 };
