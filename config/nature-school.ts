@@ -38,7 +38,7 @@ export const natureSchoolConfig = {
       items: [
         {
           name: "Cafe",
-          nameCn: "住在客家三合院（內部現代、外觀傳統）",
+          nameCn: "住在平民书馆与近水楼台民宿（自然融合建筑）",
         },
         {
           name: "Salt Farm",
