@@ -38,7 +38,7 @@ export const natureSchoolConfig = {
       items: [
         {
           name: "Cafe",
-          nameCn: "住在平民书馆与近水楼台民宿（自然融合建筑）",
+          nameCn: "住在平民书馆与近水楼台民宿（自然融合建筑1）",
         },
         {
           name: "Salt Farm",
