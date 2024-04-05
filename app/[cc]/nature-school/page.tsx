@@ -145,7 +145,7 @@ export default function Page({
         </Button> */}
       </div>
 
-      <section className="container">
+      {/* <section className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 my-2 gap-2">
           {natureSchoolConfig.navs.map((m, i) => (
             <Link
@@ -170,7 +170,7 @@ export default function Page({
             </Link>
           ))}
         </div>
-      </section>
+      </section> */}
       <Separator className="my-4 container" />
       <div className="container mx-auto  my-6 w-full text-center">
         <PageHeaderHeading className="flex-none w-full mx-auto">
