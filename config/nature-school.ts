@@ -204,9 +204,10 @@ export const natureSchoolConfig = {
     },
     {
       imgSrc: "/crab.jpeg",
-      title: "Mayor Class",
+      title: "Family Camp",
       titleCn: "沙灘露營",
-      description: "Camping on the beach",
+      description:
+        "Watch this sunset around a campfire with a star-filled sky, sleep on the beach, stroll along the clean coastline, spend leisurely hours creating freely with seaweed, and go to sleep together gazing at the fire in anticipation of the sunrise!",
       descriptionCn:
         "看這夕陽落下圍著營火，滿天星斗，睡在沙灘上，在乾淨的海岸線漫步，悠閒的時光用海草自由創作，一起凝視著火光，期待日出入睡吧!",
     },
