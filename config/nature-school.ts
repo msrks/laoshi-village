@@ -5,7 +5,7 @@ export const natureSchoolConfig = {
   description:
     "Transform the village into a natureschool,where kids grow up happy and healthy. Let reveal the energy ofour communities and nature,embracing the inherent beauty withinourselves and others",
   descriptionCn:
-    "老市村自然学校位置位于海南儋州海头镇珠碧江河畔，淡咸水湿地入海口（北部湾）交汇地区。源头于白沙山区的珠碧江的干净溪流，邻近的也是天然无污染的海岸线。一直以“文化””生态“教育“做为社区营造理念的老市村于2024年成立了自然学校，利用整个村庄当作自然体验基地，创造「交流」与「学习」的场所。自然学校以儿童至成人为对象，企划各种自然体验、乡村旅游、户外教学等与环境、社区结合相关的活动，追求人与自然、人与人，人与社会的交流。让“村”，成为一所学校。让更多的孩子在“村”里健康快乐成长。让更多人看见地方社区与自然的生命力，看见自己与每一个人与生俱来的美好",
+    "老市村自然学校位置位于海南儋州海头镇珠碧江河畔，淡咸水湿地入海口（北部湾）交汇地区。源头于白沙山区的珠碧江的干净溪流，邻近的也是天然无污染的海岸线。一直以“文化””生态“教育“做为社区营造理念的老市村于2024年成立了自然学校，利用整个村庄当作自然体验基地，创造「交流」与「学习」的场所。自然学校以儿童至成人为对象，企划各种自然体验、乡村旅游、户外教学等与环境、社区结合相关的活动，追求人与自然、人与人，人与社会的交流。让“村”，成为一所学校。让更多的孩子在“村”里健康快乐成长。让更多人看见地方社区与自然的生命力，看见自己与每一个人与生俱来的美好",因为您的到来，让这个社区变得更美好。
   feedbackTitle: "Past Events Feedbacks",
   feedbackTitleCn: "参与者的活动心得",
   subsections: [
@@ -209,7 +209,7 @@ export const natureSchoolConfig = {
       description:
         "Watch this sunset around a campfire with a star-filled sky, sleep on the beach, stroll along the clean coastline, spend leisurely hours creating freely with seaweed, and go to sleep together gazing at the fire in anticipation of the sunrise!",
       descriptionCn:
-        "看這夕陽落下圍著營火，滿天星斗，睡在沙灘上，在乾淨的海岸線漫步，悠閒的時光用海草自由創作，一起凝視著火光，期待日出入睡吧!",
+        "看這夕陽落下圍著營火，滿天星斗，睡在沙灘上，在乾淨的海岸線漫步，悠閒的時光用现场的自然元素自由創作，一起凝視著火光，期待日出入睡吧!",
     },
     {
       imgSrc: "/crab.jpeg",
@@ -217,7 +217,7 @@ export const natureSchoolConfig = {
       titleCn: "浮潛",
       description: "Snorkeling",
       descriptionCn:
-        "來北海道也可以浮潛!跟當地魚夫借用的海膽田，一潛而下遍地都是可愛的海膽，乾淨的海洋裡。海星、海兔、寄居蟹，豐富的潮間帶生物等你來探訪。",
+        "來老市村也可以浮潛!跟當地魚夫借用的玻璃箱，即可淌水观察，也可以一潛而下遍地都是可愛的海膽，乾淨的海洋裡。海星、海兔、寄居蟹，豐富的潮間帶生物等你來探訪。",
     },
     {
       imgSrc: "/crab.jpeg",
@@ -225,7 +225,7 @@ export const natureSchoolConfig = {
       titleCn: "撈魚 抓蝦",
       description: "Fishing and shrimping",
       descriptionCn:
-        "一人手上握一隻網子變身河川少年吧!北海道乾淨的河川可以讓大家輕易的觀察到螃蟹 蝦子 魚。是大人小孩都適合的夏季活動。",
+        "一人手上握一隻網子變身河川少年吧!老市村乾淨的河川可以讓大家輕易的觀察到螃蟹 蝦子 魚。是大人小孩都適合的全年活動。",
     },
     {
       imgSrc: "/crab.jpeg",
@@ -233,62 +233,62 @@ export const natureSchoolConfig = {
       titleCn: "露營活動",
       description: "Camping",
       descriptionCn:
-        "黑松內山毛櫸自然學校，本身就是個露營場，提供帳棚出租、野炊料理出租，歡迎自駕行的朋友來訪。",
+        "老市自然學校，本身就是個露營場，提供帳棚出租、野炊料理出租，歡迎自駕行的朋友來訪。",
     },
     {
       imgSrc: "/crab.jpeg",
       title: "Another Guys Class",
       titleCn: "住宿 餐點",
       description: "Camping",
-      descriptionCn: "走訪黑松內地區的訪客，歡迎來自然學校住宿一晚",
+      descriptionCn: "走訪老市村的訪客，歡迎來自然學校住宿一晚",
     },
     {
       imgSrc: "/crab.jpeg",
       title: "Another Guys Class",
-      titleCn: "參訪研習",
+      titleCn: "參訪研学",
       description: "Camping",
       descriptionCn:
-        "提供對日本自然學校有興趣者，一個實習交流參訪的平台。透過黑松內的安排可以到北海道各地自然學校交流喔!",
+        "提供對老市自然环境及乡土风情，社区发展项目有興趣者，一個實習交流參訪的平台!",
     },
     {
       imgSrc: "/crab.jpeg",
       title: "Another Guys Class",
-      titleCn: "馬鈴薯片DIY",
+      titleCn: "古法制盐DIY",
       description: "Camping",
       descriptionCn:
-        "北海道盛產的馬鈴薯，其實黑松內就是其中重要的產區，可以走進農家看到碩大的倉庫，乘坐大型機具，就像銀之匙一樣的體驗。最後自己動手，跟日本媽媽一起炸馬鈴薯片，享受好吃的北海道口味!",
+        "这边的海盐不以急速现代方式制作，以千年传统智慧制盐，在去除有害杂质之余，也保留了大量对人体有益的微量元素。村民煮玉米、煮粥，单单加老市盐下去味道即鲜美甘甜，成为一代老市人美好的回忆。，跟老市盐民一起做盐，享受好吃的海盐风味!",
     },
     {
       imgSrc: "/crab.jpeg",
       title: "Another Guys Class",
-      titleCn: "牧場參觀",
+      titleCn: "生态塘參觀",
       description: "Camping",
       descriptionCn:
-        "來北海道就是要喝牛奶! 比超市還要新鮮的就是直接到產地去，一起照顧牧場的母牛們，懷著感謝的心喝下每一口得來不易的鮮奶。還可以用鮮奶自己做成奶油喔!",
+        "生态塘里可以钓螃蟹也可以钓鱼，可以划船，还可以观鸟，每年3~7月中国最美小鸟栗喉蜂虎在这里筑巢繁殖。从污染性荒废的鱼塘改造成提高生态价值，提供栖息地及食物，人、鸟及其他生物各取所需，达致平衡。；老市村可持续发展与保育理念及落地实践可提供一个最好的自然教育与研究基地",
     },
     {
       imgSrc: "/crab.jpeg",
       title: "Another Guys Class",
-      titleCn: "搗麻糬體驗",
+      titleCn: "酸豆酱制作體驗",
       description: "Camping",
       descriptionCn:
-        "黑松內是糯米的產區，用在地的食材，和傳統的道具，體驗日本和風的禱麻糬吧!",
+        "老市村是海南拥有最多酸豆树的乡村社区，用在地的食材，和傳統的道具，體驗老市村的酸豆酱吧!",
     },
     {
       imgSrc: "/crab.jpeg",
       title: "Another Guys Class",
-      titleCn: "幼兒園參訪",
+      titleCn: "乡村社区參訪",
       description: "Camping",
       descriptionCn:
-        "提供對日本幼兒園參訪、實習有興趣的你一個交流的機會，可以到當地的幼兒園實際擔任一天志工，跟著日本小孩一起上學，欣賞乾淨整潔的木質教室，還有老師們的班級經營手法~",
+        "提供對社区治理參訪、實習有興趣的你一個交流的機會，可以到當地跟随村长實際事务擔任一天志工，跟著村民代表了解实际乡村运转与生活方式，美食，自然，民俗，社区发展等议题",
     },
     {
       imgSrc: "/crab.jpeg",
       title: "Another Guys Class",
-      titleCn: "國小生交流活動",
+      titleCn: "地方镇小学交流活動",
       description: "Camping",
       descriptionCn:
-        "黑松內山毛櫸自然學校與當地國小有緊密的合作關係，歡迎國外的國中小與日本當地進行國際交流活動。可以透過一起上體育課拉近孩子之間距離，異國料理PARTY,或是中、英文會話讓孩子從小對外國語產生興趣。",
+        "老市村自然學校與當地镇小学足球队有緊密的合作關係，歡迎中小学生與當地進行跨越城乡边界交流活動。可以透過一起上足球课，踢一场比赛拉近孩子之間距離，地方美食PARTY,或是海南本土地方會話讓孩子從小對地方文化多样性產生興趣。",
     },
   ],
 };
