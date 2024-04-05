@@ -1,17 +1,17 @@
 export const natureSchoolConfig = {
-  title: "Nature School",
   titleCn: "老市自然学校",
+  title: "Nature School",
   imgSrc: "/crab.jpeg",
-  description:
-    "Transform the village into a natureschool,where kids grow up happy and healthy. Let reveal the energy ofour communities and nature,embracing the inherent beauty withinourselves and others",
   descriptionCn:
     "老市村自然学校位置位于海南儋州海头镇珠碧江河畔，淡咸水湿地入海口（北部湾）交汇地区。源头于白沙山区的珠碧江的干净溪流，邻近的也是天然无污染的海岸线。一直以“文化””生态“教育“做为社区营造理念的老市村于2024年成立了自然学校，利用整个村庄当作自然体验基地，创造「交流」与「学习」的场所。自然学校以儿童至成人为对象，企划各种自然体验、乡村旅游、户外教学等与环境、社区结合相关的活动，追求人与自然、人与人，人与社会的交流。让“村”，成为一所学校。让更多的孩子在“村”里健康快乐成长。让更多人看见地方社区与自然的生命力，看见自己与每一个人与生俱来的美好,因为您的到来，让这个社区变得更美好。",
-  feedbackTitle: "Past Events Feedbacks",
+  description:
+    "The location of the Laoshi Village Nature School is located on the banks of the Zhu Bi River in Haitou Town, Danzhou, Hainan, where the freshwater wetlands meet the estuary of the sea (Beibu Gulf). It originates from the clean streams of the Zhu Bi River in the Baisha Mountain area, and the nearby natural and pollution-free coastline. Laoshi Village, which has always taken 'culture' and 'ecology'd education as the concept of community building, established a nature school in 2024, using the entire village as a natural experience base to create a place for 'exchange' and 'learning'. The Nature School targets children to adults, plans various activities related to the environment, community, and outdoor teaching, and pursues communication between people and nature, people and people, and people and society. Let the 'village' become a school. Let more children grow up healthy and happy in the 'village'. Let more people see the vitality of local communities and nature, and see the beauty that everyone is born with. Because of your arrival, this community has become better.",
   feedbackTitleCn: "参与者的活动心得",
+  feedbackTitle: "Activity Experience of Participants",
   subsections: [
     {
-      title: "Nature School Team",
       titleCn: "老市自然学校 团队",
+      title: "Laoshi Nature School Team",
       items: [
         {
           name: "Tan Xiyun Principal (Civilian Library Director,Old City Village Mayor) Civil Engineer for 10 years, with a wealth of construction. Hai Tou Primary School soccer coach, has many years of community governance experience, but also play music, love sports, good at all kinds of sports, swimming, soccer, volleyball, badminton ...... chess, love to read, love to think, heavy practice, love to travel, Beijing, Tibet, Japan cycling experience, in the United States in Silicon Valley as a soccer coach, is still in the Stanford University Tour",
@@ -33,8 +33,8 @@ export const natureSchoolConfig = {
       ],
     },
     {
-      title: "Nature School Curriculum",
       titleCn: "環境自然",
+      title: "Environmental Nature",
       items: [
         {
           nameCn: "住在平民书馆与近水楼台民宿（自然融合建筑1）",
@@ -51,8 +51,8 @@ export const natureSchoolConfig = {
       ],
     },
     {
-      title: "Nature School Curriculum",
       titleCn: "課程活潑",
+      title: "Vibrant Curriculum",
       items: [
         {
           nameCn:
@@ -80,7 +80,7 @@ export const natureSchoolConfig = {
     },
     {
       titleCn: "自然教育博物师资",
-      title: "Natural Education Museum Teacher",
+      title: "Natural Education Museum Teachers",
       items: [
         {
           nameCn:
@@ -101,7 +101,7 @@ export const natureSchoolConfig = {
     },
     {
       titleCn: "少年報導者師資",
-      title: "Boy Reporter Teacher",
+      title: "Junior Reporter Teachers",
       items: [
         {
           nameCn:
@@ -112,7 +112,7 @@ export const natureSchoolConfig = {
     },
     {
       titleCn: "「給高中生的」師資",
-      title: "Boy Reporter Teacher",
+      title: "For High School Students",
       items: [
         {
           nameCn:
@@ -182,8 +182,8 @@ export const natureSchoolConfig = {
       href: "/farm",
     },
   ],
-  activitiesTitle: "Activities in Laoshi",
   activitiesTitleCn: "老市村 活動方案介紹",
+  activitiesTitle: "Laoshi Village Activity Plan Introduction",
   activitiesNav: [
     {
       imgSrc: "/student-internship.png",
