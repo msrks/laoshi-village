@@ -257,7 +257,7 @@ export const natureSchoolConfig = {
         "Provide a platform for those who are interested in the natural environment and local customs of Laoshi, and community development projects.",
     },
     {
-      imgSrc: "/saltDIY.png",
+      imgSrc: "/saltdiy.png",
       titleCn: "古法制盐DIY",
       title: "Ancient Salt Making DIY",
       descriptionCn:
