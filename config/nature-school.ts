@@ -16,7 +16,7 @@ export const natureSchoolConfig = {
         {
           name: "Tan Xiyun Principal (Civilian Library Director,Old City Village Mayor) Civil Engineer for 10 years, with a wealth of construction. Hai Tou Primary School soccer coach, has many years of community governance experience, but also play music, love sports, good at all kinds of sports, swimming, soccer, volleyball, badminton ...... chess, love to read, love to think, heavy practice, love to travel, Beijing, Tibet, Japan cycling experience, in the United States in Silicon Valley as a soccer coach, is still in the Stanford University Tour",
           nameCn:
-            "谭喜云 校長（平民書馆馆長,老市村村长）土木工程师出身，驻扎乡村多年，从事社区治理与可持续发展工作。热爱教育，是青少年足球教练，同时爱音乐，爱运动，擅长吉他弹唱、游泳，足球，排球，羽毛球……象棋等，爱读书，爱思考，重实践，爱旅行，有北京，西藏，日本骑行经历，目前在村子生活半年，在斯坦福大学游学半年
+            "谭喜云 校長（平民書馆馆長,老市村村长）土木工程师出身，驻扎乡村多年，从事社区治理与可持续发展工作。热爱教育，是青少年足球教练，同时爱音乐，爱运动，擅长吉他弹唱、游泳，足球，排球，羽毛球……象棋等，爱读书，爱思考，爱旅行，有北京，西藏，日本骑行经历，目前在村子生活半年，在斯坦福大学游学半年",
         {
           name: "Leung Po Juan (Head of B&B)",
           nameCn: "梁宝璜 返乡青年（民宿負責人）",
