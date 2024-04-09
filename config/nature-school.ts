@@ -92,9 +92,7 @@ export const natureSchoolConfig = {
             "松鼠学堂自然体验导师：刘艳 曾帮助老市村研发出针对青少年的自然教育课程，从植物、鸟类、昆虫、两栖爬行类动物，讲到湿地、滨海潮间带、热带雨林",
           name: "Squirrel School Nature Experience Teacher: Liu Yan",
         },
-      ],
-    },
-    {
+        {
           nameCn:
             "現任立法委員暨知名繪本主編：陳培瑜 長年耕耘於孩子閱讀領域並曾創立兒童書店",
           name: "Current legislator and well-known picture book editor: Chen Peiyu",
