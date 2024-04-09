@@ -16,19 +16,18 @@ export const natureSchoolConfig = {
         {
           name: "Tan Xiyun Principal (Civilian Library Director,Old City Village Mayor) Civil Engineer for 10 years, with a wealth of construction. Hai Tou Primary School soccer coach, has many years of community governance experience, but also play music, love sports, good at all kinds of sports, swimming, soccer, volleyball, badminton ...... chess, love to read, love to think, heavy practice, love to travel, Beijing, Tibet, Japan cycling experience, in the United States in Silicon Valley as a soccer coach, is still in the Stanford University Tour",
           nameCn:
-            "谭喜云 校長（平民書馆馆長,老市村村长）土木工程师10年，有丰富建筑。海头小学足球教练，有多年社区治理经验，同时也是玩音乐，爱运动，擅长各项体育运动，游泳，足球，排球，羽毛球……象棋，爱读书，爱思考，重实践，爱旅行，有北京，西藏，日本骑行经历，在美国硅谷当过足球教练，目前仍在斯坦福大学游学",
-        },
+            "谭喜云 校長（平民書馆馆長,老市村村长）土木工程师出身，驻扎乡村多年，从事社区治理与可持续发展工作。热爱教育，是青少年足球教练，同时爱音乐，爱运动，擅长吉他弹唱、游泳，足球，排球，羽毛球……象棋等，爱读书，爱思考，重实践，爱旅行，有北京，西藏，日本骑行经历，目前在村子生活半年，在斯坦福大学游学半年
         {
           name: "Leung Po Juan (Head of B&B)",
-          nameCn: "梁宝璜 老師（民宿負責人）",
+          nameCn: "梁宝璜 返乡青年（民宿負責人）",
         },
         {
           name: "Xue Dongfeng (Cuisine Expert)",
-          nameCn: "薛冬风 老師（料理專家）",
+          nameCn: "薛冬风 村嫂（地方料理專家）",
         },
         {
           name: "Agui (expert in catching fish and shrimp)",
-          nameCn: "阿贵老師（抓鱼摸虾专家）",
+          nameCn: "阿贵 土生土长的在地青年（抓鱼摸虾专家）",
         },
       ],
     },
@@ -37,11 +36,11 @@ export const natureSchoolConfig = {
       title: "Environmental Nature",
       items: [
         {
-          nameCn: "住在平民书馆与近水楼台民宿（自然融合建筑1）",
+          nameCn: "住在平民书馆与近水楼台民宿（融合在自然里的建筑）",
           name: "Living in the Civilian Library and Near Water Pavilion Homestay",
         },
         {
-          nameCn: "玩在稻田埤塘邊 （下田體驗、埤塘划船、草地奔跑）",
+          nameCn: "玩在古酸豆树下珠碧江邊 （湿地體驗、生态塘划船、球场上奔跑）",
           name: "Playing on the edge of the rice field pond",
         },
         {
@@ -51,22 +50,22 @@ export const natureSchoolConfig = {
       ],
     },
     {
-      titleCn: "課程活潑",
+      titleCn: "課程活潑,走出教室，到古树下，回到教育最初的样子",
       title: "Vibrant Curriculum",
       items: [
         {
           nameCn:
-            "從遊戲中學工程學 （不只是玩 從玩中累積知識 啟發物理、工程思維）",
+            "從真实生活中玩与学 （不只是玩 從玩中累積知識 建立连接 啟發创意）",
           name: "Learning engineering from games",
         },
         {
           nameCn:
-            "舞動身體與五感啟發 （學校沒有教的課 但卻讓你的是孩子一生最受用的啟發）",
+            "舞動身體與五感啟發 （學校沒有教的課 但卻讓你的孩子一生最受用的啟發）",
           name: "Inspiring the body and five senses",
         },
         {
           nameCn:
-            "食農教育＋田野探索 （讓你的孩子留下最難忘的回憶 赤腳踩在田裡的感動）",
+            "自然教育＋社区探索 （讓你的孩子留下最難忘的回憶 赤腳踩在泥土的感動）",
           name: "Food and Farm Education",
         },
       ],
@@ -79,7 +78,7 @@ export const natureSchoolConfig = {
       items: [],
     },
     {
-      titleCn: "自然教育博物师资",
+      titleCn: "「博物与自然教育」师资",
       title: "Natural Education Museum Teachers",
       items: [
         {
@@ -94,13 +93,13 @@ export const natureSchoolConfig = {
         },
         {
           nameCn:
-            "現任立法委員暨知名繪本主編：陳培瑜 長年耕耘於孩子閱讀領域並曾創立兒童書店",
+            "周丽（猪七七）：户外达人，LNT高阶导师，中登协户外营地指导员，户外运动指导员，青少年营地教育导师，攀树高级学员，红十字急救员，户外社群活动策划及负责人，青耘志愿者理事长",
           name: "Current legislator and well-known picture book editor: Chen Peiyu",
         },
       ],
     },
     {
-      titleCn: "艺术音乐師資",
+      titleCn: "「艺术与音乐」師資",
       title: "Junior Reporter Teachers",
       items: [
         {
