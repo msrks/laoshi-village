@@ -104,7 +104,7 @@ export const natureSchoolConfig = {
       items: [
         {
           nameCn:
-            "少年報導者是由非營利媒體《報導者》針對兒少打造的深度新聞報導品牌，透過圖文、聲音、遊戲等形式，讓孩子認識國內外重要議題。 關於更多他們",
+            "阿肖",
           name: "Junior Reporter is a brand of in-depth news reporting for children and young adults created by the nonprofit media outlet The Reporter, which introduces children to important issues at home and abroad through graphics, audio, and games. More about them ",
         },
       ],
