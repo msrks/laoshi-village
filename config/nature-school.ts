@@ -248,7 +248,7 @@ export const natureSchoolConfig = {
         "Visitors to Laoshi Village are welcome to stay at the Nature School for one night",
     },
     {
-      imgSrc: "/educationalvisit.jpg",
+      imgSrc: "/visitingstuding.jpg",
       titleCn: "參訪研学",
       title: "Study Tour",
       descriptionCn:
