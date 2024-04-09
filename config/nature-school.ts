@@ -93,7 +93,7 @@ export const natureSchoolConfig = {
         },
         {
           nameCn:
-            "周丽（猪七七）：户外达人，LNT高阶导师，中登协户外营地指导员，户外运动指导员，青少年营地教育导师，攀树高级学员，红十字急救员，户外社群活动策划及负责人，青耘志愿者理事长",
+            "周丽",
           name: "Current legislator and well-known picture book editor: Chen Peiyu",
         },
       ],
