@@ -116,22 +116,22 @@ export const natureSchoolConfig = {
       items: [
         {
           nameCn:
-            "現任台灣疫苗發展協會理事長：何美鄉 臺灣流行疾病學專家、內科醫師/曾於SARS期間率先進入和平醫院，協助控制疫情。",
+            "乐东镜湖书院创始人、海南和仁社会工作服务中心主任：吉家钦 推动过国内多家公益组织的发起和发展，具有二十年的农村社区工作经验。曾跟随台湾辅仁大学社会科学院院长夏林清教授学习行动研究6年，尝试以行动研究的方式协同社群发展。",
           name: "Current Chairman of the Taiwan Vaccine Development Association: He Meixiang",
         },
         {
-          nameCn: "國立臺灣大學哲學博士：古秀鈴 任教於中國文化大學哲學系",
+          nameCn: "海南吾岛吾学创始人：丘慧巧",
           name: "Ph.D. in Philosophy from National Taiwan University: Gu Xiuling",
         },
         {
           nameCn:
-            "「華文朗讀節」策展人：胡川安 研究所於國立臺灣大學雙修考古學與歷史學/任教於國立中央大學中文系",
-          name: "Curator of the Chinese Reading Festival: Hu Chuanan",
+            "斯坦福大学东亚学院考古学博士：敬朴",
+          name: "Current Chief Judge and Judge of the Administrative Litigation Division of the Taipei District Court: Zhang Yufeng",
         },
         {
           nameCn:
-            "現任臺北地院行政訴訟庭庭長兼法官：張瑜鳳  多重身分的章魚法官、斜槓作家",
-          name: "Current Chief Judge and Judge of the Administrative Litigation Division of the Taipei District Court: Zhang Yufeng",
+            "斯坦福大学教育学博士：Cody",
+          name: "Curator of the Chinese Reading Festival: Hu Chuanan",
         },
       ],
     },
