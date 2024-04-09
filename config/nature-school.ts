@@ -204,7 +204,7 @@ export const natureSchoolConfig = {
         "歡迎公司、企業團體一起到老市村進行团建、年会、工作假期，无论是以放松体验地方风土人情还是交流為目的到訪老市村，古树，湿地，海洋，基层社区治理的實際案例，种种教育、文化、心理有意思的社区营造项目，讓到訪老市村的职场达人接觸到大自然与基层社区的“真实”的機會。",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/camping.jpg",
       titleCn: "沙灘露營",
       title: "Beach Camping",
       description:
@@ -231,7 +231,7 @@ export const natureSchoolConfig = {
         "One person holds a net in his hand and transforms into a river",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/fire.jpg",
       titleCn: "露營活動",
       title: "Camping",
       descriptionCn:
@@ -240,7 +240,7 @@ export const natureSchoolConfig = {
         "The Old City Nature School itself is a campsite, offering tent rentals and picnic cooking rentals, and welcomes friends who drive themselves to visit.",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/logingdining.png",
       titleCn: "住宿 餐點",
       title: "Accommodation and Meals",
       descriptionCn: "走訪老市村的訪客，歡迎來自然學校住宿一晚",
@@ -248,7 +248,7 @@ export const natureSchoolConfig = {
         "Visitors to Laoshi Village are welcome to stay at the Nature School for one night",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/educationalvisit.jpg",
       titleCn: "參訪研学",
       title: "Study Tour",
       descriptionCn:
@@ -257,7 +257,7 @@ export const natureSchoolConfig = {
         "Provide a platform for those who are interested in the natural environment and local customs of Laoshi, and community development projects.",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/saltDIY.png",
       titleCn: "古法制盐DIY",
       title: "Ancient Salt Making DIY",
       descriptionCn:
@@ -266,7 +266,7 @@ export const natureSchoolConfig = {
         "The sea salt here is not made in a fast modern way, but in a thousand-year-old traditional way. In addition to removing harmful impurities, it also retains a large amount of beneficial trace elements for the human body. Villagers cook corn and porridge, and the taste is delicious and sweet just by adding Laoshi salt. It has become a good memory for a generation of Laoshi people. Make salt with the salt people of Laoshi and enjoy the delicious flavor of sea salt!",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/ecologicalpond.jpg",
       titleCn: "生态塘參觀",
       title: "Ecological Pond Visit",
       descriptionCn:
@@ -275,7 +275,7 @@ export const natureSchoolConfig = {
         "In the ecological pond, you can catch crabs and fish, row boats, and watch birds. From March to July every year, the most beautiful bird in China, the Rufous-throated Flycatcher, nests and breeds here. From a polluted and abandoned fish pond to a transformation that enhances ecological value, provides habitat and food, and meets the needs of humans, birds, and other organisms, achieving balance. The concept of sustainable development and conservation in Laoshi Village and the practical implementation can provide the best natural education and research base.",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/tamarindjam.jpg",
       titleCn: "酸豆酱制作體驗",
       title: "Soybean Sauce Making Experience",
       descriptionCn:
@@ -284,7 +284,7 @@ export const natureSchoolConfig = {
         "Laoshi Village is a rural community in Hainan with the most sour bean trees. Use local ingredients and traditional tools to experience the sour bean sauce of Laoshi Village!",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/comunityvisiting.jpg",
       titleCn: "乡村社区參訪",
       title: "Village Community Visit",
       descriptionCn:
@@ -293,7 +293,7 @@ export const natureSchoolConfig = {
         "Provide you with an opportunity to visit and intern in community governance. You can follow the village chief to serve as a volunteer for a day, and follow the village representative to understand the actual operation and lifestyle of the village, food, nature, folklore, community development and other topics",
     },
     {
-      imgSrc: "/crab.jpeg",
+      imgSrc: "/educationalvisit.jpg",
       titleCn: "地方镇小学交流活動",
       title: "Local Town Primary School Exchange Activities",
       descriptionCn:
