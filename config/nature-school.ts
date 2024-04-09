@@ -105,7 +105,7 @@ export const natureSchoolConfig = {
       items: [
         {
           nameCn:
-            "阿肖",
+            "海南本土画家：阿肖",
           name: "Junior Reporter is a brand of in-depth news reporting for children and young adults created by the nonprofit media outlet The Reporter, which introduces children to important issues at home and abroad through graphics, audio, and games. More about them ",
         },
       ],
