@@ -284,7 +284,7 @@ export const natureSchoolConfig = {
         "Laoshi Village is a rural community in Hainan with the most sour bean trees. Use local ingredients and traditional tools to experience the sour bean sauce of Laoshi Village!",
     },
     {
-      imgSrc: "/comunityvisiting.jpg",
+      imgSrc: "/comunityvisiting.jpeg",
       titleCn: "乡村社区參訪",
       title: "Village Community Visit",
       descriptionCn:
