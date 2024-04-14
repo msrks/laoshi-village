@@ -9,7 +9,7 @@ export const siteConfig = {
   heroSubSlogan: "For justice, love thy neighbor, wise living, be the best you",
   heroSubSloganCn: "为正义，爱邻居，明智生活，做最好的自己",
   description: "The best place to visit",
-  descriptionCn: "最好的参观地方",
+  descriptionCn: "终身学习的生态社区",
   url: "https://alan-webpage.vercel.app",
   ogImage: "https://alan-webpage.vercel.app/opengraph-image.png",
   mainNav: [
