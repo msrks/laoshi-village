@@ -136,7 +136,7 @@ export const siteConfig = {
         },
         {
           title: "Laoshi Salt Conservation Center",
-          titleCn: "老市挝石盐保护中心",
+          titleCn: "老市盐保育中心",
           href: "/salt-conservation-center",
           description: "Laoshi Salt Conservation Center",
           items: [],
@@ -149,7 +149,7 @@ export const siteConfig = {
       items: [
         {
           title: "Introduction to Nature School",
-          titleCn: "自然学校紹介",
+          titleCn: "自然学校介绍",
           href: "/nature-school",
           description: "Introduction to Nature School",
           items: [],
