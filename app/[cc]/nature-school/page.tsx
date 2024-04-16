@@ -94,6 +94,12 @@ export default function Page({
                 {m.items.map((item, i) => (
                   <div key={i}>
                     {params.cc === "cn" ? item.nameCn : item.name}
+                    <span className="text-muted-foreground">
+                      {": "}
+                      {params.cc === "cn"
+                        ? item.descriptionCn
+                        : item.description}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -115,6 +121,12 @@ export default function Page({
                 {m.items.map((item, i) => (
                   <div key={i}>
                     {params.cc === "cn" ? item.nameCn : item.name}
+                    <span className="text-muted-foreground">
+                      {": "}
+                      {params.cc === "cn"
+                        ? item.descriptionCn
+                        : item.description}
+                    </span>
                   </div>
                 ))}
               </div>

@@ -7,7 +7,7 @@ export const siteConfig = {
   nameCn: "海头老市村",
   heroSlogan: "Hello from 海头老市村",
   heroSubSlogan: "For justice, love thy neighbor, wise living, be the best you",
-  heroSubSloganCn: "为正义，爱邻居，明智生活，做最好的自己",
+  heroSubSloganCn: "为正义, 爱邻居, 明智生活, 做最好的自己",
   description: "The best place to visit",
   descriptionCn: "终身学习的生态社区",
   url: "https://alan-webpage.vercel.app",
@@ -197,7 +197,7 @@ export const siteConfig = {
       titleCn: "志愿者招募",
       href: "/",
       description: "Join us to build the community!",
-      descriptionCn: "定义你的青春，突破自己的框架；来与我们一起社区营造吧！",
+      descriptionCn: "定义你的青春, 突破自己的框架；来与我们一起社区营造吧！",
     },
     {
       title: "Donation",
@@ -205,14 +205,14 @@ export const siteConfig = {
       href: "/about",
       description: "Support us with your donation!",
       descriptionCn:
-        "爱惜乡土，积少成多，卷起衣袖赞助我们；改变，让你我都看得见。",
+        "爱惜乡土, 积少成多, 卷起衣袖赞助我们；改变, 让你我都看得见。",
     },
     {
       title: "Visiting Appointment",
       titleCn: "参访预约",
       href: "/blog",
       description: "Make an appointment to visit and explore Laoshi Village",
-      descriptionCn: "预约参观、探索老市村、发掘这片土地上你从未接触过的感动",
+      descriptionCn: "预约参观, 探索老市村, 发掘这片土地上你从未接触过的感动",
     },
   ] satisfies FooterItem[],
 };
