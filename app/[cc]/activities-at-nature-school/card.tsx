@@ -35,7 +35,9 @@ export function ActivityCard({ activity }: { activity: Activity }) {
           <CardDescription className="flex flex-col gap-1">
             <div className="flex items-center gap-2">
               <Calendar className="size-4" />
-              {activity.date.split("T")[0]}
+              {activity.dateItems
+                .map((di: string) => di.split("T")[0])
+                .join(", ")}
             </div>
             <div className="flex items-center gap-2">
               <Clock4 className="size-4" />

@@ -24,7 +24,9 @@ export default function ActivitiesView({
       <div className="flex sm:flex-row flex-col items-start">
         <div className="flex-none mr-2 mb-4">
           <CalendarDemo
-            dateList={activities.map((a) => a.date.split("T")[0])}
+            dateList={activities
+              .flatMap((a) => a.dateItems)
+              .map((d) => d.split("T")[0])}
             date={date}
             setDate={setDate}
           />
@@ -33,8 +35,10 @@ export default function ActivitiesView({
           {activities
             .filter((a) => {
               if (!date || date.length === 0) return true;
-              return date.some(
-                (d) => a.date.split("T")[0] === d.toISOString().split("T")[0]
+              return date.some((d) =>
+                a.dateItems
+                  .map((di: string) => di.split("T")[0])
+                  .includes(d.toISOString().split("T")[0])
               );
             })
             .map((a, i) => (

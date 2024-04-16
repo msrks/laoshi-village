@@ -19,7 +19,7 @@ export default function Page({
 }) {
   const activities = allActivities
     .filter((event) => event.published)
-    .sort((a, b) => b.date.localeCompare(a.date));
+    .sort((a, b) => b.dateItems[0].localeCompare(a.dateItems[0]));
 
   return (
     <>
