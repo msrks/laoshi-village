@@ -116,11 +116,7 @@ export default async function PostPage({ params }: PostPageProps) {
       </Link>
       <div className="space-y-2">
         <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-          {activity.date && (
-            <time dateTime={activity.date}>{formatDate(activity.date)}</time>
-          )}
-          {activity.date ? <div>•</div> : null}
-          <div>{activity.readingTime}min</div>
+          <div>{activity.readingTime}min to read</div>
         </div>
         <h1 className="inline-block text-3xl font-bold leading-tight lg:text-4xl">
           {activity.title}
@@ -132,7 +128,7 @@ export default async function PostPage({ params }: PostPageProps) {
       <div className="flex items-center gap-2 flex-wrap">
         <div className="flex items-center gap-2">
           <Calendar className="size-4" />
-          {activity.date.split("T")[0]}
+          {activity.dateItems.map((d: string) => d.split("T")[0]).join(", ")}
         </div>
         <div className="flex items-center gap-2">
           <Clock4 className="size-4" />
