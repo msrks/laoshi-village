@@ -6,10 +6,7 @@ import {
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields: ComputedFields = {
-  slug: {
-    type: "string",
-    resolve: (doc) => `/${doc._raw.flattenedPath}`,
-  },
+  slug: { type: "string", resolve: (doc) => `/${doc._raw.flattenedPath}` },
   slugAsParams: {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
@@ -31,16 +28,9 @@ export const Page = defineDocumentType(() => ({
   filePathPattern: `pages/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-    image: {
-      type: "string",
-    },
+    title: { type: "string", required: true },
+    description: { type: "string" },
+    image: { type: "string" },
     date: { type: "date", required: true },
   },
   computedFields,
@@ -51,25 +41,11 @@ export const Announcement = defineDocumentType(() => ({
   filePathPattern: `announcements/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-    date: {
-      type: "date",
-      required: true,
-    },
-    published: {
-      type: "boolean",
-      default: true,
-    },
-    image: {
-      type: "string",
-      required: true,
-    },
+    title: { type: "string", required: true },
+    description: { type: "string" },
+    date: { type: "date", required: true },
+    published: { type: "boolean", default: true },
+    image: { type: "string", required: true },
   },
 
   computedFields,
@@ -106,25 +82,11 @@ export const Article = defineDocumentType(() => ({
   filePathPattern: `articles/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: {
-      type: "string",
-      required: true,
-    },
-    description: {
-      type: "string",
-    },
-    date: {
-      type: "date",
-      required: true,
-    },
-    published: {
-      type: "boolean",
-      default: true,
-    },
-    image: {
-      type: "string",
-      required: true,
-    },
+    title: { type: "string", required: true },
+    description: { type: "string" },
+    date: { type: "date", required: true },
+    published: { type: "boolean", default: true },
+    image: { type: "string", required: true },
   },
 
   computedFields,
