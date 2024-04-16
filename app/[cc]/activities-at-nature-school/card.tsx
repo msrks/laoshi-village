@@ -1,7 +1,8 @@
+"use client";
+
 import { Activity } from "@/.contentlayer/generated";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -32,32 +33,27 @@ export function ActivityCard({ activity }: { activity: Activity }) {
         </CardContent>
         <CardHeader>
           <CardTitle>{activity.title}</CardTitle>
-          <CardDescription className="flex flex-col gap-1">
-            <div className="flex items-center gap-2">
-              <Calendar className="size-4" />
-              {activity.dateItems
-                .map((di: string) => di.split("T")[0])
-                .join(", ")}
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock4 className="size-4" />
-              {activity.time}
-            </div>
-            <div className="flex items-center gap-2">
-              <MapPin className="size-4" />
-              {activity.location}
-            </div>
-            <div className="flex items-center gap-2">
-              <Smile className="size-4" />
-              {activity.age}
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="size-4" />
-              {activity.capacity}
-            </div>
-            {/* <Button size="sm" asChild className="mr-auto">
-              <Link href={`/cn/${activity.slug}`}>詳情</Link>
-            </Button> */}
+          <CardDescription className="flex gap-2">
+            <Calendar className="size-4" />
+            {activity.dateItems
+              .map((di: string) => di.split("T")[0])
+              .join(", ")}
+          </CardDescription>
+          <CardDescription className="flex gap-2">
+            <Clock4 className="size-4" />
+            {activity.time}
+          </CardDescription>
+          <CardDescription className="flex gap-2">
+            <MapPin className="size-4" />
+            {activity.location}
+          </CardDescription>
+          <CardDescription className="flex gap-2">
+            <Smile className="size-4" />
+            {activity.age}
+          </CardDescription>
+          <CardDescription className="flex gap-2">
+            <Users className="size-4" />
+            {activity.capacity}
           </CardDescription>
         </CardHeader>
         <CardFooter className="flex px-6 pb-4 flex-wrap gap-2">
