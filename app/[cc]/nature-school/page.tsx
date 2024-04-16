@@ -78,7 +78,7 @@ export default function Page({
           ))}
         </div>
       </div>
-      <div className="container grid grid-cols-2 gap-4">
+      <div className="container grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           {natureSchoolConfig.subsections.map((m, i) => (
             <div key={i} className="flex flex-col my-6 gap-2">
