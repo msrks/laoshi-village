@@ -58,7 +58,7 @@ export const Activity = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     description: { type: "string" },
-    date: { type: "date", required: true },
+    dateList: { type: "string", required: true },
     time: { type: "string" },
     location: { type: "string" },
     age: { type: "string" },
@@ -74,7 +74,13 @@ export const Activity = defineDocumentType(() => ({
     image: { type: "string", required: true },
   },
 
-  computedFields,
+  computedFields: {
+    ...computedFields,
+    dateItems: {
+      type: "list",
+      resolve: (doc) => doc.dateList.split(",").map((d) => new Date(d)),
+    },
+  },
 }));
 
 export const Article = defineDocumentType(() => ({
