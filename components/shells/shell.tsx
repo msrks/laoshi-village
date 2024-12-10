@@ -29,7 +29,7 @@ function Shell({
   ...props
 }: ShellProps) {
   return (
-    <Comp className={cn(shellVariants({ variant }), className)} {...props} />
+    <section className={cn(shellVariants({ variant }), className)} {...props} />
   );
 }
 

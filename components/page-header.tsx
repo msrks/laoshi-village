@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { Separator } from "@/components/ui/separator";
 
 interface PageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  as?: React.ElementType;
+  as?: keyof JSX.IntrinsicElements | React.JSXElementConstructor<any>;
   separated?: boolean;
 }
 
@@ -18,10 +18,10 @@ function PageHeader({
   ...props
 }: PageHeaderProps) {
   return (
-    <Comp className={cn("flex flex-col gap-1", className)} {...props}>
+    <section className={cn("flex flex-col gap-1", className)} {...props}>
       {children}
       {separated ? <Separator className="mt-2.5" /> : null}
-    </Comp>
+    </section>
   );
 }
 
