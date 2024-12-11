@@ -21,8 +21,22 @@ export default function Page({
 }) {
   return (
     <>
-      <div className="w-full max-w-[1400px] relative">
+      {/* ddesktop */}
+      <div className="w-full max-w-[1400px] relative hidden sm:block">
         <AspectRatio ratio={16 / 6}>
+          <Image
+            src={aboutConfig.imgSrc}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </AspectRatio>
+      </div>
+
+      {/* mobile */}
+      <div className="w-full max-w-[1400px] relative  sm:hidden">
+        <AspectRatio ratio={1 / 1}>
           <Image
             src={aboutConfig.imgSrc}
             alt=""
