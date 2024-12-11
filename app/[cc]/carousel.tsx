@@ -15,10 +15,19 @@ import { CC } from "./page";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { homepageConfig } from "@/config/homepage";
 
-export default function CarouselComponent({ lang }: { lang: CC }) {
+export default function CarouselComponent({
+  lang,
+  mobile = false,
+}: {
+  lang: CC;
+  mobile?: boolean;
+}) {
   return (
     <Carousel
-      className="w-full overflow-hidden px-2"
+      className={
+        "w-full overflow-hidden px-2" +
+        (mobile ? " sm:hidden" : " hidden sm:block")
+      }
       plugins={[
         Autoplay({
           delay: 5000,
@@ -31,7 +40,7 @@ export default function CarouselComponent({ lang }: { lang: CC }) {
             <Card>
               <CardContent className="flex items-center justify-center">
                 <AspectRatio
-                  ratio={16 / 9}
+                  ratio={!mobile ? 16 / 9 : 10 / 16}
                   className="relative overflow-hidden"
                 >
                   <div className="absolute inset-0 z-10 bg-black/20 flex justify-center items-center">

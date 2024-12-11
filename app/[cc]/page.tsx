@@ -18,6 +18,7 @@ export default function LandingPage({
 }) {
   return (
     <div className="grow flex flex-col items-center justify-center relative w-full">
+      <CarouselComponent lang={params.cc!} mobile />
       <CarouselComponent lang={params.cc!} />
       <div className="container relative">
         <div className="hidden md:grid grid-cols-4 my-2 gap-2">
