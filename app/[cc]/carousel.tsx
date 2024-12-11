@@ -40,7 +40,7 @@ export default function CarouselComponent({
             <Card>
               <CardContent className="flex items-center justify-center">
                 <AspectRatio
-                  ratio={!mobile ? 16 / 9 : 8 / 16}
+                  ratio={!mobile ? 16 / 9 : 9 / 16}
                   className="relative overflow-hidden"
                 >
                   <div className="absolute inset-0 z-10 bg-black/20 flex justify-center items-center">
