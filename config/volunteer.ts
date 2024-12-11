@@ -1,6 +1,6 @@
 export const volunteerConfig = {
   title: "Volunteer Recruitment",
-  titleCn: "義工招募aaa",
+  titleCn: "義工招募aaabbbbbbb",
   imgSrc: "/volunteer/hero-volunteer.jpeg",
   description:
     "What is the eternal reliance of the hometown, we do not know, we only know that because of people, the hometown never withers. This is a sentence in the vision of the foundation, which reveals that volunteers in the foundation organization become the backbone of the structure through the transmission operation of the board of directors, the volunteer group, and the secretariat. The foundation's volunteer group has four types of organizations: the 'Wenjiao Small Volunteer' of junior high school students, the 'High School Volunteer' composed of high school students, the 'Xin Gangyi' from the college youth association, and the adult volunteer group. The four-stage organization is passed down in one vein, forming a close inheritance and public participation network. Through community participation, visit learning, and interactive fellowship, the volunteers of the foundation are always full of energy and motivation, ready to go, and sustainable. It is hoped that the people of Laoshi Village will increase their identification and public affairs participation in their hometown through the process of personal participation.",
