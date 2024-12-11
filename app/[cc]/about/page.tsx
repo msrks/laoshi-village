@@ -21,7 +21,7 @@ export default function Page({
 }) {
   return (
     <>
-      {/* ddesktop */}
+      {/* desktop */}
       <div className="w-full max-w-[1400px] relative hidden sm:block">
         <AspectRatio ratio={16 / 6}>
           <Image

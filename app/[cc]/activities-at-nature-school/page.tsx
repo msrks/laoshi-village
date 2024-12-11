@@ -23,8 +23,22 @@ export default function Page({
 
   return (
     <>
-      <div className="w-full max-w-[1400px] relative">
+      {/* desktop */}
+      <div className="w-full max-w-[1400px] relative hidden sm:block">
         <AspectRatio ratio={16 / 2}>
+          <Image
+            src={activitiesConfig.imgSrc}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </AspectRatio>
+      </div>
+
+      {/* mobile */}
+      <div className="w-full max-w-[1400px] relative sm:hidden">
+        <AspectRatio ratio={2 / 1}>
           <Image
             src={activitiesConfig.imgSrc}
             alt=""

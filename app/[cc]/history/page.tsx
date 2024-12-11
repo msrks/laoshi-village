@@ -60,7 +60,8 @@ export default function Page({
 }) {
   return (
     <div className="sm:container px-4 sm:px-0 space-y-2 sm:space-y-12 mb-12">
-      <div className="w-full max-w-[1400px] relative">
+      {/* desktop */}
+      <div className="w-full max-w-[1400px] relative hidden sm:block">
         <AspectRatio ratio={16 / 3}>
           <Image
             src={config.imgSrc}
@@ -71,6 +72,20 @@ export default function Page({
           />
         </AspectRatio>
       </div>
+
+      {/* mobile */}
+      <div className="w-full max-w-[1400px] relative sm:hidden">
+        <AspectRatio ratio={2 / 1}>
+          <Image
+            src={config.imgSrc}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </AspectRatio>
+      </div>
+
       {config.items.map((m, i) => (
         <div className="w-full relative sm:grid grid-cols-4 gap-6" key={i}>
           <h1 className="col-span-4 text-3xl font-semibold">

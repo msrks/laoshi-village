@@ -25,7 +25,8 @@ export default function Page({
 }) {
   return (
     <>
-      <div className="w-full max-w-[1400px] relative">
+      {/* desktop */}
+      <div className="w-full max-w-[1400px] relative hidden sm:block">
         <AspectRatio ratio={16 / 6}>
           <Image
             src={natureSchoolConfig.imgSrc}
@@ -36,6 +37,20 @@ export default function Page({
           />
         </AspectRatio>
       </div>
+
+      {/* mobile */}
+      <div className="w-full max-w-[1400px] relative sm:hidden">
+        <AspectRatio ratio={1 / 1}>
+          <Image
+            src={natureSchoolConfig.imgSrc}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </AspectRatio>
+      </div>
+
       <div className="container flex flex-col lg:flex-row gap-6 my-6">
         <PageHeaderHeading className="flex-none lg:w-[280px]">
           {params.cc === "cn"
