@@ -26,7 +26,7 @@ export default function CarouselComponent({
     <Carousel
       className={
         "w-full overflow-hidden px-2" +
-        (mobile ? " sm:hidden" : " hidden sm:block")
+        (mobile ? " sm:hidden px-0" : " hidden sm:block")
       }
       plugins={[
         Autoplay({
