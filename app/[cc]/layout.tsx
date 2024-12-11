@@ -13,7 +13,7 @@ export default function Layout({
 }: PropsWithChildren & { params: { cc: "en" | "cn" } }) {
   return (
     <div className="relative min-h-screen flex flex-col items-center ">
-      <header className="fixed sm:sticky top-0 z-50 w-full border-b bg-background/5 sm:bg-background">
+      <header className="fixed sm:sticky top-0 z-50 w-full border-b bg-background/50 sm:bg-background">
         <div className="container h-8 flex items-center sm:h-12">
           <MainNav items={siteConfig.mainNav} lang={params.cc} />
           <MobileNav
