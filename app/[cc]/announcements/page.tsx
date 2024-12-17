@@ -14,6 +14,16 @@ export const metadata: Metadata = {
   description: "Explore the latest news and updates from the community",
 };
 
+interface PageProps {
+  params: {
+    cc: string;
+  };
+}
+
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  return [{ cc: "cn" }, { cc: "en" }];
+}
+
 const config = {
   title: "最新公告",
 };

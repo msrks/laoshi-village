@@ -43,6 +43,7 @@ export async function generateMetadata({
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
   return allPages.map((page) => ({
+    cc: "cn",
     slug: page.slugAsParams.split("/"),
   }));
 }

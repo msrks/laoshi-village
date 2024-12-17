@@ -21,6 +21,16 @@ const config = {
   description: "Articles about the latest news and updates from the community",
 };
 
+interface PageProps {
+  params: {
+    cc: string;
+  };
+}
+
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  return [{ cc: "cn" }, { cc: "en" }];
+}
+
 export default function ArticlePage({
   params = { cc: "cn" },
   asSubsection = false,

@@ -51,6 +51,16 @@ const config = {
   ],
 };
 
+interface PageProps {
+  params: {
+    cc: string;
+  };
+}
+
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  return [{ cc: "cn" }, { cc: "en" }];
+}
+
 export default function Page({
   params = { cc: "cn" },
 }: {

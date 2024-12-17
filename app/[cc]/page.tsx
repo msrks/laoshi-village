@@ -9,6 +9,16 @@ import CarouselComponent from "./carousel";
 
 export type CC = "en" | "cn";
 
+interface PageProps {
+  params: {
+    cc: string;
+  };
+}
+
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  return [{ cc: "cn" }, { cc: "en" }];
+}
+
 export default function LandingPage({
   params = { cc: "cn" },
 }: {

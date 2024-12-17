@@ -91,6 +91,7 @@ export async function generateStaticParams(): Promise<
   PostPageProps["params"][]
 > {
   return allActivities.map((activity) => ({
+    cc: "cn",
     slug: activity.slugAsParams.split("/"),
   }));
 }
