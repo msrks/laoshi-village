@@ -2,11 +2,11 @@ const { withContentlayer } = require("next-contentlayer");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // output: "export",
 
   reactStrictMode: true,
   swcMinify: true,
-  // output: "standalone",
+  output: "standalone",
 };
 
 module.exports = withContentlayer(nextConfig);
