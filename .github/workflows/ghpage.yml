@@ -1,14 +1,43 @@
-on: push
-name: Build, export and publish to branch on push
+name: Deploy to gh-pages
+
+on:
+  push:
+    branches: ["main"] # main ブランチに push があったら実行
+
 jobs:
-  build-export-and-deploy:
-    name: Build, export and publish sample site to the `out` branch
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Build with the latest action rev
-        uses: tsg-iitkgp/next-build-export-action@v1.1
-        env:
-          BUILD_DIR: .
-          PAGES_BRANCH: out
-          TOKEN: ${{ secrets.TOKEN }}
+      # 1. リポジトリのチェックアウト
+      - name: Check out the repository
+        uses: actions/checkout@v2
+
+      # 2. Node.js のセットアップ
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # 3. 依存関係のインストール
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. ビルド
+      - name: Build Next.js
+        run: npm run build
+
+      # # 5. export
+      # - name: Export Next.js to static
+      #   run: npm run export
+      #   # 実行後、デフォルトでは ./out ディレクトリに静的ファイルが出力される
+
+      # 6. gh-pages ブランチにデプロイ
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          # デフォルトでは branch: gh-pages
+          # 必要に応じて branch: gh-pages と書いてもOK
+          branch: gh-pages
