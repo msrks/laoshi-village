@@ -40,7 +40,7 @@ export const volunteerConfig = {
       paramKey: "old-house-ts",
     },
     {
-      imgSrc: "/reading2.png",
+      imgSrc: "/ecology volunteer.jpg",
       title: "Volunteer Recruitment",
       titleCn: "环保生态组",
       descriptionCn:
