@@ -10,7 +10,7 @@ export const volunteerConfig = {
   navTitleCn: "義工分組介紹",
   navs: [
     {
-      imgSrc: "/old-house-ts.jpg",
+      imgSrc: "/temple-ts.jpg",
       title: "Volunteer Recruitment",
       titleCn: "艺文教育组",
       descriptionCn:
@@ -20,7 +20,7 @@ export const volunteerConfig = {
       paramKey: "old-house-ts",
     },
     {
-      imgSrc: "/temple-ts.jpg",
+      imgSrc: "/reading.png",
       title: "Volunteer Recruitment",
       titleCn: " 阅读写作推广组",
       descriptionCn:
