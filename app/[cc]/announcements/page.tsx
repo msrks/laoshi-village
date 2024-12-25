@@ -35,9 +35,9 @@ export default function AnnouncementPage({
     cc?: CC;
   };
 }) {
-  const announcements = allAnnouncements
-    .filter((announcement) => announcement.published)
-    .sort((a, b) => b.date.localeCompare(a.date));
+  const announcements = allAnnouncements.sort((a, b) =>
+    b.date.localeCompare(a.date)
+  );
 
   return (
     <Shell className="md:pb-10 min-h-[calc(100vh-156px)]">
@@ -46,22 +46,20 @@ export default function AnnouncementPage({
         <PageHeaderDescription>announcements..</PageHeaderDescription>
       </PageHeader>
       <Separator className="hidden md:block my-2" />
-      <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         <React.Suspense
           fallback={Array.from({ length: 3 }).map((_, i) => (
             <EventCardSkeleton key={i} />
           ))}
         >
-          {announcements.map((announcement, i) =>
-            i < 3 ? (
-              <AnnouncementCard
-                key={announcement.slug}
-                announcement={announcement}
-                i={i}
-                lang={params.cc!}
-              />
-            ) : null
-          )}
+          {announcements.map((announcement, i) => (
+            <AnnouncementCard
+              key={announcement.slug}
+              announcement={announcement}
+              i={i}
+              lang={params.cc!}
+            />
+          ))}
         </React.Suspense>
       </section>
     </Shell>

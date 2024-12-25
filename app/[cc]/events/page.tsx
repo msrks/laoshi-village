@@ -63,16 +63,9 @@ export default function EventPages({
             <EventCardSkeleton key={i} />
           ))}
         >
-          {events.map((event, i) =>
-            i < 3 ? (
-              <EventCard
-                key={event.slug}
-                event={event}
-                i={i}
-                lang={params.cc!}
-              />
-            ) : null
-          )}
+          {events.map((event, i) => (
+            <EventCard key={event.slug} event={event} i={i} lang={params.cc!} />
+          ))}
         </React.Suspense>
       </section>
     </Shell>

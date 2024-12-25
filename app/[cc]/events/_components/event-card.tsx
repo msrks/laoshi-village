@@ -23,9 +23,9 @@ export function EventCard({ event, i, lang }: EventCardProps) {
       <span className="sr-only">{event.title}</span>
       <article className="space-y-4">
         <AspectRatio ratio={16 / 9} className="overflow-hidden relative">
-          {event.image ? (
+          {event.ogImage ? (
             <Image
-              src={event.image}
+              src={event.ogImage}
               alt={event.title}
               fill
               sizes="(min-width: 1024px) 384px, (min-width: 768px) 288px, (min-width: 640px) 224px, 100vw"

@@ -3,6 +3,7 @@ import {
   makeSource,
   type ComputedFields,
 } from "contentlayer/source-files";
+import ogs from "open-graph-scraper";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields: ComputedFields = {
@@ -41,14 +42,41 @@ export const Announcement = defineDocumentType(() => ({
   filePathPattern: `announcements/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: { type: "string", required: true },
-    description: { type: "string" },
     date: { type: "date", required: true },
-    published: { type: "boolean", default: true },
-    image: { type: "string", required: true },
+    url: { type: "string", required: true },
   },
 
-  computedFields,
+  computedFields: {
+    ...computedFields,
+    image: {
+      type: "string",
+      resolve: async (doc) => {
+        const { result } = await ogs({ url: doc.url });
+        return result.ogImage ? result.ogImage[0].url : null;
+      },
+    },
+    description: {
+      type: "string",
+      resolve: async (doc) => {
+        const { result } = await ogs({ url: doc.url });
+        return result.ogDescription;
+      },
+    },
+    title: {
+      type: "string",
+      resolve: async (doc) => {
+        const { result } = await ogs({ url: doc.url });
+        return result.ogTitle;
+      },
+    },
+    author: {
+      type: "string",
+      resolve: async (doc) => {
+        const { result } = await ogs({ url: doc.url });
+        return result.author;
+      },
+    },
+  },
 }));
 
 export const Activity = defineDocumentType(() => ({
@@ -103,14 +131,41 @@ export const Event = defineDocumentType(() => ({
   filePathPattern: `events/**/*.mdx`,
   contentType: "mdx",
   fields: {
-    title: { type: "string", required: true },
-    description: { type: "string" },
     date: { type: "date", required: true },
     published: { type: "boolean", default: true },
-    image: { type: "string", required: true },
     externalLink: { type: "string" },
   },
-  computedFields,
+  computedFields: {
+    ...computedFields,
+    ogImage: {
+      type: "string",
+      resolve: async (doc) => {
+        const { result } = await ogs({ url: doc.externalLink });
+        return result.ogImage ? result.ogImage[0].url : null;
+      },
+    },
+    description: {
+      type: "string",
+      resolve: async (doc) => {
+        const { result } = await ogs({ url: doc.externalLink });
+        return result.ogDescription;
+      },
+    },
+    title: {
+      type: "string",
+      resolve: async (doc) => {
+        const { result } = await ogs({ url: doc.externalLink });
+        return result.ogTitle;
+      },
+    },
+    author: {
+      type: "string",
+      resolve: async (doc) => {
+        const { result } = await ogs({ url: doc.externalLink });
+        return result.ogSiteName;
+      },
+    },
+  },
 }));
 
 export default makeSource({
