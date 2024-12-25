@@ -7,6 +7,7 @@ import { Shell } from "@/components/shells/shell";
 import { EventCardSkeleton } from "./_components/event-card-skeleton";
 import { AnnouncementCard } from "./_components/event-card";
 import { CC } from "../page";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
@@ -30,17 +31,23 @@ const config = {
 
 export default function AnnouncementPage({
   params = { cc: "cn" },
+  asSubsection = false,
 }: {
   params: {
     cc?: CC;
   };
+  asSubsection?: boolean;
 }) {
   const announcements = allAnnouncements.sort((a, b) =>
     b.date.localeCompare(a.date)
   );
 
   return (
-    <Shell className="md:pb-10 min-h-[calc(100vh-156px)]">
+    <Shell
+      className={cn("md:pb-10", {
+        "min-h-[calc(100vh-156px)]": !asSubsection,
+      })}
+    >
       <PageHeader>
         <div className="text-xl md:text-3xl">{config.title}</div>
         <PageHeaderDescription>announcements..</PageHeaderDescription>
@@ -52,14 +59,17 @@ export default function AnnouncementPage({
             <EventCardSkeleton key={i} />
           ))}
         >
-          {announcements.map((announcement, i) => (
-            <AnnouncementCard
-              key={announcement.slug}
-              announcement={announcement}
-              i={i}
-              lang={params.cc!}
-            />
-          ))}
+          {announcements.map(
+            (announcement, i) =>
+              (!asSubsection || i < 4) && (
+                <AnnouncementCard
+                  key={announcement.slug}
+                  announcement={announcement}
+                  i={i}
+                  lang={params.cc!}
+                />
+              )
+          )}
         </React.Suspense>
       </section>
     </Shell>

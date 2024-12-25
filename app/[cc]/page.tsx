@@ -6,6 +6,7 @@ import ArticlePage from "./articles/page";
 import { homepageConfig } from "@/config/homepage";
 import EventPages from "./events/page";
 import CarouselComponent from "./carousel";
+import AnnouncementPage from "./announcements/page";
 
 export type CC = "en" | "cn";
 
@@ -57,6 +58,7 @@ export default function LandingPage({
         </div>
       </div>
       <Separator className="container hidden md:block my-2" />
+      <AnnouncementPage params={{ cc: params.cc }} asSubsection />
       <div className="sm:grid grid-cols-2">
         <div className="block">
           <ArticlePage params={{ cc: params.cc }} asSubsection />
