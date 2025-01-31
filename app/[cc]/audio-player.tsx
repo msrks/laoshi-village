@@ -17,7 +17,11 @@ export function AudioPlayer() {
   useEffect(() => {
     const handleInteraction = () => setCanAutoPlay(true);
     window.addEventListener("click", handleInteraction, { once: true });
-    return () => window.removeEventListener("click", handleInteraction);
+    window.addEventListener("scroll", handleInteraction, { once: true });
+    return () => {
+      window.removeEventListener("click", handleInteraction);
+      window.removeEventListener("scroll", handleInteraction);
+    };
   }, [canAutoPlay]);
 
   useEffect(() => {
