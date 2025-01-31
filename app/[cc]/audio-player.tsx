@@ -1,27 +1,33 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Menu,
-  Music,
-  Pause,
-  PauseCircle,
-  Play,
-  PlayCircle,
-  SkipBack,
-  SkipForward,
-  Volume,
-} from "lucide-react";
-import { useState } from "react";
+import { Music, PauseCircle } from "lucide-react";
+import { useState, useEffect } from "react";
 import useSound from "use-sound";
 
 export function AudioPlayer() {
-  const [play, { pause }] = useSound("/we-are-the-world.mp3", {
+  const [play, { pause }] = useSound("/alan.mp3", {
     volume: 0.5,
     loop: true,
   });
 
   const [isPlaying, setIsPlaying] = useState(false);
+  const [canAutoPlay, setCanAutoPlay] = useState(false);
+
+  useEffect(() => {
+    const handleInteraction = () => {
+      if (!canAutoPlay) setCanAutoPlay(true);
+    };
+    window.addEventListener("click", handleInteraction);
+    return () => window.removeEventListener("click", handleInteraction);
+  }, [canAutoPlay]);
+
+  useEffect(() => {
+    if (canAutoPlay) {
+      play();
+      setIsPlaying(true);
+    }
+  }, [canAutoPlay, play]);
 
   return (
     <div className="flex items-center ml-2">
@@ -48,20 +54,4 @@ export function AudioPlayer() {
       )}
     </div>
   );
-}
-
-{
-  /* <audio
-id="song"
-className="bg-blue-200"
-src="/we-are-the-world.mp3"
-autoPlay
-loop
-></audio>
-<Button variant="ghost" size="icon">
-<PlayCircle
-  className="size-6"
-  onClick={() => document.getElementById("song").play()}
-/>
-</Button> */
 }
