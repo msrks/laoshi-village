@@ -16,7 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function ActivityCard({ activity }: { activity: Activity }) {
-  console.log(activity);
+  // console.log(activity);
   return (
     <Link href={`/cn/${activity.slug}`}>
       <Card className="w-[350px] overflow-hidden">
