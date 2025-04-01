@@ -1,25 +1,41 @@
-import chromium from "chrome-aws-lambda";
+import chromium from "@sparticuz/chromium-min";
 import {
   defineDocumentType,
   makeSource,
   type ComputedFields,
 } from "contentlayer/source-files";
 import ogs from "open-graph-scraper";
-import puppeteer from "puppeteer-core";
+import puppeteer from "puppeteer";
+import puppeteerCore from "puppeteer-core";
+
+const remoteExecutablePath =
+  "https://github.com/Sparticuz/chromium/releases/download/v121.0.0/chromium-v121.0.0-pack.tar";
+let browser: any | null = null;
+async function getBrowser() {
+  if (browser) return browser;
+
+  if (process.env.NEXT_PUBLIC_VERCEL_ENVIRONMENT === "production") {
+    browser = await puppeteerCore.launch({
+      args: chromium.args,
+      executablePath: await chromium.executablePath(remoteExecutablePath),
+      headless: true,
+    });
+  } else {
+    browser = await puppeteer.launch({
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+      headless: true,
+    });
+  }
+  return browser;
+}
 
 async function fetchOpenGraphData(url: string) {
-  const browser = await puppeteer.launch({
-    args: chromium.args,
-    executablePath: await chromium.executablePath,
-    headless: chromium.headless,
-    defaultViewport: chromium.defaultViewport,
-  });
-
   try {
+    const browser = await getBrowser();
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: "networkidle2" });
     const content = await page.content();
-    await browser.close();
+    await page.close();
 
     const { result } = await ogs({
       html: content,
@@ -28,7 +44,6 @@ async function fetchOpenGraphData(url: string) {
     return result;
   } catch (error) {
     console.error(`Failed to fetch OpenGraph data for ${url}:`, error);
-    await browser.close();
     return {
       ogImage: null,
       ogDescription: null,
