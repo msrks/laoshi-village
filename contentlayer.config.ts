@@ -5,13 +5,15 @@ import {
   type ComputedFields,
 } from "contentlayer/source-files";
 import ogs from "open-graph-scraper";
-import puppeteer from "puppeteer";
-// Utility function to fetch OpenGraph data
+import puppeteer from "puppeteer-core";
+
 async function fetchOpenGraphData(url: string) {
   const browser = await puppeteer.launch({
     args: chromium.args,
-    executablePath: await chromium.executablePath,
+    executablePath:
+      (await chromium.executablePath) || "/usr/bin/chromium-browser",
     headless: chromium.headless,
+    defaultViewport: chromium.defaultViewport,
   });
   const page = await browser.newPage();
   await page.goto(url, { waitUntil: "networkidle2" });
