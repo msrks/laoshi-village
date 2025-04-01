@@ -10,8 +10,7 @@ import puppeteer from "puppeteer-core";
 async function fetchOpenGraphData(url: string) {
   const browser = await puppeteer.launch({
     args: chromium.args,
-    executablePath:
-      (await chromium.executablePath) || "/usr/bin/chromium-browser",
+    executablePath: await chromium.executablePath,
     headless: chromium.headless,
     defaultViewport: chromium.defaultViewport,
   });
@@ -19,10 +18,7 @@ async function fetchOpenGraphData(url: string) {
   await page.goto(url, { waitUntil: "networkidle2" });
   const content = await page.content();
   await browser.close();
-  const { result } = await ogs({
-    html: content,
-    onlyGetOpenGraphInfo: true,
-  });
+  const { result } = await ogs({ html: content, onlyGetOpenGraphInfo: true });
   return result;
 }
 
