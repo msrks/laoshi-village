@@ -14,12 +14,29 @@ async function fetchOpenGraphData(url: string) {
     headless: chromium.headless,
     defaultViewport: chromium.defaultViewport,
   });
-  const page = await browser.newPage();
-  await page.goto(url, { waitUntil: "networkidle2" });
-  const content = await page.content();
-  await browser.close();
-  const { result } = await ogs({ html: content, onlyGetOpenGraphInfo: true });
-  return result;
+
+  try {
+    const page = await browser.newPage();
+    await page.goto(url, { waitUntil: "networkidle2" });
+    const content = await page.content();
+    await browser.close();
+
+    const { result } = await ogs({
+      html: content,
+      onlyGetOpenGraphInfo: true,
+    });
+    return result;
+  } catch (error) {
+    console.error(`Failed to fetch OpenGraph data for ${url}:`, error);
+    await browser.close();
+    return {
+      ogImage: null,
+      ogDescription: null,
+      ogTitle: null,
+      author: null,
+      ogSiteName: null,
+    };
+  }
 }
 
 // Shared computed fields
@@ -157,6 +174,14 @@ export const Event = defineDocumentType(() => ({
   computedFields: {
     ...baseComputedFields,
     ...createOpenGraphFields("externalLink"),
+    ogImage: {
+      type: "string",
+      resolve: async (doc: any) => {
+        if (!doc.externalLink) return null;
+        const result = await fetchOpenGraphData(doc.externalLink);
+        return result.ogImage?.[0]?.url || null;
+      },
+    },
   },
 }));
 
