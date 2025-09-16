@@ -62,6 +62,19 @@ export const siteConfig = {
       ],
     },
     {
+      title: "Tamarind Festival",
+      titleCn: "酸豆节",
+      items: [
+        {
+          title: "Tamarind Festival",
+          titleCn: "酸豆节",
+          href: "/tamarind-festival",
+          description: "Tamarind Festival",
+          items: [],
+        },
+      ],
+    },
+    {
       title: "News",
       titleCn: "新闻",
       items: [
