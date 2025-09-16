@@ -1,0 +1,12 @@
+{
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "build": {
+    "env": {
+      "DISABLE_OPENGRAPH_FETCH": "true"
+    }
+  }
+}
