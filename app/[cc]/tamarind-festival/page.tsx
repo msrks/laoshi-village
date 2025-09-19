@@ -55,7 +55,7 @@ export default function Page({
         </div>
         <AspectRatio ratio={16 / 6}>
           <Image
-            src="/tamarind2025.png"
+            src="/tamarind-festival.png"
             alt=""
             fill
             className="object-cover"
@@ -68,7 +68,7 @@ export default function Page({
       <div className="w-full max-w-[1400px] relative  sm:hidden">
         <AspectRatio ratio={1 / 1}>
           <Image
-            src="/tamarind2025.png"
+            src="/tamarind-festival.png"
             alt=""
             fill
             className="object-cover"
@@ -88,7 +88,7 @@ export default function Page({
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/tamarind2025/schedule/2023"
+                        href="/tamarind-festival/schedule/2023"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                       >
                         <div className="text-sm font-medium leading-none">
@@ -100,7 +100,7 @@ export default function Page({
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/tamarind2025/schedule/2024"
+                        href="/tamarind-festival/schedule/2024"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                       >
                         <div className="text-sm font-medium leading-none">
@@ -112,7 +112,7 @@ export default function Page({
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/tamarind2025/schedule/2025"
+                        href="/tamarind-festival/schedule/2025"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                       >
                         <div className="text-sm font-medium leading-none">
@@ -128,7 +128,7 @@ export default function Page({
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="/tamarind2025/partners-and-exhibitors"
+                  href="/tamarind-festival/partners-and-exhibitors"
                   className={navigationMenuTriggerStyle()}
                 >
                   Partners and Exhibitors
@@ -139,7 +139,7 @@ export default function Page({
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="/tamarind2025/hotels-and-atrractions"
+                  href="/tamarind-festival/hotels-and-atrractions"
                   className={navigationMenuTriggerStyle()}
                 >
                   Hotels and Attractions
@@ -150,7 +150,18 @@ export default function Page({
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <Link
-                  href="/tamarind2025/faq"
+                  href="/tamarind-festival/transportation"
+                  className={navigationMenuTriggerStyle()}
+                >
+                  Transportation
+                </Link>
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <NavigationMenuLink asChild>
+                <Link
+                  href="/tamarind-festival/faq"
                   className={navigationMenuTriggerStyle()}
                 >
                   FAQ

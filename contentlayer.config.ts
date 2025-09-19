@@ -3,11 +3,43 @@ import {
   makeSource,
   type ComputedFields,
 } from "contentlayer/source-files";
+import fs from "fs";
 import ogs from "open-graph-scraper";
+import path from "path";
+
+// メタデータキャッシュを読み込む関数
+function loadMetadataCache() {
+  try {
+    const cacheFile = path.join(
+      process.cwd(),
+      "content/announcements-metadata.json"
+    );
+    if (fs.existsSync(cacheFile)) {
+      const data = fs.readFileSync(cacheFile, "utf8");
+      return JSON.parse(data);
+    }
+  } catch (error) {
+    console.warn("Failed to load metadata cache:", error);
+  }
+  return {};
+}
 
 async function fetchOpenGraphData(url: string) {
+  // まずキャッシュをチェック
+  const cache = loadMetadataCache();
+  if (cache[url]) {
+    const cached = cache[url];
+    return {
+      ogImage: cached.image ? { url: cached.image } : null,
+      ogDescription: cached.description,
+      ogTitle: cached.title,
+      author: cached.author,
+      ogSiteName: cached.author,
+    };
+  }
+
+  // キャッシュにない場合は従来通り取得
   try {
-    // Use the simple approach without browser
     console.log(`Attempting OpenGraph fetch for ${url}`);
     const { result } = await ogs({
       url: url,
@@ -107,10 +139,52 @@ export const Announcement = defineDocumentType(() => ({
   fields: {
     date: { type: "date", required: true },
     url: { type: "string", required: true },
+    image: { type: "string" },
+    description: { type: "string" },
+    title: { type: "string" },
+    author: { type: "string" },
   },
   computedFields: {
     ...baseComputedFields,
-    ...createOpenGraphFields("url"),
+    // frontmatterにメタデータがある場合はそれを使用、なければOpenGraphから取得
+    image: {
+      type: "string" as const,
+      resolve: async (doc: any) => {
+        if (doc.image) return doc.image;
+        const result = await fetchOpenGraphData(doc.url);
+        if (Array.isArray(result.ogImage)) {
+          return result.ogImage[0]?.url || null;
+        }
+        if (typeof result.ogImage === "string") {
+          return result.ogImage;
+        }
+        return result.ogImage?.url || null;
+      },
+    },
+    description: {
+      type: "string" as const,
+      resolve: async (doc: any) => {
+        if (doc.description) return doc.description;
+        const result = await fetchOpenGraphData(doc.url);
+        return result.ogDescription;
+      },
+    },
+    title: {
+      type: "string" as const,
+      resolve: async (doc: any) => {
+        if (doc.title) return doc.title;
+        const result = await fetchOpenGraphData(doc.url);
+        return result.ogTitle;
+      },
+    },
+    author: {
+      type: "string" as const,
+      resolve: async (doc: any) => {
+        if (doc.author) return doc.author;
+        const result = await fetchOpenGraphData(doc.url);
+        return result.author || result.ogSiteName;
+      },
+    },
   },
 }));
 

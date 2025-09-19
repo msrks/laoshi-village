@@ -7,7 +7,8 @@
     "build": "next build",
     "preview": "next build && next start",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "getmeta": "node scripts/getmeta.js"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
